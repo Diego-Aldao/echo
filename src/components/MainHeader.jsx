@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import imgHeader from "../assets/images/img-header-1.jpg";
+import "splitting/dist/splitting.css";
+import "splitting/dist/splitting-cells.css";
+import Splitting from "splitting";
 
 const Header = styled.header`
   width: 100%;
@@ -82,6 +85,7 @@ const Titulo = styled.h2`
   align-items: center;
   transition: all 0.3s ease-in-out;
   text-align: left;
+  position: relative;
   @media (min-width: 480px) {
     font-size: 40px;
   }
@@ -137,12 +141,19 @@ const Botton = styled.a`
 `;
 
 const MainHeader = () => {
+  useEffect(() => {
+    Splitting({
+      target: "[data-splitting]",
+      by: "chars",
+      key: null,
+    });
+  }, []);
   return (
     <Header>
       <HeaderImg></HeaderImg>
       <HeaderContenido>
         <MiniTexto>agencia</MiniTexto>
-        <Titulo>diseño interior</Titulo>
+        <Titulo data-splitting>diseño interior</Titulo>
         <Info>
           El diseño correcto y las ideas correctas importan mucho en el diseño
           de interiores. <br /> Un estilo que hace marca tendencia.
