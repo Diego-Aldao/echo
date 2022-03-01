@@ -34,3 +34,20 @@ a {
   padding: 0px;
   margin: 0px;
 }
+
+@keyframes fadeInUp {
+  from {
+    position: relative;
+    top: 10px;
+    opacity: 0;
+  }
+  to {
+    position: relative;
+    top: 0px;
+    opacity: 1;
+  }
+}
+.char {
+  animation: fadeInUp 0.5s cubic-bezier(0.3, 0, 0.7, 1) both;
+  animation-delay: calc(60ms * var(--char-index));
+}
