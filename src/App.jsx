@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Navbar from "./components/Navbar";
 
 const Wrapper = styled.main`
-  background-color: var(--color-background);
+  padding: 0px 15px;
 `;
 
 const App = () => {
