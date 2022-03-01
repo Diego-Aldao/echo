@@ -21,13 +21,16 @@ const Contenedor = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0px 15px;
   @media (min-width: 992px) {
     max-width: 960px;
     height: 72px;
-    padding: 0px 15px;
   }
   @media (min-width: 1200px) {
     max-width: 1140px;
+  }
+  @media (min-width: 1400px) {
+    max-width: 1340px;
   }
 `;
 const Logo = styled.span`
