@@ -6,6 +6,12 @@
   --color-principal: #c5a47e;
   --color-subtitulos: #eeeeee;
   --color-parrafos: #9f9f9f;
+  /*FUENTES*/
+  --fuente-jost: "Jost", sans-serif;
+  --fuente-poppins: "Poppins", sans-serif;
+}
+* {
+  box-sizing: border-box;
 }
 html {
   background-color: var(--color-background);
@@ -14,12 +20,12 @@ html {
 h5,
 h6,
 p {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--fuente-poppins);
 }
 span,
 h3,
 h2 {
-  font-family: "Jost", sans-serif;
+  font-family: var(--fuente-jost);
 }
 
 a {
