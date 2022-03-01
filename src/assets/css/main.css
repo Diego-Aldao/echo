@@ -51,3 +51,6 @@ a {
   animation: fadeInUp 0.5s cubic-bezier(0.3, 0, 0.7, 1) both;
   animation-delay: calc(60ms * var(--char-index));
 }
+.whitespace {
+  width: 10px;
+}

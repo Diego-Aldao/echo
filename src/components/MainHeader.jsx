@@ -74,7 +74,7 @@ const MiniTexto = styled.h5`
   }
 `;
 const Titulo = styled.h2`
-  font-size: 32px;
+  font-size: 28px;
   padding: 0px;
   margin: 0px;
   text-transform: uppercase;
