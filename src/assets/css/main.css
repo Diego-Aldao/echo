@@ -45,10 +45,11 @@ a {
     position: relative;
     top: 0px;
     opacity: 1;
+    color: white;
   }
 }
 .char {
-  animation: fadeInUp 0.5s cubic-bezier(0.3, 0, 0.7, 1) both;
+  animation: fadeInUp 0.3s cubic-bezier(0.3, 0, 0.7, 1) both;
   animation-delay: calc(60ms * var(--char-index));
 }
 .whitespace {

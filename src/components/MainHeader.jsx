@@ -78,7 +78,6 @@ const Titulo = styled.h2`
   padding: 0px;
   margin: 0px;
   text-transform: uppercase;
-  color: #fff;
   letter-spacing: 2px;
   font-weight: 500;
   display: flex;
