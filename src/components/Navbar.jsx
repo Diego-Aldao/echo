@@ -5,6 +5,10 @@ const Nav = styled.nav`
   height: 60px;
   display: flex;
   align-items: center;
+  position: absolute;
+  top: 0px;
+  z-index: 99;
+  width: 100%;
   @media (min-width: 992px) {
     height: 80px;
   }
