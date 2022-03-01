@@ -2,9 +2,13 @@
 
 :root {
   /*COLORES*/
+  --color-background: #000000;
   --color-principal: #c5a47e;
   --color-subtitulos: #eeeeee;
   --color-parrafos: #9f9f9f;
+}
+html {
+  background-color: var(--color-background);
 }
 
 h5,
