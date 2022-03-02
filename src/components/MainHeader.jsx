@@ -1,9 +1,15 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import imgHeader from "../assets/images/img-header-1.jpg";
+import imgHeader2 from "../assets/images/img-header-2.jpg";
 import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
 import Splitting from "splitting";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Parallax, Pagination, Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const Header = styled.header`
   width: 100%;
@@ -11,31 +17,15 @@ const Header = styled.header`
   max-height: 100vh;
   background: black;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 const HeaderImg = styled.div`
   position: absolute;
-  top: 0px;
-  right: 0px;
+  right: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  background-image: url(${imgHeader});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left;
-  &:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    background: #02050b;
-    opacity: 0.5;
-  }
+  background-image: ${(props) => `url(${props.img})`};
+  filter: brightness(0.5);
   @media (min-width: 992px) {
     width: 70%;
   }
@@ -139,6 +129,15 @@ const Botton = styled.a`
   }
 `;
 
+const sliderStyles = {
+  width: "100%",
+  height: "100%",
+  overflow: "hidden",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+};
+
 const MainHeader = () => {
   useEffect(() => {
     Splitting({
@@ -147,18 +146,37 @@ const MainHeader = () => {
       key: null,
     });
   }, []);
+
   return (
     <Header>
-      <HeaderImg></HeaderImg>
-      <HeaderContenido>
-        <MiniTexto>agencia</MiniTexto>
-        <Titulo data-splitting>diseño interior</Titulo>
-        <Info>
-          El diseño correcto y las ideas correctas importan mucho en el diseño
-          de interiores. <br /> Un estilo que hace marca tendencia.
-        </Info>
-        <Botton>Descrubir trabajo</Botton>
-      </HeaderContenido>
+      <Swiper
+        style={{
+          width: "100%",
+          height: "100%",
+        }}
+        direction={"vertical"}
+        speed={800}
+        parallax={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Parallax, Pagination, Navigation]}
+        className="mySwiper"
+      >
+        <SwiperSlide style={sliderStyles}>
+          <HeaderImg data-swiper-parallax="75%" img={imgHeader}></HeaderImg>
+          <HeaderContenido>
+            <MiniTexto>agencia</MiniTexto>
+            <Titulo data-splitting>diseño interior</Titulo>
+            <Info>
+              El diseño correcto y las ideas correctas importan mucho en el
+              diseño de interiores. <br /> Un estilo que hace marca tendencia.
+            </Info>
+            <Botton>Descrubir trabajo</Botton>
+          </HeaderContenido>
+        </SwiperSlide>
+      </Swiper>
     </Header>
   );
 };
