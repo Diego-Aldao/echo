@@ -168,10 +168,40 @@ const MainHeader = () => {
           <HeaderImg data-swiper-parallax="75%" img={imgHeader}></HeaderImg>
           <HeaderContenido>
             <MiniTexto>agencia</MiniTexto>
-            <Titulo data-splitting>diseño interior</Titulo>
+            <Titulo data-splitting>
+              <a href="">diseño interior</a>
+            </Titulo>
             <Info>
               El diseño correcto y las ideas correctas importan mucho en el
-              diseño de interiores. <br /> Un estilo que hace marca tendencia.
+              diseño de interiores. <br /> Un estilo que marca tendencia.
+            </Info>
+            <Botton>Descrubir trabajo</Botton>
+          </HeaderContenido>
+        </SwiperSlide>
+        <SwiperSlide style={sliderStyles}>
+          <HeaderImg data-swiper-parallax="75%" img={imgHeader2}></HeaderImg>
+          <HeaderContenido>
+            <MiniTexto>diseño</MiniTexto>
+            <Titulo data-splitting>
+              <a href="">interior innovador</a>
+            </Titulo>
+            <Info>
+              El diseño correcto y las ideas correctas importan mucho en el
+              diseño de interiores. <br /> Un estilo que marca tendencia.
+            </Info>
+            <Botton>Descrubir trabajo</Botton>
+          </HeaderContenido>
+        </SwiperSlide>
+        <SwiperSlide style={sliderStyles}>
+          <HeaderImg data-swiper-parallax="75%" img={imgHeader}></HeaderImg>
+          <HeaderContenido>
+            <MiniTexto>únicos &</MiniTexto>
+            <Titulo data-splitting>
+              <a href="">elegantes diseños</a>
+            </Titulo>
+            <Info>
+              El diseño correcto y las ideas correctas importan mucho en el
+              diseño de interiores. <br /> Un estilo que marca tendencia.
             </Info>
             <Botton>Descrubir trabajo</Botton>
           </HeaderContenido>

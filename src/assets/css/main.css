@@ -32,6 +32,7 @@ a {
   color: inherit;
   padding: 0px;
   margin: 0px;
+  display: inline-block;
 }
 
 @keyframes fadeInUp {
