@@ -14,7 +14,7 @@ import "swiper/css/navigation";
 const Header = styled.header`
   width: 100%;
   height: 100vh;
-  max-height: 100vh;
+  min-height: 800px;
   background: black;
   position: relative;
 `;
