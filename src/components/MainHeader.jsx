@@ -25,6 +25,9 @@ const HeaderImg = styled.div`
   width: 100%;
   height: 100%;
   background-image: ${(props) => `url(${props.img})`};
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
   filter: brightness(0.5);
   @media (min-width: 992px) {
     width: 70%;
