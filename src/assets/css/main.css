@@ -55,3 +55,23 @@ a {
 .whitespace {
   width: 10px;
 }
+
+.swiper-pagination-current,
+.swiper-pagination-total {
+  font-size: 60px;
+  font-weight: 500;
+  color: transparent;
+  -webkit-text-stroke: 0.5px #fff;
+  transition: all 0.5s ease-in-out !important;
+}
+.swiper-pagination {
+  color: #fff;
+  width: 90px;
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+}
+.swiper-pagination-total {
+  color: white;
+  font-size: 48px;
+}
