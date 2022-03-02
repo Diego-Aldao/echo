@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { MdOutlineMenuOpen } from "react-icons/md";
+import { RiArrowDownSFill } from "react-icons/ri";
 
 const Nav = styled.nav`
   height: 60px;
@@ -46,9 +48,13 @@ const Logo = styled.span`
   }
 `;
 const Hamburguesa = styled.span`
-  width: 25px;
-  height: 25px;
-  background: white;
+  display: flex;
+  height: 31px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.9rem;
+  font-weight: 100;
   @media (min-width: 992px) {
     display: none;
   }
@@ -81,19 +87,27 @@ const Navbar = () => {
     <Nav>
       <Contenedor>
         <Logo>echo</Logo>
-        <Hamburguesa></Hamburguesa>
+        <Hamburguesa>
+          <MdOutlineMenuOpen />
+        </Hamburguesa>
         <LinksNav>
           <LinkNav>
-            <span>inicio i</span>
+            <span>
+              inicio <RiArrowDownSFill />
+            </span>
           </LinkNav>
           <LinkNav>
             <a href="">about</a>
           </LinkNav>
           <LinkNav>
-            <span>portfolio i</span>
+            <span>
+              portfolio <RiArrowDownSFill />
+            </span>
           </LinkNav>
           <LinkNav>
-            <span>blog i</span>
+            <span>
+              blog <RiArrowDownSFill />
+            </span>
           </LinkNav>
           <LinkNav>
             <a href="">contacto</a>
