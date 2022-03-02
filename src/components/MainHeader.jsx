@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import imgHeader from "../assets/images/img-header-1.jpg";
-import imgHeader2 from "../assets/images/img-header-2.jpg";
+import imgHeader1 from "../assets/images/img-header-2.jpg";
+import imgHeader2 from "../assets/images/p-2.jpg";
+import imgHeader3 from "../assets/images/p-3.jpg";
 import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
 import Splitting from "splitting";
@@ -168,7 +169,7 @@ const MainHeader = () => {
         className="mySwiper"
       >
         <SwiperSlide style={sliderStyles}>
-          <HeaderImg data-swiper-parallax="75%" img={imgHeader}></HeaderImg>
+          <HeaderImg data-swiper-parallax="75%" img={imgHeader1}></HeaderImg>
           <HeaderContenido>
             <MiniTexto>agencia</MiniTexto>
             <Titulo data-splitting>
@@ -196,7 +197,7 @@ const MainHeader = () => {
           </HeaderContenido>
         </SwiperSlide>
         <SwiperSlide style={sliderStyles}>
-          <HeaderImg data-swiper-parallax="75%" img={imgHeader}></HeaderImg>
+          <HeaderImg data-swiper-parallax="75%" img={imgHeader3}></HeaderImg>
           <HeaderContenido>
             <MiniTexto>únicos &</MiniTexto>
             <Titulo data-splitting>
