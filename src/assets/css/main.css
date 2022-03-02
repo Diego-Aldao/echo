@@ -76,6 +76,13 @@ a {
   font-size: 48px;
 }
 
+@media (min-width: 768px) {
+  .swiper-pagination {
+    top: 22%;
+    left: 80%;
+  }
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   top: 85%;
