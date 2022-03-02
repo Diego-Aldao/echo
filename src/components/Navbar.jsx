@@ -38,9 +38,11 @@ const Logo = styled.span`
   text-transform: uppercase;
   margin: 0px;
   width: 60px;
+  font-family: "Iceland", cursive;
+  font-size: 1.5rem;
   @media (min-width: 992px) {
     width: 120px;
-    font-size: 2rem;
+    font-size: 3rem;
   }
 `;
 const Hamburguesa = styled.span`
