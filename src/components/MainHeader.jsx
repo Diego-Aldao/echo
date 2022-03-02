@@ -158,7 +158,7 @@ const MainHeader = () => {
         speed={800}
         parallax={true}
         pagination={{
-          clickable: true,
+          type: "fraction",
         }}
         navigation={true}
         modules={[Parallax, Pagination, Navigation]}
