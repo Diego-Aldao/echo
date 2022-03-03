@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import imgAbout from "../assets/images/p-1.jpg";
+import imgAbout from "../assets/images/p-2.jpg";
 
 const Wrapper = styled.section`
   width: 100%;
@@ -9,6 +9,30 @@ const Wrapper = styled.section`
 `;
 const Contenedor = styled.div`
   padding: 0px 15px;
+  max-width: 540px;
+  margin: 0 auto;
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+    display: flex;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+  @media (min-width: 1400px) {
+    max-width: 1340px;
+  }
+`;
+const ContenidoAbout = styled.div`
+  width: 100%;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 4;
+  @media (min-width: 992px) {
+    flex: 0 0 41.666667%;
+  }
 `;
 const MiniTexto = styled.h6`
   margin: 0px 0px 10px 0px;
@@ -26,15 +50,18 @@ const Titulo = styled.h3`
   font-weight: 400;
   line-height: 1.4;
   margin: 0px 0px 50px;
+  @media (min-width: 768px) {
+    font-size: 35px;
+  }
 `;
 
-const ContenidoAbout = styled.div`
+const CajaAbout = styled.div`
   width: 90%;
   padding: 60px 40px;
   background: #272727;
   margin-left: auto;
   position: relative;
-  margin-bottom: 80px;
+
   &:after {
     content: "";
     position: absolute;
@@ -45,18 +72,24 @@ const ContenidoAbout = styled.div`
     border: 5px solid var(--color-principal);
     z-index: -1;
   }
+  @media (min-width: 992px) {
+    padding: 60px 50px;
+  }
 `;
 
-const TituloContenido = styled.h2`
+const TituloCaja = styled.h2`
   font-size: 25px;
   margin: 0px 0px 20px;
   letter-spacing: 1px;
   line-height: 1.4;
   font-weight: 600;
   text-transform: capitalize;
+  @media (min-width: 480px) {
+    font-size: 40px;
+  }
 `;
 
-const TextoContenido = styled.p`
+const TextoCaja = styled.p`
   font-size: 15px;
   margin: 0;
   font-weight: 400;
@@ -69,18 +102,28 @@ const MediaAbout = styled.div`
   width: 100%;
   position: relative;
   min-height: 1px;
+  @media (min-width: 992px) {
+    flex: 0 0 58.33333333333%;
+  }
 `;
 const MediaImg = styled.img`
   width: 100%;
   height: auto;
   vertical-align: middle;
   border-style: none;
+  @media (min-width: 992px) {
+    width: calc(100% + 50px);
+    margin-left: -50px;
+  }
 `;
 const MediaContenido = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0px 15px;
   margin-top: 20px;
+  @media (min-width: 480px) {
+    flex-direction: row;
+  }
 `;
 const ItemMediaContenido = styled.div`
   width: 100%;
@@ -96,11 +139,20 @@ const ItemMediaContenido = styled.div`
     font-size: 18px;
     color: var(--color-principal);
     line-height: 1.4;
+    font-weight: 500;
   }
   h6 {
     font-size: 15px;
     text-transform: capitalize;
     font-weight: 400;
+  }
+  @media (min-width: 480px) {
+    margin-bottom: 0px;
+  }
+  @media (min-width: 768px) {
+    h5 {
+      font-size: 25px;
+    }
   }
 `;
 
@@ -108,14 +160,18 @@ const About = () => {
   return (
     <Wrapper>
       <Contenedor>
-        <MiniTexto>nosotros</MiniTexto>
-        <Titulo>nuestra empresa</Titulo>
         <ContenidoAbout>
-          <TituloContenido>25 años de experiencia</TituloContenido>
-          <TextoContenido>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam
-          </TextoContenido>
+          <MiniTexto>nosotros</MiniTexto>
+          <Titulo>nuestra empresa</Titulo>
+          <CajaAbout>
+            <TituloCaja>
+              25 años <br /> de experiencia
+            </TituloCaja>
+            <TextoCaja>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam
+            </TextoCaja>
+          </CajaAbout>
         </ContenidoAbout>
         <MediaAbout>
           <MediaImg src={imgAbout}></MediaImg>
