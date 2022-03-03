@@ -11,6 +11,7 @@ import { Parallax, Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { useInView } from "react-intersection-observer";
 
 const Header = styled.header`
   width: 100%;
@@ -55,6 +56,7 @@ const HeaderContenido = styled.div`
   }
 `;
 const MiniTexto = styled.h5`
+  position: relative;
   font-size: 20px;
   padding: 0px;
   margin: 0px 0px 10px;
@@ -62,7 +64,9 @@ const MiniTexto = styled.h5`
   font-weight: 300;
   color: var(--color-principal);
   letter-spacing: 2px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s;
+  transition-delay: 0.8s;
+  opacity: 1;
   @media (min-width: 480px) {
     letter-spacing: 22px;
   }
@@ -87,12 +91,15 @@ const Titulo = styled.h2`
   }
 `;
 const Info = styled.p`
+  position: relative;
   font-size: 14px;
   padding: 0px;
   margin: 10px 0px 0px;
   font-weight: 300;
   line-height: 2;
   color: var(--color-subtitulos);
+  transition: all 0.4s;
+  transition-delay: 0.8s;
 `;
 const Botton = styled.a`
   position: relative;
@@ -107,6 +114,8 @@ const Botton = styled.a`
   margin-top: 30px;
   font-family: var(--fuente-jost);
   letter-spacing: 0.5px;
+  transition: all 0.8s;
+  transition-delay: 0.4s;
   &:after {
     content: "";
     width: 99.5%;
@@ -143,6 +152,16 @@ const sliderStyles = {
 };
 
 const MainHeader = () => {
+  const [ref, inView] = useInView({
+    rootMargin: "0px",
+  });
+  const [ref2, inView2] = useInView({
+    rootMargin: "0px",
+  });
+  const [ref3, inView3] = useInView({
+    rootMargin: "0px",
+  });
+
   useEffect(() => {
     Splitting({
       target: "[data-splitting]",
@@ -170,44 +189,92 @@ const MainHeader = () => {
       >
         <SwiperSlide style={sliderStyles}>
           <HeaderImg data-swiper-parallax="75%" img={imgHeader1}></HeaderImg>
-          <HeaderContenido>
-            <MiniTexto>agencia</MiniTexto>
+          <HeaderContenido ref={ref}>
+            <MiniTexto
+              style={{ top: inView ? "0px" : "-20px", opacity: inView ? 1 : 0 }}
+            >
+              agencia
+            </MiniTexto>
             <Titulo data-splitting>
               <a href="">diseño interior</a>
             </Titulo>
-            <Info>
+            <Info
+              style={{ top: inView ? "0px" : "20px", opacity: inView ? 1 : 0 }}
+            >
               El diseño correcto y las ideas correctas importan mucho en el
               diseño de interiores. <br /> Un estilo que marca tendencia.
             </Info>
-            <Botton>Descrubir trabajo</Botton>
+            <Botton
+              style={{ top: inView ? "0px" : "20px", opacity: inView ? 1 : 0 }}
+            >
+              Descrubir trabajo
+            </Botton>
           </HeaderContenido>
         </SwiperSlide>
         <SwiperSlide style={sliderStyles}>
           <HeaderImg data-swiper-parallax="75%" img={imgHeader2}></HeaderImg>
-          <HeaderContenido>
-            <MiniTexto>diseño</MiniTexto>
+          <HeaderContenido ref={ref2}>
+            <MiniTexto
+              style={{
+                top: inView2 ? "0px" : "-20px",
+                opacity: inView2 ? 1 : 0,
+              }}
+            >
+              diseño
+            </MiniTexto>
             <Titulo data-splitting>
               <a href="">interior innovador</a>
             </Titulo>
-            <Info>
+            <Info
+              style={{
+                top: inView2 ? "0px" : "20px",
+                opacity: inView2 ? 1 : 0,
+              }}
+            >
               El diseño correcto y las ideas correctas importan mucho en el
               diseño de interiores. <br /> Un estilo que marca tendencia.
             </Info>
-            <Botton>Descrubir trabajo</Botton>
+            <Botton
+              style={{
+                top: inView2 ? "0px" : "20px",
+                opacity: inView2 ? 1 : 0,
+              }}
+            >
+              Descrubir trabajo
+            </Botton>
           </HeaderContenido>
         </SwiperSlide>
         <SwiperSlide style={sliderStyles}>
           <HeaderImg data-swiper-parallax="75%" img={imgHeader3}></HeaderImg>
-          <HeaderContenido>
-            <MiniTexto>únicos &</MiniTexto>
+          <HeaderContenido ref={ref3}>
+            <MiniTexto
+              style={{
+                top: inView3 ? "0px" : "-20px",
+                opacity: inView3 ? 1 : 0,
+              }}
+            >
+              únicos &
+            </MiniTexto>
             <Titulo data-splitting>
               <a href="">elegantes diseños</a>
             </Titulo>
-            <Info>
+            <Info
+              style={{
+                top: inView3 ? "0px" : "20px",
+                opacity: inView3 ? 1 : 0,
+              }}
+            >
               El diseño correcto y las ideas correctas importan mucho en el
               diseño de interiores. <br /> Un estilo que marca tendencia.
             </Info>
-            <Botton>Descrubir trabajo</Botton>
+            <Botton
+              style={{
+                top: inView3 ? "0px" : "20px",
+                opacity: inView3 ? 1 : 0,
+              }}
+            >
+              Descrubir trabajo
+            </Botton>
           </HeaderContenido>
         </SwiperSlide>
       </Swiper>
