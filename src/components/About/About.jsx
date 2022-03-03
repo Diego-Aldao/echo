@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import imgAbout from "../assets/images/p-2.jpg";
+import imgAbout from "../../assets/images/p-2.jpg";
 
 const Wrapper = styled.section`
   width: 100%;

@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import imgHeader1 from "../assets/images/img-header-2.jpg";
-import imgHeader2 from "../assets/images/p-2.jpg";
-import imgHeader3 from "../assets/images/p-3.jpg";
+import imgHeader1 from "../../assets/images/img-header-2.jpg";
+import imgHeader2 from "../../assets/images/p-2.jpg";
+import imgHeader3 from "../../assets/images/p-3.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Parallax, Pagination, Navigation } from "swiper";
 import "swiper/css";
@@ -11,7 +11,7 @@ import "swiper/css/navigation";
 import { useInView } from "react-intersection-observer";
 import ContenidoHeader from "./ContenidoHeader";
 
-const Header = styled.header`
+const Wrapper = styled.header`
   width: 100%;
   height: 100vh;
   min-height: 800px;
@@ -43,7 +43,7 @@ const sliderStyles = {
   alignItems: "center",
 };
 
-const MainHeader = () => {
+const Header = () => {
   //CADA CONTENEDOR NECESITA SU PROPIO REF E INVIEW
   const [ref, inView] = useInView({
     rootMargin: "0px",
@@ -56,7 +56,7 @@ const MainHeader = () => {
   });
 
   return (
-    <Header>
+    <Wrapper>
       <Swiper
         style={{
           width: "100%",
@@ -100,8 +100,8 @@ const MainHeader = () => {
           />
         </SwiperSlide>
       </Swiper>
-    </Header>
+    </Wrapper>
   );
 };
 
-export default MainHeader;
+export default Header;
