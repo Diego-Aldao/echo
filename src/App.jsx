@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Navbar from "./components/Navbar";
 import MainHeader from "./components/MainHeader";
+import About from "./components/About";
 import CustomCursor from "custom-cursor-react";
 import "custom-cursor-react/dist/index.css";
 
@@ -23,6 +24,7 @@ const App = () => {
       />
       <Navbar />
       <MainHeader />
+      <About />
     </Wrapper>
   );
 };
