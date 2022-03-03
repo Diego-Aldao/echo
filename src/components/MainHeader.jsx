@@ -1,11 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import imgHeader1 from "../assets/images/img-header-2.jpg";
 import imgHeader2 from "../assets/images/p-2.jpg";
 import imgHeader3 from "../assets/images/p-3.jpg";
-import "splitting/dist/splitting.css";
-import "splitting/dist/splitting-cells.css";
-import Splitting from "splitting";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Parallax, Pagination, Navigation } from "swiper";
 import "swiper/css";
@@ -57,14 +54,6 @@ const MainHeader = () => {
   const [ref3, inView3] = useInView({
     rootMargin: "0px",
   });
-
-  useEffect(() => {
-    Splitting({
-      target: "[data-splitting]",
-      by: "chars",
-      key: null,
-    });
-  }, []);
 
   return (
     <Header>
