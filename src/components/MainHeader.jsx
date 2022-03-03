@@ -72,6 +72,7 @@ const MiniTexto = styled.h5`
   }
 `;
 const Titulo = styled.h2`
+  color: #fff;
   font-size: 28px;
   padding: 0px;
   margin: 0px;
@@ -195,7 +196,10 @@ const MainHeader = () => {
             >
               agencia
             </MiniTexto>
-            <Titulo data-splitting>
+            <Titulo
+              data-splitting
+              style={{ display: inView ? "flex" : "none" }}
+            >
               <a href="">diseño interior</a>
             </Titulo>
             <Info
@@ -222,7 +226,10 @@ const MainHeader = () => {
             >
               diseño
             </MiniTexto>
-            <Titulo data-splitting>
+            <Titulo
+              data-splitting
+              style={{ display: inView2 ? "flex" : "none" }}
+            >
               <a href="">interior innovador</a>
             </Titulo>
             <Info
@@ -255,7 +262,10 @@ const MainHeader = () => {
             >
               únicos &
             </MiniTexto>
-            <Titulo data-splitting>
+            <Titulo
+              data-splitting
+              style={{ display: inView3 ? "flex" : "none" }}
+            >
               <a href="">elegantes diseños</a>
             </Titulo>
             <Info
