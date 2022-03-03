@@ -12,6 +12,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useInView } from "react-intersection-observer";
+import ContenidoHeader from "./ContenidoHeader";
 
 const Header = styled.header`
   width: 100%;
@@ -190,102 +191,30 @@ const MainHeader = () => {
       >
         <SwiperSlide style={sliderStyles}>
           <HeaderImg data-swiper-parallax="75%" img={imgHeader1}></HeaderImg>
-          <HeaderContenido ref={ref}>
-            <MiniTexto
-              style={{ top: inView ? "0px" : "-20px", opacity: inView ? 1 : 0 }}
-            >
-              agencia
-            </MiniTexto>
-            <Titulo
-              data-splitting
-              style={{ display: inView ? "flex" : "none" }}
-            >
-              <a href="">diseño interior</a>
-            </Titulo>
-            <Info
-              style={{ top: inView ? "0px" : "20px", opacity: inView ? 1 : 0 }}
-            >
-              El diseño correcto y las ideas correctas importan mucho en el
-              diseño de interiores. <br /> Un estilo que marca tendencia.
-            </Info>
-            <Botton
-              style={{ top: inView ? "0px" : "20px", opacity: inView ? 1 : 0 }}
-            >
-              Descrubir trabajo
-            </Botton>
-          </HeaderContenido>
+          <ContenidoHeader
+            refObs={ref}
+            inView={inView}
+            miniTexto={"agencia"}
+            titulo={"diseño interior"}
+          />
         </SwiperSlide>
         <SwiperSlide style={sliderStyles}>
           <HeaderImg data-swiper-parallax="75%" img={imgHeader2}></HeaderImg>
-          <HeaderContenido ref={ref2}>
-            <MiniTexto
-              style={{
-                top: inView2 ? "0px" : "-20px",
-                opacity: inView2 ? 1 : 0,
-              }}
-            >
-              diseño
-            </MiniTexto>
-            <Titulo
-              data-splitting
-              style={{ display: inView2 ? "flex" : "none" }}
-            >
-              <a href="">interior innovador</a>
-            </Titulo>
-            <Info
-              style={{
-                top: inView2 ? "0px" : "20px",
-                opacity: inView2 ? 1 : 0,
-              }}
-            >
-              El diseño correcto y las ideas correctas importan mucho en el
-              diseño de interiores. <br /> Un estilo que marca tendencia.
-            </Info>
-            <Botton
-              style={{
-                top: inView2 ? "0px" : "20px",
-                opacity: inView2 ? 1 : 0,
-              }}
-            >
-              Descrubir trabajo
-            </Botton>
-          </HeaderContenido>
+          <ContenidoHeader
+            refObs={ref2}
+            inView={inView2}
+            miniTexto={"diseño"}
+            titulo={"interior innovador"}
+          />
         </SwiperSlide>
         <SwiperSlide style={sliderStyles}>
           <HeaderImg data-swiper-parallax="75%" img={imgHeader3}></HeaderImg>
-          <HeaderContenido ref={ref3}>
-            <MiniTexto
-              style={{
-                top: inView3 ? "0px" : "-20px",
-                opacity: inView3 ? 1 : 0,
-              }}
-            >
-              únicos &
-            </MiniTexto>
-            <Titulo
-              data-splitting
-              style={{ display: inView3 ? "flex" : "none" }}
-            >
-              <a href="">elegantes diseños</a>
-            </Titulo>
-            <Info
-              style={{
-                top: inView3 ? "0px" : "20px",
-                opacity: inView3 ? 1 : 0,
-              }}
-            >
-              El diseño correcto y las ideas correctas importan mucho en el
-              diseño de interiores. <br /> Un estilo que marca tendencia.
-            </Info>
-            <Botton
-              style={{
-                top: inView3 ? "0px" : "20px",
-                opacity: inView3 ? 1 : 0,
-              }}
-            >
-              Descrubir trabajo
-            </Botton>
-          </HeaderContenido>
+          <ContenidoHeader
+            refObs={ref3}
+            inView={inView3}
+            miniTexto={"únicos &"}
+            titulo={"elegantes diseños"}
+          />
         </SwiperSlide>
       </Swiper>
     </Header>
