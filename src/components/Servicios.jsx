@@ -3,14 +3,28 @@ import styled from "styled-components";
 import iconoSketch from "../assets/images/Iconos/sketch.png";
 import iconoFurniture from "../assets/images/Iconos/furniture.png";
 import iconoHome from "../assets/images/Iconos/home.png";
-/* import { MdDesignServices } from "react-icons/md"; */
-/* import { GiBedLamp } from "react-icons/gi";
-import { RiPlantFill } from "react-icons/gi"; */
 
 const Wrapper = styled.section`
   width: 100%;
-  padding: 0px 15px 140px;
+  padding-bottom: 140px;
   color: white;
+`;
+const Contenedor = styled.div`
+  padding: 0px 15px;
+  max-width: 540px;
+  margin: 0 auto;
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+  @media (min-width: 1400px) {
+    max-width: 1340px;
+  }
 `;
 
 const Titulo = styled.h3`
@@ -19,16 +33,25 @@ const Titulo = styled.h3`
   letter-spacing: 4px;
   text-transform: capitalize;
   margin: 0px;
+  @media (min-width: 480px) {
+    font-size: 60px;
+  }
 `;
 
 const ContenidoServicios = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  @media (min-width: 992px) {
+    flex-direction: row;
+  }
 `;
 
 const ItemServicios = styled.div`
   margin-top: 80px;
+  @media (min-width: 992px) {
+    padding-right: 35px;
+  }
 `;
 
 const Icono = styled.img`
@@ -56,33 +79,35 @@ const TextoItem = styled.p`
 const Servicios = () => {
   return (
     <Wrapper>
-      <Titulo>servicios</Titulo>
-      <ContenidoServicios>
-        <ItemServicios>
-          <Icono src={iconoSketch} />
-          <TituloItem>diseño & planificación</TituloItem>
-          <TextoItem>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio
-            dicta, neque aut repellat culpa eaque aliquid.
-          </TextoItem>
-        </ItemServicios>
-        <ItemServicios>
-          <Icono src={iconoFurniture} />
-          <TituloItem>muebles & deco</TituloItem>
-          <TextoItem>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio
-            dicta, neque aut repellat culpa eaque aliquid.
-          </TextoItem>
-        </ItemServicios>
-        <ItemServicios>
-          <Icono src={iconoHome} />
-          <TituloItem>diseño exterior</TituloItem>
-          <TextoItem>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio
-            dicta, neque aut repellat culpa eaque aliquid.
-          </TextoItem>
-        </ItemServicios>
-      </ContenidoServicios>
+      <Contenedor>
+        <Titulo>servicios</Titulo>
+        <ContenidoServicios>
+          <ItemServicios>
+            <Icono src={iconoSketch} />
+            <TituloItem>diseño & planificación</TituloItem>
+            <TextoItem>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Distinctio dicta, neque aut repellat culpa eaque aliquid.
+            </TextoItem>
+          </ItemServicios>
+          <ItemServicios>
+            <Icono src={iconoFurniture} />
+            <TituloItem>muebles & deco</TituloItem>
+            <TextoItem>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Distinctio dicta, neque aut repellat culpa eaque aliquid.
+            </TextoItem>
+          </ItemServicios>
+          <ItemServicios>
+            <Icono src={iconoHome} />
+            <TituloItem>diseño exterior</TituloItem>
+            <TextoItem>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Distinctio dicta, neque aut repellat culpa eaque aliquid.
+            </TextoItem>
+          </ItemServicios>
+        </ContenidoServicios>
+      </Contenedor>
     </Wrapper>
   );
 };
