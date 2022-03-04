@@ -6,7 +6,7 @@ import About from "./components/About/About";
 import CustomCursor from "custom-cursor-react";
 import "custom-cursor-react/dist/index.css";
 import Servicios from "./components/Servicios/Servicios";
-import Trabajos from "./components/Trabajos";
+import Trabajos from "./components/Trabajos/Trabajos";
 
 const Wrapper = styled.main``;
 

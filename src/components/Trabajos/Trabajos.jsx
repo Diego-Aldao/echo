@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import imgPeque from "../assets/images/img-peque.jpg";
-import imgGrande from "../assets/images/img-grande.jpg";
+import imgPeque from "../../assets/images/img-peque.jpg";
+import imgGrande from "../../assets/images/img-grande.jpg";
+import ImagenTrabajos from "./ImagenTrabajos";
 
 const Wrapper = styled.section`
   width: 100%;
@@ -45,16 +46,8 @@ const Grid = styled.div`
   grid-row-gap: 45px;
   @media (min-width: 768px) {
     grid-column-gap: 45px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
-`;
-
-const Imagen = styled.img`
-  width: 100%;
-  display: block;
-  object-fit: fill;
-  padding: 0px;
-  margin: 0px;
 `;
 
 const Trabajos = () => {
@@ -63,12 +56,13 @@ const Trabajos = () => {
       <Contenedor>
         <Titulo>trabajos</Titulo>
         <Grid>
-          <Imagen src={imgGrande} />
-          <Imagen src={imgPeque} />
-          <Imagen src={imgGrande} />
-          <Imagen src={imgPeque} />
-          <Imagen src={imgPeque} />
-          <Imagen src={imgGrande} />
+          <ImagenTrabajos img={imgGrande} column={"2 / 3"} row={"1 / 3"} />
+          <ImagenTrabajos img={imgPeque} column={"1 / 2"} row={"1 / 2"} />
+          <ImagenTrabajos img={imgGrande} column={"1 / 2"} row={"2 / 4"} />
+          <ImagenTrabajos img={imgPeque} column={"2 / 3"} row={"3 / 4"} />
+          <ImagenTrabajos img={imgPeque} column={"1 / 2"} row={"4 / 5"} />
+          <ImagenTrabajos img={imgGrande} column={"2 / 3"} row={"4 / 6"} />
+          <ImagenTrabajos img={imgPeque} column={"1 / 2"} row={"5 / 6"} />
         </Grid>
       </Contenedor>
     </Wrapper>
