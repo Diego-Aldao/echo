@@ -30,8 +30,11 @@ const Titulo = styled.h3`
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: capitalize;
-  margin: 0px 0px 20px;
+  margin: 0px 0px 60px;
   @media (min-width: 480px) {
+    font-size: 40px;
+  }
+  @media (min-width: 768px) {
     font-size: 60px;
   }
 `;
@@ -40,7 +43,12 @@ const Grid = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: repeat(6, auto-fill);
   grid-row-gap: 45px;
+  @media (min-width: 768px) {
+    grid-column-gap: 45px;
+    grid-template-columns: 1fr 1fr;
+  }
 `;
+
 const Imagen = styled.img`
   width: 100%;
   display: block;
