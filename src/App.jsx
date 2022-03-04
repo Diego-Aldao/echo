@@ -6,6 +6,7 @@ import About from "./components/About/About";
 import CustomCursor from "custom-cursor-react";
 import "custom-cursor-react/dist/index.css";
 import Servicios from "./components/Servicios/Servicios";
+import Trabajos from "./components/Trabajos";
 
 const Wrapper = styled.main``;
 
@@ -27,6 +28,7 @@ const App = () => {
       <MainHeader />
       <About />
       <Servicios />
+      <Trabajos />
     </Wrapper>
   );
 };
