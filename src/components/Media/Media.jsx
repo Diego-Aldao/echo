@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Background from "../../assets/images/bg-media.jpg";
 import { BsPlay } from "react-icons/bs";
@@ -71,6 +71,7 @@ const SubtituloMedia = styled.h6`
 `;
 
 const BtnPlay = styled.button`
+  display: ${(props) => (props.miVideo ? "none" : "inline")};
   width: 120px;
   height: 120px;
   background: none;
@@ -83,6 +84,7 @@ const BtnPlay = styled.button`
   top: 0px;
   bottom: 0px;
   text-align: center;
+  cursor: pointer;
 `;
 
 const IconoPlay = styled(BsPlay)`
@@ -92,12 +94,19 @@ const IconoPlay = styled(BsPlay)`
 `;
 
 const Media = () => {
+  const [miVideo, setMiVideo] = useState(false);
+
+  const handleClick = () => {
+    setMiVideo(!miVideo);
+    console.log(miVideo);
+  };
+
   return (
     <Wrapper>
       <ImagenBg src={Background} />
       <Contenedor>
-        <MediaModal />
-        <BtnPlay>
+        {miVideo && <MediaModal miVideo={miVideo} setMiVideo={setMiVideo} />}
+        <BtnPlay onClick={handleClick} miVideo={miVideo}>
           <IconoPlay />
         </BtnPlay>
         <CajaClientes>
