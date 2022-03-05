@@ -7,9 +7,9 @@ import MediaModal from "./MediaModal";
 const Wrapper = styled.section`
   width: 100%;
   position: relative;
-  margin-bottom: 140px;
   color: white;
-  height: 100vh;
+  height: 80vh;
+  min-height: 660px;
 `;
 const ImagenBg = styled.img`
   object-fit: cover;
@@ -48,12 +48,20 @@ const CajaClientes = styled.div`
   max-width: 136px;
   margin-right: 20px;
   background: black;
+  @media (min-width: 768px) {
+    padding: 30px 40px;
+    max-width: 200px;
+  }
 `;
 const CajaProductos = styled.div`
   padding: 20px;
   background: #fff;
   color: black;
   max-width: 136px;
+  @media (min-width: 768px) {
+    padding: 30px 40px;
+    max-width: 300px;
+  }
 `;
 const TituloMedia = styled.h4`
   font-size: 20px;
@@ -61,6 +69,9 @@ const TituloMedia = styled.h4`
   line-height: 1.4;
   margin: 0px;
   text-transform: capitalize;
+  @media (min-width: 768px) {
+    font-size: 30px;
+  }
 `;
 const SubtituloMedia = styled.h6`
   font-size: 15px;

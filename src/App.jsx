@@ -8,6 +8,7 @@ import "custom-cursor-react/dist/index.css";
 import Servicios from "./components/Servicios/Servicios";
 import Trabajos from "./components/Trabajos/Trabajos";
 import Media from "./components/Media/Media";
+import Equipo from "./components/Equipo/Equipo";
 
 const Wrapper = styled.main``;
 
@@ -31,6 +32,7 @@ const App = () => {
       <Servicios />
       <Trabajos />
       <Media />
+      <Equipo />
     </Wrapper>
   );
 };

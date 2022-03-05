@@ -25,17 +25,14 @@ const ContenedorVideo = styled.video`
 `;
 const BtnCerrar = styled.div`
   position: absolute;
-  width: 25px;
-  height: 25px;
-  top: 0px;
-  right: 15px;
-  color: black;
+  top: -5px;
+  right: -35px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   z-index: 1;
-  font-size: 25px;
+  font-size: 45px;
 `;
 
 const MediaModal = ({ miVideo, setMiVideo }) => {
