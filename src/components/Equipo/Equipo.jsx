@@ -16,7 +16,6 @@ const Contenedor = styled.div`
   }
   @media (min-width: 992px) {
     max-width: 960px;
-    display: flex;
   }
   @media (min-width: 1200px) {
     max-width: 1140px;
@@ -40,11 +39,16 @@ const ContenedorEquipo = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 `;
 
 const ItemEquipo = styled.div`
   width: 90%;
-  height: 400px;
+  height: 95vw;
   margin: 0px auto 50px;
   position: relative;
   &:after {
@@ -62,6 +66,19 @@ const ItemEquipo = styled.div`
     &:after {
       transform: rotate(5deg);
     }
+  }
+  @media (min-width: 768px) {
+    flex: 0 0 45%;
+    margin: 0px 0px 70px;
+    height: 55vw;
+    max-height: 450px;
+  }
+  @media (min-width: 992px) {
+    flex: 0 0 20%;
+    max-height: 250px;
+  }
+  @media (min-width: 1200px) {
+    max-height: 300px;
   }
 `;
 const ImagenEquipo = styled.img`
@@ -119,12 +136,24 @@ const Equipo = () => {
             <ImagenEquipo src={imgEquipo} />
           </ItemEquipo>
           <ItemEquipo>
+            <InfoEquipo>
+              <TituloEquipo>ryan hicks</TituloEquipo>
+              <SubEquipo>client manager</SubEquipo>
+            </InfoEquipo>
             <ImagenEquipo src={imgEquipo} />
           </ItemEquipo>
           <ItemEquipo>
+            <InfoEquipo>
+              <TituloEquipo>ryan hicks</TituloEquipo>
+              <SubEquipo>client manager</SubEquipo>
+            </InfoEquipo>
             <ImagenEquipo src={imgEquipo} />
           </ItemEquipo>
           <ItemEquipo>
+            <InfoEquipo>
+              <TituloEquipo>ryan hicks</TituloEquipo>
+              <SubEquipo>client manager</SubEquipo>
+            </InfoEquipo>
             <ImagenEquipo src={imgEquipo} />
           </ItemEquipo>
         </ContenedorEquipo>
