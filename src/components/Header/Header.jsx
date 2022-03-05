@@ -68,6 +68,10 @@ const Header = () => {
         pagination={{
           type: "fraction",
         }}
+        autoplay={{
+          delay: 1000,
+          disableOnInteraction: false,
+        }}
         navigation={true}
         modules={[Parallax, Pagination, Navigation]}
         className="mySwiper"
