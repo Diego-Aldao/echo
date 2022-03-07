@@ -3,10 +3,10 @@ import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import img from "../../assets/images/p-1.jpg";
 import "swiper/css";
+import { Autoplay } from "swiper";
 
 const Wrapper = styled.section`
   width: 100%;
-  padding: 140px 0px;
 `;
 const Contenedor = styled(Swiper)`
   padding: 0px 15px;
@@ -92,12 +92,23 @@ const Testimonios = () => {
   return (
     <Wrapper>
       <Contenedor
+        speed={1000}
         slidesPerView={1}
         spaceBetween={40}
         style={{
           width: "100%",
           height: "100%",
         }}
+        breakpoints={{
+          768: {
+            slidesPerView: 2,
+          },
+        }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay]}
         className="mySwiper2"
       >
         <SwiperSlide
@@ -110,8 +121,7 @@ const Testimonios = () => {
             <Texto>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Praesentium, et esse. Cum nihil ipsa quae voluptate suscipit
-              aliquid cupiditate quas quam quidem vitae impedit earum, ad
-              quisquam illum quasi quia?
+              aliquid cupiditate quas quam quidem vitae impedit earum.
             </Texto>
             <Autor>
               <ImgAutor>
@@ -133,8 +143,7 @@ const Testimonios = () => {
             <Texto>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Praesentium, et esse. Cum nihil ipsa quae voluptate suscipit
-              aliquid cupiditate quas quam quidem vitae impedit earum, ad
-              quisquam illum quasi quia?
+              aliquid cupiditate quas quam quidem vitae impedit earum
             </Texto>
             <Autor>
               <ImgAutor>
@@ -156,8 +165,7 @@ const Testimonios = () => {
             <Texto>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Praesentium, et esse. Cum nihil ipsa quae voluptate suscipit
-              aliquid cupiditate quas quam quidem vitae impedit earum, ad
-              quisquam illum quasi quia?
+              aliquid cupiditate quas quam quidem vitae impedit earum
             </Texto>
             <Autor>
               <ImgAutor>
@@ -179,8 +187,7 @@ const Testimonios = () => {
             <Texto>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Praesentium, et esse. Cum nihil ipsa quae voluptate suscipit
-              aliquid cupiditate quas quam quidem vitae impedit earum, ad
-              quisquam illum quasi quia?
+              aliquid cupiditate quas quam quidem vitae impedit earum
             </Texto>
             <Autor>
               <ImgAutor>
