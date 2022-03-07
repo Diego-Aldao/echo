@@ -11,6 +11,7 @@ import Media from "./components/Media/Media";
 import Equipo from "./components/Equipo/Equipo";
 import Testimonios from "./components/Testimonios/Testimonios";
 import Noticias from "./components/Noticias/Noticias";
+import Footer from "./components/Footer/Footer";
 
 const Wrapper = styled.main``;
 
@@ -37,6 +38,7 @@ const App = () => {
       <Equipo />
       <Testimonios />
       <Noticias />
+      <Footer />
     </Wrapper>
   );
 };
