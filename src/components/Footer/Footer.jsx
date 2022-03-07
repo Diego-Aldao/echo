@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Contacto from "./Contacto";
 
 const Wrapper = styled.section`
   width: 100%;
@@ -26,7 +27,9 @@ const Contenedor = styled.div`
 const Footer = () => {
   return (
     <Wrapper>
-      <Contenedor></Contenedor>
+      <Contenedor>
+        <Contacto />
+      </Contenedor>
     </Wrapper>
   );
 };
