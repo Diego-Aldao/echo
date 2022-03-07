@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import ItemNoticia from "./ItemNoticia";
 
@@ -45,14 +45,15 @@ const Contenido = styled.div`
 `;
 
 const Noticias = () => {
+  const [bgOpacity, setBgOpacity] = useState("#00000086");
   return (
     <Wrapper>
       <Contenedor>
         <Titulo>noticias</Titulo>
         <Contenido>
+          <ItemNoticia bgOpacity={bgOpacity} />
           <ItemNoticia />
-          <ItemNoticia />
-          <ItemNoticia />
+          <ItemNoticia bgOpacity={bgOpacity} />
         </Contenido>
       </Contenedor>
     </Wrapper>

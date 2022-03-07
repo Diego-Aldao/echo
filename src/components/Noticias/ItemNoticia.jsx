@@ -11,8 +11,27 @@ const Item = styled.div`
   @media (min-width: 992px) {
     margin: 0px 15px 0px;
   }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: ${(props) => props.bgOpacity};
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover {
+    &:after {
+      background: none;
+    }
+  }
 `;
 
+const Info = styled.div`
+  position: relative;
+  z-index: 4;
+`;
 const Fecha = styled.span`
   font-size: 11px;
   padding: 5px 10px;
@@ -57,16 +76,18 @@ const Boton = styled.a`
   line-height: 1.4;
 `;
 
-const ItemNoticia = () => {
+const ItemNoticia = ({ bgOpacity }) => {
   return (
-    <Item>
-      <Fecha>agosto 06</Fecha>
-      <Tags>
-        <span>admin</span>
-        <span>WordPress</span>
-      </Tags>
-      <Titulo>double rectangle houses from old containers.</Titulo>
-      <Boton>leer mas</Boton>
+    <Item bgOpacity={bgOpacity}>
+      <Info>
+        <Fecha>agosto 06</Fecha>
+        <Tags>
+          <span>admin</span>
+          <span>WordPress</span>
+        </Tags>
+        <Titulo>double rectangle houses from old containers.</Titulo>
+        <Boton>leer mas</Boton>
+      </Info>
     </Item>
   );
 };
