@@ -34,12 +34,18 @@ const Titulo = styled.h3`
     font-size: 60px;
   }
 `;
+const Contenido = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+`;
 
 const Noticias = () => {
   return (
     <Wrapper>
       <Contenedor>
         <Titulo>noticias</Titulo>
+        <Contenido></Contenido>
       </Contenedor>
     </Wrapper>
   );
