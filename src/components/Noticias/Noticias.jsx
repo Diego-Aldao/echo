@@ -39,6 +39,9 @@ const Contenido = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
+  @media (min-width: 992px) {
+    flex-direction: row;
+  }
 `;
 
 const Noticias = () => {

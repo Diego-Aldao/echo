@@ -1,11 +1,18 @@
 import React from "react";
 import styled from "styled-components";
+import ImgPrueba from "../../assets/images/img-header-1.jpg";
 
 const Item = styled.div`
   padding: 50px 30px;
   margin-bottom: 50px;
   color: #fff;
+  position: relative;
+  background: url(${ImgPrueba});
+  @media (min-width: 992px) {
+    margin: 0px 15px 0px;
+  }
 `;
+
 const Fecha = styled.span`
   font-size: 11px;
   padding: 5px 10px;
