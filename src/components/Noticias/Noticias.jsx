@@ -23,10 +23,24 @@ const Contenedor = styled.div`
   }
 `;
 
+const Titulo = styled.h3`
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: capitalize;
+  margin: 0px 0px 50px;
+  color: white;
+  @media (min-width: 480px) {
+    font-size: 60px;
+  }
+`;
+
 const Noticias = () => {
   return (
     <Wrapper>
-      <Contenedor></Contenedor>
+      <Contenedor>
+        <Titulo>noticias</Titulo>
+      </Contenedor>
     </Wrapper>
   );
 };
