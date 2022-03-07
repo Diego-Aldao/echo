@@ -45,7 +45,7 @@ const Contenido = styled.div`
 `;
 
 const Noticias = () => {
-  const [bgOpacity, setBgOpacity] = useState("#00000086");
+  const [bgOpacity, setBgOpacity] = useState("#000000b0");
   return (
     <Wrapper>
       <Contenedor>
