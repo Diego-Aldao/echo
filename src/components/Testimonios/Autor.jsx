@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { ImQuotesLeft } from "react-icons/im";
 
 const Contenido = styled.div`
   width: 100%;
@@ -12,6 +13,17 @@ const Texto = styled.p`
   font-weight: 400;
   color: #fff;
   line-height: 2;
+  position: relative;
+`;
+const Icono = styled(ImQuotesLeft)`
+  color: #ffffff47;
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  padding: 0px 5px;
+  font-size: 42px;
+  background: #000;
+  z-index: 22;
 `;
 const Info = styled.div`
   display: flex;
@@ -28,7 +40,6 @@ const Info = styled.div`
     position: absolute;
     left: 100px;
     top: -20px;
-    z-index: 24;
   }
 `;
 const ImgAutor = styled.div`
@@ -65,6 +76,7 @@ const NombreAutor = styled.h6`
 const Autor = ({ img, nombre, cargo }) => {
   return (
     <Contenido>
+      <Icono />
       <Texto>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium,
         et esse. Cum nihil ipsa quae voluptate suscipit aliquid cupiditate quas
