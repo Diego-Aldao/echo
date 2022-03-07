@@ -9,6 +9,7 @@ import Servicios from "./components/Servicios/Servicios";
 import Trabajos from "./components/Trabajos/Trabajos";
 import Media from "./components/Media/Media";
 import Equipo from "./components/Equipo/Equipo";
+import Testimonios from "./components/Testimonios/Testimonios";
 
 const Wrapper = styled.main``;
 
@@ -33,6 +34,7 @@ const App = () => {
       <Trabajos />
       <Media />
       <Equipo />
+      <Testimonios />
     </Wrapper>
   );
 };
