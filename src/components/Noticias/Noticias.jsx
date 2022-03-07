@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import ItemNoticia from "./ItemNoticia";
 
 const Wrapper = styled.section`
   width: 100%;
@@ -45,7 +46,11 @@ const Noticias = () => {
     <Wrapper>
       <Contenedor>
         <Titulo>noticias</Titulo>
-        <Contenido></Contenido>
+        <Contenido>
+          <ItemNoticia />
+          <ItemNoticia />
+          <ItemNoticia />
+        </Contenido>
       </Contenedor>
     </Wrapper>
   );
