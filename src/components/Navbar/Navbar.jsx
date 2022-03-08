@@ -106,7 +106,7 @@ const Navbar = () => {
             <a href="">about</a>
           </LinkNav>
           <LinkNav onClick={() => setModal(!modal)}>
-            <span>
+            <span className="dropdown">
               portfolio <RiArrowDownSFill />
             </span>
             <Dropdown modal={modal} />
