@@ -8,8 +8,10 @@ const Contenido = styled.div`
   min-width: 11rem;
   border-top: 2px solid #c5a47e;
   position: absolute;
-  top: 60px;
+  top: ${(props) => (props.modal ? "60px" : "70px")};
   left: -10px;
+  visibility: ${(props) => (props.modal ? "visible" : "hidden")};
+  opacity: ${(props) => (props.modal ? "1" : "0")};
 `;
 const ItemContenido = styled.a`
   width: 100%;
@@ -40,9 +42,9 @@ const ItemContenido = styled.a`
   }
 `;
 
-const Dropdown = () => {
+const Dropdown = ({ modal }) => {
   return (
-    <Contenido>
+    <Contenido modal={modal}>
       <ItemContenido>item uno</ItemContenido>
       <ItemContenido>item uno</ItemContenido>
       <ItemContenido>item uno</ItemContenido>

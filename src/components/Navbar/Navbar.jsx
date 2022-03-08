@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { MdOutlineMenuOpen } from "react-icons/md";
 import { RiArrowDownSFill } from "react-icons/ri";
+import Dropdown from "./Dropdown";
 
 const Nav = styled.nav`
   height: 60px;
@@ -80,9 +81,14 @@ const LinkNav = styled.li`
   font-size: 0.938rem;
   font-weight: 500;
   letter-spacing: 1px;
+  position: relative;
+  span {
+    cursor: pointer;
+  }
 `;
 
 const Navbar = () => {
+  const [modal, setModal] = useState(false);
   return (
     <Nav>
       <Contenedor>
@@ -93,20 +99,21 @@ const Navbar = () => {
         <LinksNav>
           <LinkNav>
             <span>
-              inicio <RiArrowDownSFill />
+              <a href="">inicio</a>
             </span>
           </LinkNav>
           <LinkNav>
             <a href="">about</a>
           </LinkNav>
-          <LinkNav>
+          <LinkNav onClick={() => setModal(!modal)}>
             <span>
               portfolio <RiArrowDownSFill />
             </span>
+            <Dropdown modal={modal} />
           </LinkNav>
           <LinkNav>
             <span>
-              blog <RiArrowDownSFill />
+              <a href="">blog</a>
             </span>
           </LinkNav>
           <LinkNav>
