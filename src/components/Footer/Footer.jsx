@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Contacto from "./Contacto";
+import Extra from "./Extra";
 import Reciente from "./Reciente";
 
 const Wrapper = styled.section`
@@ -31,6 +32,7 @@ const Footer = () => {
       <Contenedor>
         <Contacto />
         <Reciente />
+        <Extra />
       </Contenedor>
     </Wrapper>
   );
