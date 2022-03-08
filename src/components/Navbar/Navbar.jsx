@@ -58,6 +58,9 @@ const Hamburguesa = styled.span`
   color: #fff;
   font-size: 1.9rem;
   font-weight: 100;
+  transform: ${(props) =>
+    props.navegacion ? "rotate(0deg)" : "rotate(180deg)"};
+  transition: all 0.4s;
   @media (min-width: 992px) {
     display: none;
   }
@@ -91,12 +94,16 @@ const LinkNav = styled.li`
 
 const Navbar = () => {
   const [modal, setModal] = useState(false);
+  const [navegacion, setNavegacion] = useState(false);
   return (
     <Nav>
       <Contenedor>
-        <NavMovil />
+        <NavMovil navegacion={navegacion} setNavegacion={setNavegacion} />
         <Logo>echo</Logo>
-        <Hamburguesa>
+        <Hamburguesa
+          onClick={() => setNavegacion(!navegacion)}
+          navegacion={navegacion}
+        >
           <MdOutlineMenuOpen />
         </Hamburguesa>
         <LinksNav>

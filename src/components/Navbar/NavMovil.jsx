@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { RiArrowDownSFill } from "react-icons/ri";
 
@@ -8,11 +8,12 @@ const Contenedor = styled.div`
   height: auto;
   display: block;
   position: absolute;
-  top: 45px;
-  left: 0px;
+  top: ${(props) => (props.navegacion ? "45px" : "55px")};
+  left: ${(props) => (props.navegacion ? "0px" : "-20px")};
   background: black;
-  visibility: visible;
-  opacity: 1;
+  transition: all 0.4s;
+  visibility: ${(props) => (props.navegacion ? "visible" : "hidden")};
+  opacity: ${(props) => (props.navegacion ? "1" : "0")};
   ul {
     list-style: none;
     margin: 0px;
@@ -34,9 +35,9 @@ const Contenedor = styled.div`
   }
 `;
 
-const NavMovil = () => {
+const NavMovil = ({ navegacion }) => {
   return (
-    <Contenedor>
+    <Contenedor navegacion={navegacion}>
       <ul>
         <li>
           <a href="">inicio</a>
