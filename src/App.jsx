@@ -19,7 +19,7 @@ const App = () => {
   return (
     <Wrapper>
       <CustomCursor
-        targets={["a, h1"]}
+        targets={["a, button"]}
         dimensions={30}
         fill={"#c5a47e"}
         smoothness={{
