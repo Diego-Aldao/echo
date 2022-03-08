@@ -6,14 +6,14 @@ import { useState } from "react";
 const Contenedor = styled.div`
   padding: 10px 15px;
   width: 100%;
-  height: auto;
+  max-height: ${(props) => (props.navegacion ? "500px" : "0px")};
+  overflow: hidden;
   display: block;
   position: absolute;
-  top: ${(props) => (props.navegacion ? "45px" : "55px")};
-  left: ${(props) => (props.navegacion ? "0px" : "-20px")};
+  top: 45px;
+  left: 0px;
   background: black;
   transition: all 0.4s;
-  visibility: ${(props) => (props.navegacion ? "visible" : "hidden")};
   opacity: ${(props) => (props.navegacion ? "1" : "0")};
   ul {
     list-style: none;
