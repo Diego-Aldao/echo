@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Contacto from "./Contacto";
+import Reciente from "./Reciente";
 
 const Wrapper = styled.section`
   width: 100%;
@@ -29,6 +30,7 @@ const Footer = () => {
     <Wrapper>
       <Contenedor>
         <Contacto />
+        <Reciente />
       </Contenedor>
     </Wrapper>
   );

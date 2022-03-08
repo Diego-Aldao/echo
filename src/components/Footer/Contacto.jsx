@@ -6,6 +6,7 @@ import { BsTelephone } from "react-icons/bs";
 
 const Contenido = styled.div`
   padding: 0px 25px;
+  margin-bottom: 50px;
 `;
 
 const Titulo = styled.h5`
