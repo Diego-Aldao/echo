@@ -7,6 +7,13 @@ import { BsTelephone } from "react-icons/bs";
 const Contenido = styled.div`
   padding: 0px 25px;
   margin-bottom: 50px;
+  @media (min-width: 768px) {
+    padding: 0px;
+  }
+  @media (min-width: 992px) {
+    padding: 0px 15px;
+    flex: 0 0 33.3333333%;
+  }
 `;
 
 const Titulo = styled.h5`
@@ -16,6 +23,9 @@ const Titulo = styled.h5`
   font-size: 18px;
   text-transform: capitalize;
   font-family: var(--fuente-jost);
+  @media (min-width: 768px) {
+    font-size: 25px;
+  }
 `;
 const Info = styled.ul`
   margin-bottom: 20px;

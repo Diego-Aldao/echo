@@ -8,6 +8,10 @@ import { GrYoutube } from "react-icons/gr";
 const Contenido = styled.div`
   padding: 0px;
   margin-bottom: 50px;
+  @media (min-width: 992px) {
+    padding: 0px 15px;
+    flex: 0 0 33.3333333%;
+  }
 `;
 
 const Logo = styled.span`
@@ -22,8 +26,7 @@ const Logo = styled.span`
 const Redes = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 50px 0px 30px;
+  margin: 30px 0px;
   span {
     width: 60px;
     height: 60px;
@@ -32,6 +35,7 @@ const Redes = styled.div`
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.05);
     font-size: 18px;
+    margin-right: 10px;
   }
 `;
 const Copy = styled.p`

@@ -6,6 +6,13 @@ import { RiSendPlaneFill } from "react-icons/ri";
 const Contenido = styled.div`
   padding: 0px 25px;
   margin-bottom: 50px;
+  @media (min-width: 768px) {
+    padding: 0px;
+  }
+  @media (min-width: 992px) {
+    padding: 0px 15px;
+    flex: 0 0 33.3333333%;
+  }
 `;
 
 const Titulo = styled.h5`
@@ -15,6 +22,9 @@ const Titulo = styled.h5`
   font-size: 18px;
   text-transform: capitalize;
   font-family: var(--fuente-jost);
+  @media (min-width: 768px) {
+    font-size: 25px;
+  }
 `;
 const Info = styled.ul`
   margin-bottom: 40px;
@@ -22,6 +32,23 @@ const Info = styled.ul`
   li {
     display: flex;
     margin-bottom: 25px;
+  }
+`;
+
+const Icono = styled.div`
+  color: white;
+  margin-right: 25px;
+  width: 30vw;
+  max-width: 150px;
+  height: 18vw;
+  max-height: 100px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  @media (min-width: 992px) {
+    max-width: 82px;
+    max-height: 55px;
   }
 `;
 
@@ -42,22 +69,12 @@ const FechaInfo = styled.span`
   margin-top: 5px;
 `;
 
-const Icono = styled.div`
-  color: white;
-  margin-right: 25px;
-  max-width: 55px;
-  max-height: 35px;
-  img {
-    width: 100%;
-    height: 100%;
-  }
-`;
 const Newsletter = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
   input {
-    width: 70%;
+    width: 75%;
     padding: 15px;
     border: 1px solid rgba(255, 255, 255, 0.247);
     background: transparent;
