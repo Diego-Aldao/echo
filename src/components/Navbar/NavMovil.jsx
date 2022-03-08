@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { RiArrowDownSFill } from "react-icons/ri";
+import { useState } from "react";
 
 const Contenedor = styled.div`
   padding: 10px 15px;
@@ -35,7 +36,31 @@ const Contenedor = styled.div`
   }
 `;
 
+const Dropdown = styled.div`
+  max-height: ${(props) => (props.toggle ? "500px" : "0px")};
+  overflow: hidden;
+  padding: ${(props) => (props.toggle ? "10px 0px" : "0px")};
+  border-top: 2px solid #c5a47e;
+  transition: all 0.4s;
+  opacity: ${(props) => (props.toggle ? "1" : "0")};
+`;
+const ItemDropdown = styled.a`
+  width: 100%;
+  display: block;
+  color: #fff;
+  padding: 10px 25px;
+  position: relative;
+  font-size: 13px;
+  opacity: 0.9;
+  font-weight: 400;
+  transition: all 0.4s;
+  &:hover {
+    color: var(--color-principal);
+  }
+`;
+
 const NavMovil = ({ navegacion }) => {
+  const [toggle, setToggle] = useState(false);
   return (
     <Contenedor navegacion={navegacion}>
       <ul>
@@ -45,11 +70,17 @@ const NavMovil = ({ navegacion }) => {
         <li>
           <a href="">about</a>
         </li>
-        <li>
-          <a href="">
+        <li onClick={() => setToggle(!toggle)}>
+          <a href="#">
             portfolio
             <RiArrowDownSFill />
           </a>
+          <Dropdown toggle={toggle}>
+            <ItemDropdown>item uno</ItemDropdown>
+            <ItemDropdown>item uno</ItemDropdown>
+            <ItemDropdown>item uno</ItemDropdown>
+            <ItemDropdown>item uno</ItemDropdown>
+          </Dropdown>
         </li>
         <li>
           <a href="">blog</a>
