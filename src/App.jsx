@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import MainHeader from "./components/Header/Header";
 import About from "./components/About/About";
 import CustomCursor from "custom-cursor-react";
