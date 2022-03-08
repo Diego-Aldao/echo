@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { MdOutlineMenuOpen } from "react-icons/md";
 import { RiArrowDownSFill } from "react-icons/ri";
 import Dropdown from "./Dropdown";
+import NavMovil from "./NavMovil";
 
 const Nav = styled.nav`
   height: 60px;
@@ -25,6 +26,7 @@ const Contenedor = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0px 15px;
+  position: relative;
   @media (min-width: 992px) {
     max-width: 960px;
     height: 72px;
@@ -92,6 +94,7 @@ const Navbar = () => {
   return (
     <Nav>
       <Contenedor>
+        <NavMovil />
         <Logo>echo</Logo>
         <Hamburguesa>
           <MdOutlineMenuOpen />
