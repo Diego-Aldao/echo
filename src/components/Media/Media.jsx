@@ -9,7 +9,8 @@ const Wrapper = styled.section`
   position: relative;
   color: white;
   height: 80vh;
-  min-height: 660px;
+  min-height: 560px;
+  max-height: 900px;
 `;
 const ImagenBg = styled.img`
   object-fit: cover;
