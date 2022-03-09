@@ -7,6 +7,7 @@ const Wrapper = styled.section`
   width: 100%;
   padding: 140px 0px;
   color: #fff;
+  cursor: default;
 `;
 const Contenedor = styled.div`
   padding: 0px 15px;

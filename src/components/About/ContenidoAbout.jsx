@@ -73,6 +73,18 @@ const TextoCaja = styled.p`
   color: var(--color-parrafos);
   line-height: 2;
 `;
+const BotonCaja = styled.a`
+  padding: 10px 15px;
+  display: block;
+  width: 100px;
+  margin-top: 30px;
+  font-size: 16px;
+  border: 1px solid var(--color-principal);
+  text-align: center;
+  margin-left: auto;
+  text-transform: capitalize;
+  font-family: var(--fuente-jost);
+`;
 
 const ContenidoAbout = () => {
   return (
@@ -87,6 +99,7 @@ const ContenidoAbout = () => {
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
           accusantium doloremque laudantium, totam rem aperiam
         </TextoCaja>
+        <BotonCaja>ver mas</BotonCaja>
       </CajaAbout>
     </Contenido>
   );
