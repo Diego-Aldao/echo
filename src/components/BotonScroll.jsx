@@ -42,7 +42,13 @@ const BotonScroll = () => {
   return (
     <Caja scrollTop={scrollTop}>
       <Flecha />
-      <Circle percent={scrollTop} strokeWidth="7" strokeColor={"#c5a47e"} />;
+      <Circle
+        percent={scrollTop}
+        strokeWidth="7"
+        strokeColor={"#c5a47e"}
+        trailWidth={0.1}
+      />
+      ;
     </Caja>
   );
 };
