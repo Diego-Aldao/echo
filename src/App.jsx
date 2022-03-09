@@ -12,6 +12,7 @@ import Equipo from "./components/Equipo/Equipo";
 import Testimonios from "./components/Testimonios/Testimonios";
 import Noticias from "./components/Noticias/Noticias";
 import Footer from "./components/Footer/Footer";
+import BotonScroll from "./components/BotonScroll";
 
 const Wrapper = styled.main``;
 
@@ -39,6 +40,7 @@ const App = () => {
       <Testimonios />
       <Noticias />
       <Footer />
+      <BotonScroll />
     </Wrapper>
   );
 };
