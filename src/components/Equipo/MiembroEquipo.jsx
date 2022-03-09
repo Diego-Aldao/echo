@@ -77,14 +77,14 @@ const SubEquipo = styled.span`
   font-family: var(--fuente-poppins);
 `;
 
-const MiembroEquipo = ({ imgMiembro }) => {
+const MiembroEquipo = ({ imgEquipo }) => {
   return (
     <ItemEquipo>
       <InfoEquipo>
         <TituloEquipo>ryan hicks</TituloEquipo>
         <SubEquipo>client manager</SubEquipo>
       </InfoEquipo>
-      <ImagenEquipo src={imgMiembro} />
+      <ImagenEquipo src={imgEquipo} />
     </ItemEquipo>
   );
 };

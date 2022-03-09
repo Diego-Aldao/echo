@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import imgEquipo from "../../assets/images/img-grande.jpg";
+import imgEquipoUno from "../../assets/images/Equipo/equipo-01.webp";
+import imgEquipoDos from "../../assets/images/Equipo/equipo-02.webp";
+import imgEquipoTres from "../../assets/images/Equipo/equipo-03.webp";
+import imgEquipoCuatro from "../../assets/images/Equipo/equipo-04.webp";
 import MiembroEquipo from "./MiembroEquipo";
 
 const Wrapper = styled.section`
@@ -53,10 +56,10 @@ const Equipo = () => {
       <Contenedor>
         <Titulo>nuestro equipo</Titulo>
         <ContenedorEquipo>
-          <MiembroEquipo imgMiembro={imgEquipo} />
-          <MiembroEquipo imgMiembro={imgEquipo} />
-          <MiembroEquipo imgMiembro={imgEquipo} />
-          <MiembroEquipo imgMiembro={imgEquipo} />
+          <MiembroEquipo imgEquipo={imgEquipoUno} />
+          <MiembroEquipo imgEquipo={imgEquipoDos} />
+          <MiembroEquipo imgEquipo={imgEquipoTres} />
+          <MiembroEquipo imgEquipo={imgEquipoCuatro} />
         </ContenedorEquipo>
       </Contenedor>
     </Wrapper>
