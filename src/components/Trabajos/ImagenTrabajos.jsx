@@ -29,10 +29,13 @@ const Info = styled.a`
   flex-direction: column;
   justify-content: flex-end;
   padding: 35px;
-  opacity: 0;
+  opacity: 1;
   transition: all 0.4s;
-  &:hover {
-    opacity: 1;
+  @media (min-width: 992px) {
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+    }
   }
   h5 {
     font-size: 17px;
