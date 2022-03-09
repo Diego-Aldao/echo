@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Background from "../../assets/images/bg-media.jpg";
+import Background from "../../assets/images/Media/img-media.webp";
 import { BsPlay } from "react-icons/bs";
 import MediaModal from "./MediaModal";
 
