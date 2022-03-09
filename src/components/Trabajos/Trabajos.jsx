@@ -1,7 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import imgPeque from "../../assets/images/img-peque.jpg";
-import imgGrande from "../../assets/images/img-grande.jpg";
+import imgPequeUno from "../../assets/images/Trabajos/trabajo-peque-01.webp";
+import imgPequeDos from "../../assets/images/Trabajos/trabajo-peque-02.webp";
+import imgPequeTres from "../../assets/images/Trabajos/trabajo-peque-03.webp";
+import imgGrandeUno from "../../assets/images/Trabajos/trabajo-grande-01.webp";
+import imgGrandeDos from "../../assets/images/Trabajos/trabajo-grande-02.webp";
+import imgGrandeTres from "../../assets/images/Trabajos/trabajo-grande-03.webp";
 import ImagenTrabajos from "./ImagenTrabajos";
 
 const Wrapper = styled.section`
@@ -56,13 +60,13 @@ const Trabajos = () => {
       <Contenedor>
         <Titulo>trabajos</Titulo>
         <Grid>
-          <ImagenTrabajos img={imgGrande} column={"2 / 3"} row={"1 / 3"} />
-          <ImagenTrabajos img={imgPeque} column={"1 / 2"} row={"1 / 2"} />
-          <ImagenTrabajos img={imgGrande} column={"1 / 2"} row={"2 / 4"} />
-          <ImagenTrabajos img={imgPeque} column={"2 / 3"} row={"3 / 4"} />
-          <ImagenTrabajos img={imgPeque} column={"1 / 2"} row={"4 / 5"} />
-          <ImagenTrabajos img={imgGrande} column={"2 / 3"} row={"4 / 6"} />
-          <ImagenTrabajos img={imgPeque} column={"1 / 2"} row={"5 / 6"} />
+          <ImagenTrabajos img={imgGrandeUno} column={"2 / 3"} row={"1 / 3"} />
+          <ImagenTrabajos img={imgPequeUno} column={"1 / 2"} row={"1 / 2"} />
+          <ImagenTrabajos img={imgGrandeDos} column={"1 / 2"} row={"2 / 4"} />
+          <ImagenTrabajos img={imgPequeDos} column={"2 / 3"} row={"3 / 4"} />
+          <ImagenTrabajos img={imgPequeTres} column={"1 / 2"} row={"4 / 5"} />
+          <ImagenTrabajos img={imgGrandeTres} column={"2 / 3"} row={"4 / 6"} />
+          <ImagenTrabajos img={imgPequeUno} column={"1 / 2"} row={"5 / 6"} />
         </Grid>
       </Contenedor>
     </Wrapper>
