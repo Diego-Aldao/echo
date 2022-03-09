@@ -17,6 +17,7 @@ const Wrapper = styled.header`
   min-height: 800px;
   background: black;
   position: relative;
+  cursor: default;
 `;
 const HeaderImg = styled.div`
   position: absolute;

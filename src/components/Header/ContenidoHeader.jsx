@@ -86,6 +86,7 @@ const Botton = styled.a`
   letter-spacing: 0.5px;
   transition: all 0.8s;
   transition-delay: 0.4s;
+  cursor: pointer;
   &:after {
     content: "";
     width: 99.5%;
@@ -137,7 +138,7 @@ const ContenidoHeader = ({ refObs, inView, miniTexto, titulo }) => {
     <HeaderContenido ref={refObs}>
       <MiniTexto style={stylesObserverMini}>{miniTexto}</MiniTexto>
       <Titulo data-splitting style={stylesObserverTitulo}>
-        <a href="">{titulo}</a>
+        {titulo}
       </Titulo>
       <Info style={stylesObserverInfoBtn}>
         El diseño correcto y las ideas correctas importan mucho en el diseño de
