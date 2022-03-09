@@ -16,10 +16,16 @@ const ItemEquipo = styled.div`
     left: 0px;
     z-index: -1;
     transition: all 0.3s ease-in-out;
+    transform: rotate(1deg);
   }
-  &:hover {
+  @media (min-width: 992px) {
     &:after {
-      transform: rotate(5deg);
+      transform: rotate(1deg);
+    }
+    &:hover {
+      &:after {
+        transform: rotate(5deg);
+      }
     }
   }
   @media (min-width: 768px) {
@@ -33,13 +39,18 @@ const ItemEquipo = styled.div`
     max-height: 250px;
   }
   @media (min-width: 1200px) {
-    max-height: 300px;
+    height: 24vw;
+    max-height: 750px;
+  }
+  @media (min-width: 1400px) {
+    height: 28vw;
+    max-height: 750px;
   }
 `;
 const ImagenEquipo = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
   position: relative;
 `;
 const InfoEquipo = styled.div`
@@ -49,15 +60,18 @@ const InfoEquipo = styled.div`
   width: 100%;
   height: 100%;
   background: #00000052;
-  opacity: 0;
+  opacity: 1;
   z-index: 22;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 20px;
   transition: all 0.3s ease-in-out;
-  &:hover {
-    opacity: 1;
+  @media (min-width: 992px) {
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+    }
   }
 `;
 

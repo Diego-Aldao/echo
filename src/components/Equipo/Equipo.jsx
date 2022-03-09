@@ -40,13 +40,27 @@ const Titulo = styled.h3`
   }
 `;
 const ContenedorEquipo = styled.div`
+  padding: 0px 15px;
   width: 100%;
   display: flex;
   flex-direction: column;
+  max-width: 540px;
+  margin: 0 auto;
   @media (min-width: 768px) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    max-width: 720px;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+  @media (min-width: 1400px) {
+    max-width: 100%;
+    padding: 0px 35px;
   }
 `;
 
@@ -55,13 +69,13 @@ const Equipo = () => {
     <Wrapper>
       <Contenedor>
         <Titulo>nuestro equipo</Titulo>
-        <ContenedorEquipo>
-          <MiembroEquipo imgEquipo={imgEquipoUno} />
-          <MiembroEquipo imgEquipo={imgEquipoDos} />
-          <MiembroEquipo imgEquipo={imgEquipoTres} />
-          <MiembroEquipo imgEquipo={imgEquipoCuatro} />
-        </ContenedorEquipo>
       </Contenedor>
+      <ContenedorEquipo>
+        <MiembroEquipo imgEquipo={imgEquipoUno} />
+        <MiembroEquipo imgEquipo={imgEquipoDos} />
+        <MiembroEquipo imgEquipo={imgEquipoTres} />
+        <MiembroEquipo imgEquipo={imgEquipoCuatro} />
+      </ContenedorEquipo>
     </Wrapper>
   );
 };
