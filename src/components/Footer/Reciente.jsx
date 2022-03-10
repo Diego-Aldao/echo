@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import ImgPrueba from "../../assets/images/p-1.jpg";
+import imgFooterUno from "../../assets/images/Footer/img-footer-01.webp";
+import imgFooterDos from "../../assets/images/Footer/img-footer-02.webp";
 import { RiSendPlaneFill } from "react-icons/ri";
 
 const Contenido = styled.div`
@@ -105,7 +106,7 @@ const Reciente = () => {
       <Info>
         <li>
           <Icono>
-            <img src={ImgPrueba} alt="" />
+            <img src={imgFooterUno} alt="" />
           </Icono>
           <div>
             <TextoInfo>
@@ -116,7 +117,7 @@ const Reciente = () => {
         </li>
         <li>
           <Icono>
-            <img src={ImgPrueba} alt="" />
+            <img src={imgFooterDos} alt="" />
           </Icono>
           <div>
             <TextoInfo>
