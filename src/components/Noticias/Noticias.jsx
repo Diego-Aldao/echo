@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import ItemNoticia from "./ItemNoticia";
+import imgNoticiasUno from "../../assets/images/Noticias/noticias-01.webp";
+import imgNoticiasDos from "../../assets/images/Noticias/noticias-02.webp";
+import imgNoticiasTres from "../../assets/images/Noticias/noticias-03.webp";
 
 const Wrapper = styled.section`
   width: 100%;
@@ -51,9 +54,9 @@ const Noticias = () => {
       <Contenedor>
         <Titulo>noticias</Titulo>
         <Contenido>
-          <ItemNoticia bgOpacity={bgOpacity} />
-          <ItemNoticia />
-          <ItemNoticia bgOpacity={bgOpacity} />
+          <ItemNoticia bgOpacity={bgOpacity} img={imgNoticiasUno} />
+          <ItemNoticia img={imgNoticiasDos} />
+          <ItemNoticia bgOpacity={bgOpacity} img={imgNoticiasTres} />
         </Contenido>
       </Contenedor>
     </Wrapper>

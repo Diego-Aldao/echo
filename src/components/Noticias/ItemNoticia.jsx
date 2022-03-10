@@ -1,13 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import ImgPrueba from "../../assets/images/img-header-1.jpg";
 
 const Item = styled.div`
   padding: 50px 30px;
   margin-bottom: 50px;
   color: #fff;
   position: relative;
-  background: url(${ImgPrueba});
+  background: url(${(props) => props.img});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   @media (min-width: 992px) {
     margin: 0px 15px 0px;
   }
@@ -76,16 +78,16 @@ const Boton = styled.a`
   line-height: 1.4;
 `;
 
-const ItemNoticia = ({ bgOpacity }) => {
+const ItemNoticia = ({ img, bgOpacity }) => {
   return (
-    <Item bgOpacity={bgOpacity}>
+    <Item bgOpacity={bgOpacity} img={img}>
       <Info>
         <Fecha>agosto 06</Fecha>
         <Tags>
           <span>admin</span>
           <span>WordPress</span>
         </Tags>
-        <Titulo>double rectangle houses from old containers.</Titulo>
+        <Titulo>casas de doble rectángulo de contenedores viejos.</Titulo>
         <Boton>leer mas</Boton>
       </Info>
     </Item>
