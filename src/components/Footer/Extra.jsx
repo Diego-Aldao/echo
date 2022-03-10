@@ -47,7 +47,7 @@ const Copy = styled.p`
   color: #9f9f9f;
   line-height: 2;
   margin: 0;
-  span {
+  a {
     color: var(--color-principal);
     cursor: pointer;
     display: inline-block;
@@ -73,7 +73,10 @@ const Extra = () => {
         </span>
       </Redes>
       <Copy>
-        © 2022, echo template. hecho con pasion por <span>diegodev.</span>
+        © 2022, template echo. construido por{" "}
+        <a href="https://github.com/Diego-Aldao" target="_blank">
+          diego
+        </a>
       </Copy>
     </Contenido>
   );

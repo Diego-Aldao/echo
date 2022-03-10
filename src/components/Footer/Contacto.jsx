@@ -49,6 +49,7 @@ const TextoInfo = styled.p`
   font-weight: 400;
   line-height: 2;
   margin: 0;
+  text-transform: capitalize;
 `;
 const Icono = styled.span`
   color: white;
@@ -67,10 +68,8 @@ const Contacto = () => {
             <GoLocation />
           </Icono>
           <div>
-            <TituloInfo>office address</TituloInfo>
-            <TextoInfo>
-              504 White St . Dawsonville, GA 30534 , New York
-            </TextoInfo>
+            <TituloInfo>dirección de la oficina</TituloInfo>
+            <TextoInfo>primitivo de la reta 1007, maipu, mendoza.</TextoInfo>
           </div>
         </li>
         <li>
