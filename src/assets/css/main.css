@@ -53,7 +53,7 @@ a {
   animation-delay: calc(60ms * var(--char-index));
 }
 .whitespace {
-  width: 10px;
+  width: 12px;
 }
 
 .swiper-pagination-current,

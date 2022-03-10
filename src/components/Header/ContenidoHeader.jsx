@@ -53,6 +53,8 @@ const Titulo = styled.h2`
   transition: all 0.3s ease-in-out;
   text-align: left;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
   @media (min-width: 480px) {
     font-size: 40px;
   }
