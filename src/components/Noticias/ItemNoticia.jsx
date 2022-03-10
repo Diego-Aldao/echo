@@ -20,12 +20,12 @@ const Item = styled.div`
     left: 0px;
     width: 100%;
     height: 100%;
-    background: ${(props) => props.bgOpacity};
+    background: ${(props) => (props.bgOpacity ? props.bgOpacity : "#00000028")};
     transition: all 0.3s ease-in-out;
   }
   &:hover {
     &:after {
-      background: none;
+      background: #00000028;
     }
   }
 `;
