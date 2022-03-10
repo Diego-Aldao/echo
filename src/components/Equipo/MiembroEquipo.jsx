@@ -95,7 +95,7 @@ const MiembroEquipo = ({ imgEquipo }) => {
   return (
     <ItemEquipo>
       <InfoEquipo>
-        <TituloEquipo>ryan hicks</TituloEquipo>
+        <TituloEquipo>juan bautista</TituloEquipo>
         <SubEquipo>client manager</SubEquipo>
       </InfoEquipo>
       <ImagenEquipo src={imgEquipo} />

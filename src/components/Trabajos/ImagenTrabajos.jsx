@@ -42,7 +42,7 @@ const Info = styled.a`
     font-weight: 500;
     font-family: var(--fuente-jost);
     text-transform: capitalize;
-    margin: 0px;
+    margin: 10px 0px 0px;
   }
 `;
 const Tags = styled.div`
@@ -66,7 +66,7 @@ const ImagenTrabajos = ({ img, column, row }) => {
           <span>arquitectura</span>
           <span>moderno</span>
         </Tags>
-        <h5>modern townhouse</h5>
+        <h5>casa moderna</h5>
       </Info>
     </Contenedor>
   );

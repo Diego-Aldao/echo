@@ -58,29 +58,29 @@ const Testimonios = () => {
         <SwiperSlide>
           <Autor
             imgTestimonio={imgTestimonioUno}
-            nombre="mitchl jhon"
-            cargo="envato customer"
+            nombre="juan bautista"
+            cargo="cliente de senarg"
           />
         </SwiperSlide>
         <SwiperSlide>
           <Autor
             imgTestimonio={imgTestimonioDos}
-            nombre="mitchl jhon"
-            cargo="envato customer"
+            nombre="juan bautista"
+            cargo="cliente de senarg"
           />
         </SwiperSlide>
         <SwiperSlide>
           <Autor
             imgTestimonio={imgTestimonioTres}
-            nombre="mitchl jhon"
-            cargo="envato customer"
+            nombre="Maria Morila"
+            cargo="cliente de senarg"
           />
         </SwiperSlide>
         <SwiperSlide>
           <Autor
             imgTestimonio={imgTestimonioCuatro}
-            nombre="mitchl jhon"
-            cargo="envato customer"
+            nombre="Maria Morila"
+            cargo="cliente de senarg"
           />
         </SwiperSlide>
       </Contenedor>
