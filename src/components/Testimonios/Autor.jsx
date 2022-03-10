@@ -9,14 +9,14 @@ const Texto = styled.p`
   font-size: 18px;
   padding: 80px 50px;
   margin: 0px;
-  border: 6px solid #ffffff47;
+  border: 3px solid #ffffff47;
   font-weight: 400;
   color: #fff;
   line-height: 2;
   position: relative;
 `;
 const Icono = styled(ImQuotesLeft)`
-  color: #ffffff47;
+  color: #ffffff5a;
   position: absolute;
   top: -10px;
   right: 30px;
@@ -73,7 +73,7 @@ const NombreAutor = styled.h6`
   }
 `;
 
-const Autor = ({ img, nombre, cargo }) => {
+const Autor = ({ imgTestimonio, nombre, cargo }) => {
   return (
     <Contenido>
       <Icono />
@@ -84,7 +84,7 @@ const Autor = ({ img, nombre, cargo }) => {
       </Texto>
       <Info>
         <ImgAutor>
-          <img src={img} alt="" />
+          <img src={imgTestimonio} alt="" />
         </ImgAutor>
         <NombreAutor>
           {nombre}

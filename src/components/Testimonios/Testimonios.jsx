@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
-import img from "../../assets/images/p-1.jpg";
+import imgTestimonioUno from "../../assets/images/Testimonios/testimonio-01.webp";
+import imgTestimonioDos from "../../assets/images/Testimonios/testimonio-02.webp";
+import imgTestimonioTres from "../../assets/images/Testimonios/testimonio-03.webp";
+import imgTestimonioCuatro from "../../assets/images/Testimonios/testimonio-04.webp";
 import "swiper/css";
 import { Autoplay } from "swiper";
 import Autor from "./Autor";
@@ -50,18 +53,35 @@ const Testimonios = () => {
         }}
         modules={[Autoplay]}
         className="mySwiper2"
+        loop={true}
       >
         <SwiperSlide>
-          <Autor img={img} nombre="mitchl jhon" cargo="envato customer" />
+          <Autor
+            imgTestimonio={imgTestimonioUno}
+            nombre="mitchl jhon"
+            cargo="envato customer"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <Autor img={img} nombre="mitchl jhon" cargo="envato customer" />
+          <Autor
+            imgTestimonio={imgTestimonioDos}
+            nombre="mitchl jhon"
+            cargo="envato customer"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <Autor img={img} nombre="mitchl jhon" cargo="envato customer" />
+          <Autor
+            imgTestimonio={imgTestimonioTres}
+            nombre="mitchl jhon"
+            cargo="envato customer"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <Autor img={img} nombre="mitchl jhon" cargo="envato customer" />
+          <Autor
+            imgTestimonio={imgTestimonioCuatro}
+            nombre="mitchl jhon"
+            cargo="envato customer"
+          />
         </SwiperSlide>
       </Contenedor>
     </Wrapper>
