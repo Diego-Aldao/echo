@@ -86,9 +86,11 @@ const Botton = styled.a`
   margin-top: 30px;
   font-family: var(--fuente-jost);
   letter-spacing: 0.5px;
-  transition: all 0.8s;
-  transition-delay: 0.4s;
+  transition: all 0.4s, top 0.4s 1s, opacity 0.4s 1s;
   cursor: pointer;
+  &:hover {
+    background: none;
+  }
   &:after {
     content: "";
     width: 99.5%;
