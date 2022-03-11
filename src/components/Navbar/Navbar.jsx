@@ -9,10 +9,12 @@ const Nav = styled.nav`
   height: 60px;
   display: flex;
   align-items: center;
-  position: absolute;
+  position: ${(props) => (props.mostrarNav ? "absolute" : "fixed")};
   top: 0px;
   z-index: 99;
   width: 100%;
+  transition: all 0.4s;
+  background: ${(props) => (props.mostrarNav ? "" : "black")};
   @media (min-width: 992px) {
     height: 80px;
   }
@@ -92,11 +94,11 @@ const LinkNav = styled.li`
   }
 `;
 
-const Navbar = () => {
+const Navbar = ({ mostrarNav }) => {
   const [modal, setModal] = useState(false);
   const [navegacion, setNavegacion] = useState(false);
   return (
-    <Nav>
+    <Nav mostrarNav={mostrarNav}>
       <Contenedor>
         <NavMovil navegacion={navegacion} setNavegacion={setNavegacion} />
         <Logo>echo</Logo>

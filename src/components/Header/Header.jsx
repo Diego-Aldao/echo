@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import imgHeader1 from "../../assets/images/Header/img-header-01.webp";
 import imgHeader2 from "../../assets/images/Header/img-header-02.webp";
@@ -44,20 +44,19 @@ const sliderStyles = {
   alignItems: "center",
 };
 
-const Header = () => {
+const Header = ({ setMostrarNav }) => {
   //CADA CONTENEDOR NECESITA SU PROPIO REF E INVIEW
-  const [ref, inView] = useInView({
-    rootMargin: "0px",
-  });
-  const [ref2, inView2] = useInView({
-    rootMargin: "0px",
-  });
-  const [ref3, inView3] = useInView({
-    rootMargin: "0px",
-  });
+  const [ref, inView] = useInView({ rootMargin: "0px" });
+  const [ref2, inView2] = useInView({ rootMargin: "0px" });
+  const [ref3, inView3] = useInView({ rootMargin: "0px" });
+  const [ref4, inView4] = useInView({ rootMargin: "0px" });
+
+  useEffect(() => {
+    setMostrarNav(inView4);
+  }, [inView4]);
 
   return (
-    <Wrapper>
+    <Wrapper ref={ref4}>
       <Swiper
         style={{
           width: "100%",

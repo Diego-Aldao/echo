@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Navbar from "./components/Navbar/Navbar";
-import MainHeader from "./components/Header/Header";
+import Header from "./components/Header/Header";
 import About from "./components/About/About";
 import CustomCursor from "custom-cursor-react";
 import "custom-cursor-react/dist/index.css";
@@ -13,10 +13,12 @@ import Testimonios from "./components/Testimonios/Testimonios";
 import Noticias from "./components/Noticias/Noticias";
 import Footer from "./components/Footer/Footer";
 import BotonScroll from "./components/BotonScroll";
+import { useState } from "react";
 
 const Wrapper = styled.main``;
 
 const App = () => {
+  const [mostrarNav, setMostrarNav] = useState(false);
   return (
     <Wrapper>
       <CustomCursor
@@ -30,8 +32,8 @@ const App = () => {
         }}
         targetOpacity={0.5}
       />
-      <Navbar />
-      <MainHeader />
+      <Navbar mostrarNav={mostrarNav} />
+      <Header mostrarNav={mostrarNav} setMostrarNav={setMostrarNav} />
       <About />
       <Servicios />
       <Trabajos />
