@@ -26,6 +26,10 @@ const Flecha = styled(IoIosArrowUp)`
 `;
 
 const BotonScroll = () => {
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const [scrollTop, setScrollTop] = useState(0);
 
   useEffect(() => {
@@ -38,16 +42,11 @@ const BotonScroll = () => {
 
       setScrollTop(valorScroll);
     };
-
     window.onscroll = porcentajeScroll;
   }, []);
 
-  const handleClick = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
-    <Caja scrollTop={scrollTop} onClick={handleClick}>
+    <Caja scrollTop={scrollTop} handleClick={handleClick}>
       <Flecha />
       <Circle
         percent={scrollTop}
