@@ -1,49 +1,31 @@
 import React from "react";
-import styled from "styled-components";
-import Navbar from "./components/Navbar/Navbar";
-import Header from "./components/Header/Header";
-import About from "./components/About/About";
-import CustomCursor from "custom-cursor-react";
-import "custom-cursor-react/dist/index.css";
-import Servicios from "./components/Servicios/Servicios";
-import Trabajos from "./components/Trabajos/Trabajos";
-import Media from "./components/Media/Media";
-import Equipo from "./components/Equipo/Equipo";
-import Testimonios from "./components/Testimonios/Testimonios";
-import Noticias from "./components/Noticias/Noticias";
-import Footer from "./components/Footer/Footer";
-import BotonScroll from "./components/BotonScroll";
 import { useState } from "react";
-
-const Wrapper = styled.main``;
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./layout/Layout";
+import Inicio from "./layout/Inicio";
+import AboutPage from "./paginas/About/AboutPage";
 
 const App = () => {
   const [mostrarNav, setMostrarNav] = useState(false);
   return (
-    <Wrapper>
-      <CustomCursor
-        targets={["a, button, .dropdown"]}
-        dimensions={30}
-        fill={"#c5a47e"}
-        smoothness={{
-          movement: 0.5,
-          scale: 1,
-          opacity: 0.9,
-        }}
-        targetOpacity={0.5}
-      />
-      <Navbar mostrarNav={mostrarNav} />
-      <Header mostrarNav={mostrarNav} setMostrarNav={setMostrarNav} />
-      <About />
-      <Servicios />
-      <Trabajos />
-      <Media />
-      <Equipo />
-      <Testimonios />
-      <Noticias />
-      <Footer />
-      <BotonScroll />
-    </Wrapper>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Inicio mostrarNav={mostrarNav} setMostrarNav={setMostrarNav} />
+          }
+        ></Route>
+        <Route
+          path="/about"
+          element={
+            <Layout mostrarNav={mostrarNav} setMostrarNav={setMostrarNav} />
+          }
+        >
+          <Route index element={<AboutPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 
