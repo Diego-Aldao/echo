@@ -4,9 +4,20 @@ import styled from "styled-components";
 const Contenido = styled.div`
   display: flex;
   flex-direction: column;
+  @media (min-width: 992px) {
+    flex-direction: row;
+  }
 `;
 
-const ContenedorNumeros = styled.div``;
+const ContenedorNumeros = styled.div`
+  @media (min-width: 580px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media (min-width: 992px) {
+    flex: 0 0 50%;
+  }
+`;
 
 const Numeros = styled.div`
   margin-bottom: 50px;
@@ -28,6 +39,9 @@ const Numeros = styled.div`
     letter-spacing: 2px;
     text-transform: uppercase;
   }
+  @media (min-width: 580px) {
+    flex: 0 0 50%;
+  }
 `;
 const Descripcion = styled.div`
   p {
@@ -36,6 +50,9 @@ const Descripcion = styled.div`
     font-weight: 400;
     line-height: 2;
     margin: 0 0px 20px;
+  }
+  @media (min-width: 992px) {
+    flex: 0 0 50%;
   }
 `;
 
