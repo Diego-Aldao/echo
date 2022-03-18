@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import ItemCaracteristica from "./ItemCaracteristica";
 
 const Wrapper = styled.section`
   width: 100%;
@@ -24,11 +25,30 @@ const Contenedor = styled.div`
     max-width: 1340px;
   }
 `;
+const Titulo = styled.h3`
+  font-weight: 700;
+  font-size: 35px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: capitalize;
+`;
+
+const Descripcion = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 const Caracteristicas = () => {
   return (
     <Wrapper>
-      <Contenedor></Contenedor>
+      <Contenedor>
+        <Titulo>mejores características</Titulo>
+        <Descripcion>
+          <ItemCaracteristica />
+          <ItemCaracteristica />
+          <ItemCaracteristica />
+        </Descripcion>
+      </Contenedor>
     </Wrapper>
   );
 };
