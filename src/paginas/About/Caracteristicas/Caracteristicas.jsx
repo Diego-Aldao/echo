@@ -4,7 +4,7 @@ import ItemCaracteristica from "./ItemCaracteristica";
 
 const Wrapper = styled.section`
   width: 100%;
-  padding: 140px 0px;
+  padding: 0px 0px 140px;
   color: #fff;
   cursor: default;
 `;
@@ -31,11 +31,16 @@ const Titulo = styled.h3`
   letter-spacing: 2px;
   text-align: center;
   text-transform: capitalize;
+  margin: 0px 0px 60px;
+  @media (min-width: 768px) {
+    font-size: 60px;
+  }
 `;
 
 const Descripcion = styled.div`
-  display: flex;
-  flex-direction: column;
+  @media (min-width: 992px) {
+    display: flex;
+  }
 `;
 
 const Caracteristicas = () => {
