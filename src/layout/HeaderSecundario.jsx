@@ -13,6 +13,9 @@ const Contenedor = styled.div`
   display: flex;
   align-items: center;
   background: url(${imgPrueba});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   position: relative;
   &::after {
     content: "";
@@ -37,6 +40,11 @@ const Descripcion = styled.div`
     line-height: 1.4;
     font-size: 40px;
   }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 75px;
+    }
+  }
 `;
 const Path = styled.div`
   display: flex;
@@ -53,6 +61,14 @@ const Path = styled.div`
   }
   .current {
     color: var(--color-principal);
+  }
+  @media (min-width: 480px) {
+    a {
+      font-size: 17px;
+    }
+    span {
+      margin: 0px 20px;
+    }
   }
 `;
 
