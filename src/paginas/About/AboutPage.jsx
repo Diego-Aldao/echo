@@ -3,6 +3,7 @@ import Caracteristicas from "./Caracteristicas/Caracteristicas";
 import Info from "./Info";
 import Testimonios from "../../components/Testimonios/Testimonios";
 import Equipo from "../../components/Equipo/Equipo";
+import Skills from "./Skills";
 
 const AboutPage = () => {
   return (
@@ -11,6 +12,7 @@ const AboutPage = () => {
       <Caracteristicas />
       <Testimonios />
       <Equipo />
+      <Skills />
     </>
   );
 };
