@@ -15,7 +15,7 @@ const Contenido = styled.div`
   left: -10px;
   opacity: ${(props) => (props.modal ? "1" : "0")};
 `;
-const ItemContenido = styled.a`
+const ItemContenido = styled.span`
   width: 100%;
   display: block;
   color: #fff;
