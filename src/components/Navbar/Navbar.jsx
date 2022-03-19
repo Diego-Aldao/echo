@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { MdOutlineMenuOpen } from "react-icons/md";
 import { RiArrowDownSFill } from "react-icons/ri";
@@ -111,11 +112,11 @@ const Navbar = ({ mostrarNav }) => {
         <LinksNav>
           <LinkNav>
             <span>
-              <a href="">inicio</a>
+              <Link to="/">inicio</Link>
             </span>
           </LinkNav>
           <LinkNav>
-            <a href="">about</a>
+            <Link to="/about">About</Link>
           </LinkNav>
           <LinkNav onClick={() => setModal(!modal)}>
             <span className="dropdown">
@@ -125,11 +126,11 @@ const Navbar = ({ mostrarNav }) => {
           </LinkNav>
           <LinkNav>
             <span>
-              <a href="">blog</a>
+              <Link to={"/blog"}>blog</Link>
             </span>
           </LinkNav>
           <LinkNav>
-            <a href="">contacto</a>
+            <Link to={"/contacto"}>contacto</Link>
           </LinkNav>
         </LinksNav>
       </Contenedor>
