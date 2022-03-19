@@ -16,6 +16,7 @@ const Contenedor = styled.div`
   }
   @media (min-width: 992px) {
     max-width: 960px;
+    display: flex;
   }
   @media (min-width: 1200px) {
     max-width: 1140px;
@@ -27,6 +28,7 @@ const Contenedor = styled.div`
 
 const Contenido = styled.div`
   margin-bottom: 40px;
+  min-width: 50%;
 `;
 
 const Habilidad = styled.h6`
@@ -77,6 +79,9 @@ const Titulo = styled.h4`
   line-height: 2;
   margin: 0px 0px 20px;
   text-transform: capitalize;
+  @media (min-width: 768px) {
+    font-size: 30px;
+  }
 `;
 
 const Texto = styled.p`
