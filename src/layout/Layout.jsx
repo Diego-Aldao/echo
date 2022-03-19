@@ -21,7 +21,6 @@ const Layout = ({ mostrarNav, setMostrarNav }) => {
         targetOpacity={0.5}
       />
       <Navbar mostrarNav={mostrarNav} setMostrarNav={setMostrarNav} />
-      <HeaderSecundario />
       <Outlet />
       <Footer />
       <BotonScroll />

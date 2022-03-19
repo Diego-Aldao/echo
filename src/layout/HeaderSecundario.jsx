@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import imgPrueba from "../assets/images/Header/img-header-01.webp";
 
@@ -49,39 +50,44 @@ const Descripcion = styled.div`
 const Path = styled.div`
   display: flex;
   justify-content: center;
-  a {
+  span {
     line-height: 1.5;
     font-weight: 400;
     font-family: var(--fuente-poppins);
     text-transform: capitalize;
     font-size: 15px;
   }
-  span {
-    margin: 0px 10px;
-  }
   .current {
     color: var(--color-principal);
   }
   @media (min-width: 480px) {
-    a {
-      font-size: 17px;
-    }
     span {
-      margin: 0px 20px;
+      font-size: 17px;
     }
   }
 `;
 
-const HeaderSecundario = () => {
+const Barra = styled.span`
+  margin: 0px 20px;
+`;
+
+const Current = styled.span`
+  color: var(--color-principal);
+`;
+
+const HeaderSecundario = ({ nombre, link }) => {
   return (
     <Contenedor>
       <Descripcion>
-        <h1>nosotros</h1>
+        <h1>{nombre}</h1>
         <Path>
-          <a href="">inicio</a> <span>/</span>{" "}
-          <a href="" className="current">
-            about
-          </a>
+          <span>
+            <Link to={"/"}>inicio</Link>
+          </span>
+          <Barra>/</Barra>
+          <Current>
+            <Link to={"/about"}>{link}</Link>
+          </Current>
         </Path>
       </Descripcion>
     </Contenedor>

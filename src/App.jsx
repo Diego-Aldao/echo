@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./layout/Layout";
 import Inicio from "./layout/Inicio";
 import AboutPage from "./paginas/About/AboutPage";
+import PortfolioPage from "./paginas/Portfolio/PortfolioPage";
 
 const App = () => {
   const [mostrarNav, setMostrarNav] = useState(false);
@@ -23,6 +24,14 @@ const App = () => {
           }
         >
           <Route index element={<AboutPage />} />
+        </Route>
+        <Route
+          path="/proyecto"
+          element={
+            <Layout mostrarNav={mostrarNav} setMostrarNav={setMostrarNav} />
+          }
+        >
+          <Route index element={<PortfolioPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
