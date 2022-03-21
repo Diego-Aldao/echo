@@ -4,53 +4,79 @@ import imgPrueba from "../../assets/images/Header/img-header-01.webp";
 
 const Wrapper = styled.section`
   width: 100%;
-  padding: 140px 0px;
+  padding: 0px;
   color: #fff;
   cursor: default;
 `;
-const Contenedor = styled.div`
-  padding: 0px 15px;
-  max-width: 540px;
-  margin: 0 auto;
-  @media (min-width: 768px) {
-    max-width: 720px;
-  }
-  @media (min-width: 992px) {
-    max-width: 960px;
-  }
-  @media (min-width: 1200px) {
-    max-width: 1140px;
-  }
-  @media (min-width: 1400px) {
-    max-width: 1340px;
-  }
-`;
 
 const Contenido = styled.div`
+  padding: 0px 15px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(7, 1fr);
-  grid-row-gap: 25px;
+  grid-template-rows: repeat(7, auto);
+  grid-row-gap: 15px;
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 15px;
+  }
+  @media (min-width: 992px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 15px;
+  }
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 15px;
+  }
 `;
 const Imagen = styled.img`
   width: 100%;
+  object-fit: cover;
+
   max-height: auto;
+  @media (min-width: 768px) {
+    min-height: 335px;
+    grid-column: ${(props) => (props.column ? props.column : "")};
+    grid-row: ${(props) => (props.row ? props.row : "")};
+  }
+  @media (min-width: 992px) {
+    max-height: 500px;
+    grid-column: ${(props) => (props.columnLg ? props.columnLg : "")};
+    grid-row: ${(props) => (props.row ? props.row : "")};
+  }
+  @media (min-width: 1200px) {
+    max-height: 600px;
+    grid-column: ${(props) => (props.columnXl ? props.columnXl : "")};
+    grid-row: ${(props) => (props.row ? props.row : "")};
+  }
 `;
 
 const Media = () => {
   return (
     <Wrapper>
-      <Contenedor>
-        <Contenido>
-          <Imagen src={imgPrueba} />
-          <Imagen src={imgPrueba} />
-          <Imagen src={imgPrueba} />
-          <Imagen src={imgPrueba} />
-          <Imagen src={imgPrueba} />
-          <Imagen src={imgPrueba} />
-          <Imagen src={imgPrueba} />
-        </Contenido>
-      </Contenedor>
+      <Contenido>
+        <Imagen
+          src={imgPrueba}
+          column={"1 / 3"}
+          columnLg={"1 / 2"}
+          columnXl={"1 / 5"}
+        />
+        <Imagen src={imgPrueba} />
+        <Imagen src={imgPrueba} />
+        <Imagen
+          src={imgPrueba}
+          column={"1 / 3"}
+          columnLg={"1 / 4"}
+          columnXl={"3 / 4"}
+        />
+        <Imagen
+          src={imgPrueba}
+          column={"1 / 3"}
+          columnLg={"1 / 2"}
+          columnXl={"4 / 5"}
+        />
+        <Imagen src={imgPrueba} columnXl={"1 / 3"} />
+        <Imagen src={imgPrueba} columnXl={"3 / 5"} />
+      </Contenido>
     </Wrapper>
   );
 };
