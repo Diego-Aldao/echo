@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import imgPrueba from "../../assets/images/Header/img-header-01.webp";
+import Siguiente from "./Siguiente";
 
 const Wrapper = styled.section`
   width: 100%;
@@ -71,6 +72,7 @@ const Media = () => {
         <Imagen src={imgPrueba} columnXl={"1 / 3"} />
         <Imagen src={imgPrueba} columnXl={"3 / 5"} />
       </Contenido>
+      <Siguiente />
     </Wrapper>
   );
 };
