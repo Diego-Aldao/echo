@@ -24,12 +24,22 @@ const Fecha = styled.div`
     font-size: 48px;
     margin: 0px 0px 20px;
     font-family: var(--fuente-jost);
-    text-align: center;
+    text-align: left;
   }
   span {
     font-size: 14px;
     font-weight: 500;
     text-transform: capitalize;
+  }
+  @media (min-width: 768px) {
+    min-width: 90px;
+    margin-right: 40px;
+    h5 {
+      font-size: 60px;
+    }
+    span {
+      font-size: 16px;
+    }
   }
 `;
 
@@ -55,7 +65,7 @@ const Tags = styled.div`
     background: #999;
     position: absolute;
     right: 4px;
-    top: 35%;
+    top: 45%;
   }
   a:last-of-type:after {
     display: none;
@@ -65,10 +75,9 @@ const Info = styled.div`
   h4 {
     font-weight: 700;
     line-height: 1.6;
-    margin-bottom: 5px;
+    margin: 0px 0px 5px;
     font-size: 20px;
     text-transform: capitalize;
-    margin: 0px;
   }
   p {
     color: var(--color-parrafos);
@@ -77,7 +86,7 @@ const Info = styled.div`
     line-height: 2;
     margin: 0;
   }
-  a {
+  span {
     margin-top: 20px;
     font-size: 12px;
     font-weight: 500;
@@ -86,8 +95,10 @@ const Info = styled.div`
     padding-left: 60px;
     position: relative;
     font-family: var(--fuente-poppins);
+    display: inline-block;
+    text-align: right;
   }
-  a:after {
+  span:after {
     content: "";
     width: 50px;
     height: 1px;
@@ -95,6 +106,11 @@ const Info = styled.div`
     position: absolute;
     left: 0px;
     top: 50%;
+  }
+  @media (min-width: 768px) {
+    h4 {
+      font-size: 30px;
+    }
   }
 `;
 
@@ -114,12 +130,12 @@ const ItemBlog = () => {
             <a href="">diseño</a>
           </Tags>
           <Info>
-            <h4>construye un hermoso blog con facilidad</h4>
+            <h4>construye un simple blog con facilidad</h4>
             <p>
               Lorem ipsum dolor sit ameteses eres adipisicing elit. Maiores
               recusandae vel alias dolore eaque illo voluptatem deleniti,
             </p>
-            <a href="">leer mas</a>
+            <span>leer mas</span>
           </Info>
         </Descripcion>
       </Contenido>
