@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ItemBlog from "./ItemBlog";
+import { GoChevronRight } from "react-icons/go";
 
 const Wrapper = styled.section`
   width: 100%;
@@ -22,6 +23,22 @@ const Contenedor = styled.div`
     max-width: 1140px;
   }
 `;
+const Nav = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const ItemNav = styled.span`
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid ${(props) => (props.current ? "#c5a47e" : "#fff")};
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 5px;
+`;
 
 const ContenidoBlog = () => {
   return (
@@ -30,6 +47,13 @@ const ContenidoBlog = () => {
         <ItemBlog />
         <ItemBlog />
         <ItemBlog />
+        <Nav>
+          <ItemNav current={true}>1</ItemNav>
+          <ItemNav>2</ItemNav>
+          <ItemNav>
+            <GoChevronRight />
+          </ItemNav>
+        </Nav>
       </Contenedor>
     </Wrapper>
   );
