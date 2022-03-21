@@ -23,11 +23,13 @@ const Flecha = styled(IoIosArrowUp)`
   right: 0px;
   margin: auto;
   font-size: 20px;
+  z-index: -1;
 `;
 
 const BotonScroll = () => {
   const handleClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    console.log("si");
   };
 
   const [scrollTop, setScrollTop] = useState(0);
@@ -46,7 +48,7 @@ const BotonScroll = () => {
   }, []);
 
   return (
-    <Caja scrollTop={scrollTop} handleClick={handleClick}>
+    <Caja scrollTop={scrollTop} onClick={handleClick}>
       <Flecha />
       <Circle
         percent={scrollTop}
@@ -54,7 +56,6 @@ const BotonScroll = () => {
         strokeColor={"#c5a47e"}
         trailWidth={0.1}
       />
-      ;
     </Caja>
   );
 };
