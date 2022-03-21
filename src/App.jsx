@@ -5,11 +5,13 @@ import Layout from "./layout/Layout";
 import Inicio from "./layout/Inicio";
 import AboutPage from "./paginas/About/AboutPage";
 import PortfolioPage from "./paginas/Portfolio/PortfolioPage";
+import ScrollTop from "./components/ScrollTop";
 
 const App = () => {
   const [mostrarNav, setMostrarNav] = useState(false);
   return (
     <BrowserRouter>
+      <ScrollTop />
       <Routes>
         <Route
           path="/"
