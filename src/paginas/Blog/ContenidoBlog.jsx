@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import ItemBlog from "./ItemBlog";
 
 const Wrapper = styled.section`
   width: 100%;
@@ -28,7 +29,11 @@ const Contenedor = styled.div`
 const ContenidoBlog = () => {
   return (
     <Wrapper>
-      <Contenedor></Contenedor>
+      <Contenedor>
+        <ItemBlog />
+        <ItemBlog />
+        <ItemBlog />
+      </Contenedor>
     </Wrapper>
   );
 };
