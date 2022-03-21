@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { RiArrowDownSFill } from "react-icons/ri";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Contenedor = styled.div`
   padding: 10px 15px;
@@ -20,7 +21,7 @@ const Contenedor = styled.div`
     margin: 0px;
     padding: 0px;
   }
-  a {
+  span {
     text-transform: capitalize;
     font-family: var(--fuente-jost);
     font-size: 15px;
@@ -30,6 +31,7 @@ const Contenedor = styled.div`
     width: 100%;
     padding: 15px;
     text-align: center;
+    display: inline-block;
   }
   @media (min-width: 992px) {
     display: none;
@@ -44,7 +46,7 @@ const Dropdown = styled.div`
   transition: all 0.4s;
   opacity: ${(props) => (props.toggle ? "1" : "0")};
 `;
-const ItemDropdown = styled.a`
+const ItemDropdown = styled.span`
   width: 100%;
   display: block;
   color: #fff;
@@ -65,28 +67,43 @@ const NavMovil = ({ navegacion }) => {
     <Contenedor navegacion={navegacion}>
       <ul>
         <li>
-          <a href="">inicio</a>
+          <span>
+            <Link to={"/"}>inicio</Link>
+          </span>
         </li>
         <li>
-          <a href="">about</a>
+          <span>
+            <Link to={"/about"}>about</Link>
+          </span>
         </li>
         <li onClick={() => setToggle(!toggle)}>
-          <a href="#">
-            portfolio
-            <RiArrowDownSFill />
-          </a>
+          <span>
+            proyecto <RiArrowDownSFill />
+          </span>
           <Dropdown toggle={toggle}>
-            <ItemDropdown>item uno</ItemDropdown>
-            <ItemDropdown>item uno</ItemDropdown>
-            <ItemDropdown>item uno</ItemDropdown>
-            <ItemDropdown>item uno</ItemDropdown>
+            <ItemDropdown>
+              <Link to={"/proyecto"}>proyecto 1</Link>
+            </ItemDropdown>
+            <ItemDropdown>
+              <Link to={"/proyecto"}>proyecto 2</Link>
+            </ItemDropdown>
+            <ItemDropdown>
+              <Link to={"/proyecto"}>proyecto 3</Link>
+            </ItemDropdown>
+            <ItemDropdown>
+              <Link to={"/proyecto"}>proyecto 4</Link>
+            </ItemDropdown>
           </Dropdown>
         </li>
         <li>
-          <a href="">blog</a>
+          <span>
+            <Link to={"/blog"}>blog</Link>
+          </span>
         </li>
         <li>
-          <a href="">contacto</a>
+          <span>
+            <Link to={"/contacto"}>contacto</Link>
+          </span>
         </li>
       </ul>
     </Contenedor>
