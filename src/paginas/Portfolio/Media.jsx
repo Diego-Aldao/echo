@@ -21,32 +21,26 @@ const Contenido = styled.div`
   }
   @media (min-width: 992px) {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 15px;
   }
   @media (min-width: 1200px) {
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 15px;
   }
 `;
 const Imagen = styled.img`
   width: 100%;
   object-fit: cover;
-
   max-height: auto;
   @media (min-width: 768px) {
     min-height: 335px;
     grid-column: ${(props) => (props.column ? props.column : "")};
-    grid-row: ${(props) => (props.row ? props.row : "")};
   }
   @media (min-width: 992px) {
     max-height: 500px;
     grid-column: ${(props) => (props.columnLg ? props.columnLg : "")};
-    grid-row: ${(props) => (props.row ? props.row : "")};
   }
   @media (min-width: 1200px) {
     max-height: 600px;
     grid-column: ${(props) => (props.columnXl ? props.columnXl : "")};
-    grid-row: ${(props) => (props.row ? props.row : "")};
   }
 `;
 
