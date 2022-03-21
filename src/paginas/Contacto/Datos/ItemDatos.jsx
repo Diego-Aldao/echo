@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { GiSmartphone } from "react-icons/gi";
 
 const Contenido = styled.div`
   display: flex;
@@ -12,7 +11,7 @@ const Contenido = styled.div`
 const Icono = styled.span`
   padding-right: 30px;
   width: 60px;
-  font-size: 35px;
+  font-size: 30px;
   color: var(--color-parrafos);
 `;
 const Descripcion = styled.div``;
@@ -32,16 +31,14 @@ const Info = styled.p`
   margin: 0;
 `;
 
-const ItemDatos = () => {
+const ItemDatos = ({ icono, titulo }) => {
   return (
     <Contenido>
-      <Icono>
-        <GiSmartphone />
-      </Icono>
+      <Icono>{icono}</Icono>
       <Descripcion>
-        <Titulo>email</Titulo>
-        <Info>lorem@info.com</Info>
-        <Info>lorem@info.com</Info>
+        <Titulo>{titulo}</Titulo>
+        <Info>Lorem ipsum dolor sit amet.</Info>
+        <Info>Lorem ipsum dolor sit amet.</Info>
       </Descripcion>
     </Contenido>
   );

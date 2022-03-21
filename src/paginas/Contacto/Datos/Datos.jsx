@@ -1,5 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { MdOutlineSmartphone } from "react-icons/md";
+import { FaRegEnvelopeOpen } from "react-icons/fa";
+import { ImMap2 } from "react-icons/im";
 import ItemDatos from "./ItemDatos";
 
 const Wrapper = styled.section`
@@ -31,9 +34,9 @@ const Datos = () => {
   return (
     <Wrapper>
       <Contenedor>
-        <ItemDatos />
-        <ItemDatos />
-        <ItemDatos />
+        <ItemDatos titulo={"telefono"} icono={<MdOutlineSmartphone />} />
+        <ItemDatos titulo={"email"} icono={<FaRegEnvelopeOpen />} />
+        <ItemDatos titulo={"direccion"} icono={<ImMap2 />} />
       </Contenedor>
     </Wrapper>
   );
