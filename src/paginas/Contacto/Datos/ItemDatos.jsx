@@ -5,6 +5,9 @@ import { GiSmartphone } from "react-icons/gi";
 const Contenido = styled.div`
   display: flex;
   padding: 40px 20px;
+  @media (min-width: 992px) {
+    flex: 0 0 33.3333333%;
+  }
 `;
 const Icono = styled.span`
   padding-right: 30px;
