@@ -16,7 +16,6 @@ const Contenedor = styled.div`
   }
   @media (min-width: 992px) {
     max-width: 960px;
-    display: flex;
   }
   @media (min-width: 1200px) {
     max-width: 1140px;
@@ -28,6 +27,9 @@ const Contenedor = styled.div`
 
 const Info = styled.div`
   margin-bottom: 50px;
+  @media (min-width: 768px) {
+    display: flex;
+  }
 `;
 
 const Titulo = styled.h4`
@@ -36,6 +38,10 @@ const Titulo = styled.h4`
   line-height: 1.4;
   margin: 0px 0px 20px;
   text-transform: capitalize;
+  @media (min-width: 768px) {
+    font-size: 30px;
+    flex: 0 0 35%;
+  }
 `;
 
 const Texto = styled.p`
@@ -47,7 +53,11 @@ const Texto = styled.p`
   text-transform: capitalize;
 `;
 
-const ContenedorDatos = styled.div``;
+const ContenedorDatos = styled.div`
+  @media (min-width: 992px) {
+    display: flex;
+  }
+`;
 
 const Dato = styled.div`
   margin-bottom: 30px;
@@ -66,6 +76,14 @@ const Dato = styled.div`
     line-height: 2;
     margin: 0;
     text-transform: capitalize;
+  }
+  @media (min-width: 768px) {
+    h6 {
+      font-size: 18px;
+    }
+  }
+  @media (min-width: 992px) {
+    flex: 0 0 25%;
   }
 `;
 
