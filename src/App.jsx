@@ -7,6 +7,7 @@ import AboutPage from "./paginas/About/AboutPage";
 import PortfolioPage from "./paginas/Portfolio/PortfolioPage";
 import ScrollTop from "./components/ScrollTop";
 import BlogPage from "./paginas/Blog/BlogPage";
+import ContactoPage from "./paginas/Contacto/ContactoPage";
 
 const App = () => {
   const [mostrarNav, setMostrarNav] = useState(false);
@@ -43,6 +44,14 @@ const App = () => {
           }
         >
           <Route index element={<BlogPage />} />
+        </Route>
+        <Route
+          path="/contacto"
+          element={
+            <Layout mostrarNav={mostrarNav} setMostrarNav={setMostrarNav} />
+          }
+        >
+          <Route index element={<ContactoPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
