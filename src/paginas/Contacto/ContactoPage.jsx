@@ -1,5 +1,6 @@
 import React from "react";
 import HeaderSecundario from "../../layout/HeaderSecundario";
+import Contenido from "./Datos/Contenido/Contenido";
 import Datos from "./Datos/Datos";
 
 const ContactoPage = () => {
@@ -7,6 +8,7 @@ const ContactoPage = () => {
     <>
       <HeaderSecundario nombre={"contactanos"} link={"contacto"} />
       <Datos />
+      <Contenido />
     </>
   );
 };
