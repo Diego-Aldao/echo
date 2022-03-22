@@ -4,7 +4,6 @@ import Navbar from "../components/Navbar/Navbar";
 import BotonScroll from "../components/BotonScroll";
 import CustomCursor from "custom-cursor-react";
 import "custom-cursor-react/dist/index.css";
-import HeaderSecundario from "./HeaderSecundario";
 
 const Layout = ({ mostrarNav, setMostrarNav }) => {
   return (
