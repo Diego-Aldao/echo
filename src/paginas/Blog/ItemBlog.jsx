@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import imgPrueba from "../../assets/images/Header/img-header-02.webp";
 
 const Contenedor = styled.div`
   width: 100%;
@@ -79,13 +78,6 @@ const Info = styled.div`
     font-size: 20px;
     text-transform: capitalize;
   }
-  p {
-    color: var(--color-parrafos);
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 2;
-    margin: 0;
-  }
   span {
     margin-top: 20px;
     font-size: 12px;
@@ -114,10 +106,10 @@ const Info = styled.div`
   }
 `;
 
-const ItemBlog = () => {
+const ItemBlog = ({ img }) => {
   return (
     <Contenedor>
-      <Imagen src={imgPrueba} />
+      <Imagen src={img} />
       <Contenido>
         <Fecha>
           <h5>06</h5>

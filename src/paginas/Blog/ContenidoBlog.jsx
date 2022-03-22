@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import ItemBlog from "./ItemBlog";
 import { GoChevronRight } from "react-icons/go";
+import ImagenBlog01 from "../../assets/images/PaginasSec/Blog/img-blog-01.webp";
+import ImagenBlog02 from "../../assets/images/PaginasSec/Blog/img-blog-02.webp";
+import ImagenBlog03 from "../../assets/images/PaginasSec/Blog/img-blog-03.webp";
 
 const Wrapper = styled.section`
   width: 100%;
@@ -44,9 +47,9 @@ const ContenidoBlog = () => {
   return (
     <Wrapper>
       <Contenedor>
-        <ItemBlog />
-        <ItemBlog />
-        <ItemBlog />
+        <ItemBlog img={ImagenBlog01} />
+        <ItemBlog img={ImagenBlog02} />
+        <ItemBlog img={ImagenBlog03} />
         <Nav>
           <ItemNav current={true}>1</ItemNav>
           <ItemNav>2</ItemNav>
