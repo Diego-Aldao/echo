@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Formulario from "./Formulario";
+import Mapa from "./Mapa";
 
 const Wrapper = styled.section`
   width: 100%;
@@ -31,6 +32,7 @@ const Contenido = () => {
   return (
     <Wrapper>
       <Contenedor>
+        <Mapa />
         <Formulario />
       </Contenedor>
     </Wrapper>
