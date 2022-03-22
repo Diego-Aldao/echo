@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import Formulario from "./Formulario";
 
 const Wrapper = styled.section`
   width: 100%;
-  padding: 140px 0px;
+  padding: 0px 0px 140px;
   color: #fff;
   cursor: default;
 `;
@@ -29,7 +30,9 @@ const Contenedor = styled.div`
 const Contenido = () => {
   return (
     <Wrapper>
-      <Contenedor></Contenedor>
+      <Contenedor>
+        <Formulario />
+      </Contenedor>
     </Wrapper>
   );
 };
