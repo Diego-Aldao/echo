@@ -42,17 +42,11 @@ const Icono = styled.img`
 
 const Caracteristica = styled.h6`
   margin: 0px 0px 20px;
-  font-weight: 500;
   font-size: 16px;
-  line-height: 1.5;
   text-transform: capitalize;
 `;
 
-const Texto = styled.h6`
-  color: #9f9f9f;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 2;
+const Texto = styled.p`
   margin: 0px 0px 20px;
 
   &::first-letter {

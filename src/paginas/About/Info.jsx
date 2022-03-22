@@ -40,7 +40,6 @@ const Numeros = styled.div`
   margin-bottom: 50px;
   h3 {
     font-size: 42px;
-    font-weight: 500;
     color: var(--color-principal);
     margin: 0px 0px 10px;
     span {
@@ -51,8 +50,6 @@ const Numeros = styled.div`
   }
   h6 {
     font-size: 11px;
-    margin: 0px;
-    font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
   }

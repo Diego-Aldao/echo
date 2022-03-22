@@ -75,8 +75,7 @@ const Habilidad = styled.h6`
 
 const Titulo = styled.h4`
   font-size: 20px;
-  font-weight: 500;
-  line-height: 2;
+  line-height: 1.7;
   margin: 0px 0px 20px;
   text-transform: capitalize;
   @media (min-width: 768px) {
@@ -85,10 +84,6 @@ const Titulo = styled.h4`
 `;
 
 const Texto = styled.p`
-  color: var(--color-parrafos);
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 2;
   margin: 0px 0px 10px;
 `;
 
