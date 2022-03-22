@@ -1,6 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import imgPrueba from "../../assets/images/Header/img-header-01.webp";
+import imgProyecto01 from "../../assets/images/PaginasSec/Proyecto/img-proyecto-01.webp";
+import imgProyecto02 from "../../assets/images/PaginasSec/Proyecto/img-proyecto-02.webp";
+import imgProyecto03 from "../../assets/images/PaginasSec/Proyecto/img-proyecto-03.webp";
+import imgProyecto04 from "../../assets/images/PaginasSec/Proyecto/img-proyecto-04.webp";
+import imgProyecto05 from "../../assets/images/PaginasSec/Proyecto/img-proyecto-05.webp";
+import imgProyecto06 from "../../assets/images/PaginasSec/Proyecto/img-proyecto-06.webp";
+import imgProyecto07 from "../../assets/images/PaginasSec/Proyecto/img-proyecto-07.webp";
 import Siguiente from "./Siguiente";
 
 const Wrapper = styled.section`
@@ -50,27 +56,27 @@ const Media = () => {
     <Wrapper>
       <Contenido>
         <Imagen
-          src={imgPrueba}
+          src={imgProyecto01}
           column={"1 / 3"}
           columnLg={"1 / 2"}
           columnXl={"1 / 5"}
         />
-        <Imagen src={imgPrueba} />
-        <Imagen src={imgPrueba} />
+        <Imagen src={imgProyecto02} />
+        <Imagen src={imgProyecto03} />
         <Imagen
-          src={imgPrueba}
+          src={imgProyecto04}
           column={"1 / 3"}
           columnLg={"1 / 4"}
           columnXl={"3 / 4"}
         />
         <Imagen
-          src={imgPrueba}
+          src={imgProyecto05}
           column={"1 / 3"}
           columnLg={"1 / 2"}
           columnXl={"4 / 5"}
         />
-        <Imagen src={imgPrueba} columnXl={"1 / 3"} />
-        <Imagen src={imgPrueba} columnXl={"3 / 5"} />
+        <Imagen src={imgProyecto06} columnXl={"1 / 3"} />
+        <Imagen src={imgProyecto07} columnXl={"3 / 5"} />
       </Contenido>
       <Siguiente />
     </Wrapper>
