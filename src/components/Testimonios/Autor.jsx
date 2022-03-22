@@ -8,11 +8,8 @@ const Contenido = styled.div`
 const Texto = styled.p`
   font-size: 18px;
   padding: 80px 50px;
-  margin: 0px;
   border: 3px solid #ffffff47;
-  font-weight: 400;
   color: #fff;
-  line-height: 2;
   position: relative;
 `;
 const Icono = styled(ImQuotesLeft)`
@@ -58,10 +55,7 @@ const NombreAutor = styled.h6`
   vertical-align: middle;
   padding-left: 20px;
   font-size: 16px;
-  margin: 0px;
   color: #fff;
-  line-height: 1.4;
-  font-weight: 500;
   text-transform: capitalize;
   span {
     color: var(--color-principal);

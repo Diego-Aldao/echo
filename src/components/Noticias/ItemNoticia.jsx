@@ -56,11 +56,10 @@ const Tags = styled.div`
 `;
 
 const Titulo = styled.h6`
-  line-height: 1.4;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600px;
   margin: 0px 0px 40px;
-
+  font-family: var(--fuente-poppins);
   &::first-letter {
     text-transform: capitalize;
   }

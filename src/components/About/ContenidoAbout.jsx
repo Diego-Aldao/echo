@@ -24,7 +24,6 @@ const Titulo = styled.h3`
   letter-spacing: 4px;
   text-transform: uppercase;
   font-weight: 400;
-  line-height: 1.4;
   margin: 0px 0px 50px;
   @media (min-width: 768px) {
     font-size: 35px;
@@ -57,21 +56,11 @@ const TituloCaja = styled.h2`
   font-size: 25px;
   margin: 0px 0px 20px;
   letter-spacing: 1px;
-  line-height: 1.4;
   font-weight: 600;
   text-transform: capitalize;
   @media (min-width: 480px) {
     font-size: 40px;
   }
-`;
-
-const TextoCaja = styled.p`
-  font-size: 15px;
-  margin: 0;
-  font-weight: 400;
-  line-height: 2;
-  color: var(--color-parrafos);
-  line-height: 2;
 `;
 const BotonCaja = styled.a`
   padding: 10px 15px;
@@ -95,10 +84,10 @@ const ContenidoAbout = () => {
         <TituloCaja>
           25 años <br /> de experiencia
         </TituloCaja>
-        <TextoCaja>
+        <p>
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
           accusantium doloremque laudantium, totam rem aperiam
-        </TextoCaja>
+        </p>
         <BotonCaja>ver mas</BotonCaja>
       </CajaAbout>
     </Contenido>

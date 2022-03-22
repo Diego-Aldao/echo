@@ -18,11 +18,8 @@ const Contenido = styled.div`
 
 const Titulo = styled.h5`
   margin: 0px 0px 30px;
-  font-weight: 500;
-  line-height: 1.4;
   font-size: 18px;
   text-transform: capitalize;
-  font-family: var(--fuente-jost);
   @media (min-width: 768px) {
     font-size: 25px;
   }
@@ -54,11 +51,7 @@ const Icono = styled.div`
 `;
 
 const TextoInfo = styled.p`
-  color: #9f9f9f;
   font-size: 13px;
-  font-weight: 400;
-  line-height: 2;
-  margin: 0;
 `;
 const FechaInfo = styled.span`
   font-size: 12px;

@@ -31,7 +31,6 @@ const Contenedor = styled.div`
 
 const Titulo = styled.h3`
   font-size: 28px;
-  font-weight: 500;
   letter-spacing: 4px;
   text-transform: capitalize;
   margin: 0px 0px 50px;

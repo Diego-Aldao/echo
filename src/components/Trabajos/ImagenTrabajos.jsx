@@ -39,8 +39,6 @@ const Info = styled.a`
   }
   h5 {
     font-size: 17px;
-    font-weight: 500;
-    font-family: var(--fuente-jost);
     text-transform: capitalize;
     margin: 10px 0px 0px;
   }

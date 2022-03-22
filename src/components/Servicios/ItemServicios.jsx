@@ -17,17 +17,7 @@ const TituloItem = styled.h6`
   font-size: 16px;
   margin: 0px 0px 20px;
   text-transform: capitalize;
-  font-weight: 500;
-  line-height: 1.4;
   font-family: var(--fuente-poppins);
-`;
-
-const TextoItem = styled.p`
-  color: var(--color-parrafos);
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 2;
-  margin: 0;
 `;
 
 const ItemServicios = ({ imgIcono, titulo }) => {
@@ -35,10 +25,10 @@ const ItemServicios = ({ imgIcono, titulo }) => {
     <Contenedor>
       <Icono src={imgIcono} />
       <TituloItem>{titulo}</TituloItem>
-      <TextoItem>
+      <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio
         dicta, neque aut repellat culpa eaque aliquid.
-      </TextoItem>
+      </p>
     </Contenedor>
   );
 };

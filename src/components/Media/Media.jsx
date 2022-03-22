@@ -66,9 +66,6 @@ const CajaProductos = styled.div`
 `;
 const TituloMedia = styled.h4`
   font-size: 20px;
-  font-weight: 500;
-  line-height: 1.4;
-  margin: 0px;
   text-transform: capitalize;
   @media (min-width: 768px) {
     font-size: 30px;
@@ -77,8 +74,6 @@ const TituloMedia = styled.h4`
 const SubtituloMedia = styled.h6`
   font-size: 15px;
   margin: 5px 0px 0px;
-  font-weight: 500;
-  line-height: 1.4;
   text-transform: capitalize;
 `;
 

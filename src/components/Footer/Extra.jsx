@@ -44,9 +44,6 @@ const Copy = styled.p`
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #9f9f9f;
-  line-height: 2;
-  margin: 0;
   a {
     color: var(--color-principal);
     cursor: pointer;

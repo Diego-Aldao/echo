@@ -18,11 +18,8 @@ const Contenido = styled.div`
 
 const Titulo = styled.h5`
   margin: 0px 0px 30px;
-  font-weight: 500;
-  line-height: 1.4;
   font-size: 18px;
   text-transform: capitalize;
-  font-family: var(--fuente-jost);
   @media (min-width: 768px) {
     font-size: 25px;
   }
@@ -38,17 +35,10 @@ const Info = styled.ul`
 
 const TituloInfo = styled.h6`
   font-weight: 600;
-  line-height: 1.4;
-  margin: 0px;
   font-size: 14px;
   text-transform: capitalize;
 `;
 const TextoInfo = styled.p`
-  color: #9f9f9f;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 2;
-  margin: 0;
   text-transform: capitalize;
 `;
 const Icono = styled.span`

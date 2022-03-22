@@ -44,10 +44,8 @@ const Titulo = styled.h2`
   color: #fff;
   font-size: 28px;
   padding: 0px;
-  margin: 0px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: 500;
   display: flex;
   align-items: center;
   transition: all 0.3s ease-in-out;
@@ -68,7 +66,6 @@ const Info = styled.p`
   padding: 0px;
   margin: 10px 0px 0px;
   font-weight: 300;
-  line-height: 2;
   color: var(--color-subtitulos);
   transition: all 0.4s;
   transition-delay: 0.8s;

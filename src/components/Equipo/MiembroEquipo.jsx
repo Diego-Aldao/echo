@@ -77,10 +77,9 @@ const InfoEquipo = styled.div`
 
 const TituloEquipo = styled.h6`
   font-size: 16px;
-  line-height: 1.4;
-  font-weight: 500;
   margin: 0px 0px 5px;
   text-transform: capitalize;
+  font-family: var(--fuente-poppins);
 `;
 const SubEquipo = styled.span`
   display: inline-block;
