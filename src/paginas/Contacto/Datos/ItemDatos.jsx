@@ -20,15 +20,9 @@ const Titulo = styled.h6`
   font-size: 18px;
   text-transform: capitalize;
   color: var(--color-principal);
-  font-weight: 500;
-  font-family: var(--fuente-jost);
 `;
 const Info = styled.p`
-  color: var(--color-parrafos);
   font-size: 13px;
-  font-weight: 400;
-  line-height: 2;
-  margin: 0;
 `;
 
 const ItemDatos = ({ icono, titulo }) => {
