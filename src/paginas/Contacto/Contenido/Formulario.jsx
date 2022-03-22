@@ -3,6 +3,10 @@ import styled from "styled-components";
 
 const Contenido = styled.div`
   padding: 40px 0px;
+  @media (min-width: 992px) {
+    padding: 0px 0px 0px 40px;
+    width: 50%;
+  }
 `;
 
 const Form = styled.form`

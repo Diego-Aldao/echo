@@ -5,6 +5,10 @@ import styled from "styled-components";
 const Contenedor = styled(MapContainer)`
   height: 350px;
   width: 100%;
+  @media (min-width: 992px) {
+    width: 50%;
+    height: 450px;
+  }
 `;
 
 const Mapa = () => {
