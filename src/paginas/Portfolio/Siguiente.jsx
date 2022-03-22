@@ -21,8 +21,6 @@ const Subtitulo = styled.h6`
 const Titulo = styled.h2`
   font-size: clamp(3vw, 16px, 5vw);
   font-weight: 700;
-  margin: 0px;
-  line-height: 1.4;
   text-transform: capitalize;
 `;
 

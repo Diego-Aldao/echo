@@ -34,8 +34,6 @@ const Info = styled.div`
 
 const Titulo = styled.h4`
   font-size: 20px;
-  font-weight: 500;
-  line-height: 1.4;
   margin: 0px 0px 20px;
   text-transform: capitalize;
   @media (min-width: 768px) {
@@ -45,11 +43,6 @@ const Titulo = styled.h4`
 `;
 
 const Texto = styled.p`
-  color: var(--color-parrafos);
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 2;
-  margin: 0;
   text-transform: capitalize;
 `;
 
@@ -63,18 +56,10 @@ const Dato = styled.div`
   margin-bottom: 30px;
   h6 {
     font-size: 16px;
-    font-weight: 500;
-    line-height: 1.4;
-    margin: 0px;
     text-transform: capitalize;
     font-family: var(--fuente-poppins);
   }
   p {
-    color: var(--color-parrafos);
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 2;
-    margin: 0;
     text-transform: capitalize;
   }
   @media (min-width: 768px) {
