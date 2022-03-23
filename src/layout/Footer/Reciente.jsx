@@ -3,6 +3,7 @@ import styled from "styled-components";
 import imgFooterUno from "../../assets/images/Footer/img-footer-01.webp";
 import imgFooterDos from "../../assets/images/Footer/img-footer-02.webp";
 import { RiSendPlaneFill } from "react-icons/ri";
+import LazyLoad from "react-lazyload";
 
 const Contenido = styled.div`
   padding: 0px 25px;
@@ -99,7 +100,9 @@ const Reciente = () => {
       <Info>
         <li>
           <Icono>
-            <img src={imgFooterUno} alt="" />
+            <LazyLoad heigth={"100%"} offset={150}>
+              <img src={imgFooterUno} alt="" />
+            </LazyLoad>
           </Icono>
           <div>
             <TextoInfo>
@@ -110,7 +113,9 @@ const Reciente = () => {
         </li>
         <li>
           <Icono>
-            <img src={imgFooterDos} alt="" />
+            <LazyLoad heigth={"100%"} offset={150}>
+              <img src={imgFooterDos} alt="" />
+            </LazyLoad>
           </Icono>
           <div>
             <TextoInfo>

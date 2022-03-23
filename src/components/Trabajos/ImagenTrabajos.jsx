@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import LazyLoad from "react-lazyload";
 
 const Contenedor = styled.div`
   width: 100%;
@@ -58,7 +59,9 @@ const Tags = styled.div`
 const ImagenTrabajos = ({ img, column, row }) => {
   return (
     <Contenedor column={column} row={row}>
-      <img src={img} />
+      <LazyLoad height={"100%"} offset={200}>
+        <img src={img} />
+      </LazyLoad>
       <Info href="#">
         <Tags>
           <span>arquitectura</span>

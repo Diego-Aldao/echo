@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { ImQuotesLeft } from "react-icons/im";
+import LazyLoad from "react-lazyload";
 
 const Contenido = styled.div`
   width: 100%;
@@ -78,7 +79,9 @@ const Autor = ({ imgTestimonio, nombre, cargo }) => {
       </Texto>
       <Info>
         <ImgAutor>
-          <img src={imgTestimonio} alt="" />
+          <LazyLoad heigth={"100%"} offset={150}>
+            <img src={imgTestimonio} alt="" />
+          </LazyLoad>
         </ImgAutor>
         <NombreAutor>
           {nombre}

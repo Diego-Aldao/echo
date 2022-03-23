@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import LazyLoad from "react-lazyload";
 
 const Item = styled.div`
   padding: 50px 30px;
@@ -79,17 +80,19 @@ const Boton = styled.a`
 
 const ItemNoticia = ({ img, bgOpacity }) => {
   return (
-    <Item bgOpacity={bgOpacity} img={img}>
-      <Info>
-        <Fecha>agosto 06</Fecha>
-        <Tags>
-          <span>admin</span>
-          <span>WordPress</span>
-        </Tags>
-        <Titulo>casas de doble rectángulo de contenedores viejos.</Titulo>
-        <Boton>leer mas</Boton>
-      </Info>
-    </Item>
+    <LazyLoad heigth={"100%"} offset={150}>
+      <Item bgOpacity={bgOpacity} img={img}>
+        <Info>
+          <Fecha>agosto 06</Fecha>
+          <Tags>
+            <span>admin</span>
+            <span>WordPress</span>
+          </Tags>
+          <Titulo>casas de doble rectángulo de contenedores viejos.</Titulo>
+          <Boton>leer mas</Boton>
+        </Info>
+      </Item>
+    </LazyLoad>
   );
 };
 

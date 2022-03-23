@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import imgAbout from "../../assets/images/About/img-about-01.webp";
+import LazyLoad from "react-lazyload";
 
 const Media = styled.div`
   width: 100%;
@@ -62,7 +63,9 @@ const ItemMediaContenido = styled.div`
 const MediaAbout = () => {
   return (
     <Media>
-      <MediaImg src={imgAbout}></MediaImg>
+      <LazyLoad height={"100%"} offset={150}>
+        <MediaImg src={imgAbout}></MediaImg>
+      </LazyLoad>
       <MediaContenido>
         <ItemMediaContenido>
           <h5>01</h5>

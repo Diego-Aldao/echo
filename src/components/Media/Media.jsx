@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Background from "../../assets/images/Media/img-media.webp";
 import { BsPlay } from "react-icons/bs";
 import MediaModal from "./MediaModal";
+import LazyLoad from "react-lazyload";
 
 const Wrapper = styled.section`
   width: 100%;
@@ -110,7 +111,9 @@ const Media = () => {
 
   return (
     <Wrapper>
-      <ImagenBg src={Background} />
+      <LazyLoad height={"100%"} offset={150}>
+        <ImagenBg src={Background} />
+      </LazyLoad>
       <Contenedor>
         {miVideo && <MediaModal miVideo={miVideo} setMiVideo={setMiVideo} />}
         <BtnPlay onClick={handleClick} miVideo={miVideo}>

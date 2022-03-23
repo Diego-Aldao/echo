@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import LazyLoad from "react-lazyload";
 
 const ItemEquipo = styled.div`
   width: 90%;
@@ -50,8 +51,24 @@ const ItemEquipo = styled.div`
 const ImagenEquipo = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
   position: relative;
+  height: 95vw;
+  @media (min-width: 768px) {
+    height: 55vw;
+    max-height: 450px;
+  }
+  @media (min-width: 992px) {
+    max-height: 250px;
+  }
+  @media (min-width: 1200px) {
+    height: 24vw;
+    max-height: 750px;
+  }
+  @media (min-width: 1400px) {
+    height: 28vw;
+    max-height: 750px;
+  }
 `;
 const InfoEquipo = styled.div`
   position: absolute;
@@ -97,7 +114,9 @@ const MiembroEquipo = ({ imgEquipo }) => {
         <TituloEquipo>juan bautista</TituloEquipo>
         <SubEquipo>client manager</SubEquipo>
       </InfoEquipo>
-      <ImagenEquipo src={imgEquipo} />
+      <LazyLoad height={"auto"} offset={150}>
+        <ImagenEquipo src={imgEquipo} />
+      </LazyLoad>
     </ItemEquipo>
   );
 };

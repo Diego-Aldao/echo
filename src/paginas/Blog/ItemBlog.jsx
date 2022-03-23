@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import LazyLoad from "react-lazyload";
 
 const Contenedor = styled.div`
   width: 100%;
@@ -109,7 +110,9 @@ const Info = styled.div`
 const ItemBlog = ({ img }) => {
   return (
     <Contenedor>
-      <Imagen src={img} />
+      <LazyLoad heigth={"100%"} offset={150}>
+        <Imagen src={img} />
+      </LazyLoad>
       <Contenido>
         <Fecha>
           <h5>06</h5>
