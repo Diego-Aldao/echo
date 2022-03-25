@@ -1,16 +1,22 @@
-import React from "react";
-import { useState } from "react";
+import React, { lazy, Suspense } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./layout/Layout";
 import Inicio from "./layout/Inicio";
-import AboutPage from "./paginas/About/AboutPage";
-import PortfolioPage from "./paginas/Portfolio/PortfolioPage";
 import ScrollTop from "./components/ScrollTop";
-import BlogPage from "./paginas/Blog/BlogPage";
-import ContactoPage from "./paginas/Contacto/ContactoPage";
+const PaginaAbout = lazy(() => import("./paginas/About/AboutPage"));
+const PaginaPortfolio = lazy(() => import("./paginas/Portfolio/PortfolioPage"));
+const PaginaBlog = lazy(() => import("./paginas/Blog/BlogPage"));
+const PaginaContacto = lazy(() => import("./paginas/Contacto/ContactoPage"));
+import Loader from "./components/Loader";
 
 const App = () => {
   const [mostrarNav, setMostrarNav] = useState(false);
+  const [suspended, setSuspended] = useState(false);
+  useEffect(() => {
+    setTimeout(() => setSuspended(!suspended), 2000);
+  }, []);
+
   return (
     <BrowserRouter>
       <ScrollTop />
@@ -27,7 +33,14 @@ const App = () => {
             <Layout mostrarNav={mostrarNav} setMostrarNav={setMostrarNav} />
           }
         >
-          <Route index element={<AboutPage />} />
+          <Route
+            index
+            element={
+              <Suspense fallback={<Loader />}>
+                {suspended ? <PaginaAbout /> : <Loader />}
+              </Suspense>
+            }
+          />
         </Route>
         <Route
           path="/proyecto"
@@ -35,7 +48,14 @@ const App = () => {
             <Layout mostrarNav={mostrarNav} setMostrarNav={setMostrarNav} />
           }
         >
-          <Route index element={<PortfolioPage />} />
+          <Route
+            index
+            element={
+              <Suspense fallback={<Loader />}>
+                {suspended ? <PaginaPortfolio /> : <Loader />}
+              </Suspense>
+            }
+          />
         </Route>
         <Route
           path="/blog"
@@ -43,7 +63,14 @@ const App = () => {
             <Layout mostrarNav={mostrarNav} setMostrarNav={setMostrarNav} />
           }
         >
-          <Route index element={<BlogPage />} />
+          <Route
+            index
+            element={
+              <Suspense fallback={<Loader />}>
+                {suspended ? <PaginaBlog /> : <Loader />}
+              </Suspense>
+            }
+          />
         </Route>
         <Route
           path="/contacto"
@@ -51,7 +78,14 @@ const App = () => {
             <Layout mostrarNav={mostrarNav} setMostrarNav={setMostrarNav} />
           }
         >
-          <Route index element={<ContactoPage />} />
+          <Route
+            index
+            element={
+              <Suspense fallback={<Loader />}>
+                {suspended ? <PaginaContacto /> : <Loader />}
+              </Suspense>
+            }
+          />
         </Route>
       </Routes>
     </BrowserRouter>
