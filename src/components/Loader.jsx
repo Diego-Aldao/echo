@@ -31,7 +31,7 @@ const Contenedor = styled.div`
 const Loader = () => {
   return (
     <Contenedor>
-      <Triangle ariaLabel="loading-indicator" />
+      <Triangle color="var(--color-principal)" ariaLabel="loading-indicator" />
     </Contenedor>
   );
 };
