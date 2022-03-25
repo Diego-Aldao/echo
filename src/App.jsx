@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./layout/Layout";
 import Inicio from "./layout/Inicio";
@@ -12,11 +12,6 @@ import Loader from "./components/Loader";
 
 const App = () => {
   const [mostrarNav, setMostrarNav] = useState(false);
-  const [suspended, setSuspended] = useState(false);
-  useEffect(() => {
-    setTimeout(() => setSuspended(true), 2000);
-    setSuspended(false);
-  }, []);
 
   return (
     <BrowserRouter>
@@ -38,7 +33,7 @@ const App = () => {
             index
             element={
               <Suspense fallback={<Loader />}>
-                {suspended ? <PaginaAbout /> : <Loader />}
+                <PaginaAbout />
               </Suspense>
             }
           />
@@ -53,7 +48,7 @@ const App = () => {
             index
             element={
               <Suspense fallback={<Loader />}>
-                {suspended ? <PaginaPortfolio /> : <Loader />}
+                <PaginaPortfolio />
               </Suspense>
             }
           />
@@ -68,7 +63,7 @@ const App = () => {
             index
             element={
               <Suspense fallback={<Loader />}>
-                {suspended ? <PaginaBlog /> : <Loader />}
+                <PaginaBlog />
               </Suspense>
             }
           />
@@ -83,7 +78,7 @@ const App = () => {
             index
             element={
               <Suspense fallback={<Loader />}>
-                {suspended ? <PaginaContacto /> : <Loader />}
+                <PaginaContacto />
               </Suspense>
             }
           />
