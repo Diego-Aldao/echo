@@ -18,13 +18,13 @@ const App = () => {
       <ScrollTop />
       <Routes>
         <Route
-          path="/"
+          path={import.meta.env.BASE_URL + "/"}
           element={
             <Inicio mostrarNav={mostrarNav} setMostrarNav={setMostrarNav} />
           }
         ></Route>
         <Route
-          path="/about"
+          path={import.meta.env.BASE_URL + "/about"}
           element={
             <Layout mostrarNav={mostrarNav} setMostrarNav={setMostrarNav} />
           }
@@ -39,7 +39,7 @@ const App = () => {
           />
         </Route>
         <Route
-          path="/proyecto"
+          path={import.meta.env.BASE_URL + "/proyecto"}
           element={
             <Layout mostrarNav={mostrarNav} setMostrarNav={setMostrarNav} />
           }
@@ -54,7 +54,7 @@ const App = () => {
           />
         </Route>
         <Route
-          path="/blog"
+          path={import.meta.env.BASE_URL + "/blog"}
           element={
             <Layout mostrarNav={mostrarNav} setMostrarNav={setMostrarNav} />
           }
@@ -69,7 +69,7 @@ const App = () => {
           />
         </Route>
         <Route
-          path="/contacto"
+          path={import.meta.env.BASE_URL + "/contacto"}
           element={
             <Layout mostrarNav={mostrarNav} setMostrarNav={setMostrarNav} />
           }
