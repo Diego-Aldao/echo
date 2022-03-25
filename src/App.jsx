@@ -14,7 +14,8 @@ const App = () => {
   const [mostrarNav, setMostrarNav] = useState(false);
   const [suspended, setSuspended] = useState(false);
   useEffect(() => {
-    setTimeout(() => setSuspended(!suspended), 2000);
+    setTimeout(() => setSuspended(true), 2000);
+    setSuspended(false);
   }, []);
 
   return (
