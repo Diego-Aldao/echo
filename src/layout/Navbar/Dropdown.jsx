@@ -49,16 +49,16 @@ const Dropdown = ({ modal }) => {
   return (
     <Contenido modal={modal}>
       <ItemContenido>
-        <Link to={"/proyecto"}>proyecto 1</Link>
+        <Link to={"/proyecto"}>muebles de lujo</Link>
       </ItemContenido>
       <ItemContenido>
-        <Link to={"/proyecto"}>proyecto 2</Link>
+        <Link to={"/proyecto"}>casa moderna</Link>
       </ItemContenido>
       <ItemContenido>
-        <Link to={"/proyecto"}>proyecto 3</Link>
+        <Link to={"/proyecto"}>exterior renovado</Link>
       </ItemContenido>
       <ItemContenido>
-        <Link to={"/proyecto"}>proyecto 4</Link>
+        <Link to={"/proyectos"}>ver todos</Link>
       </ItemContenido>
     </Contenido>
   );

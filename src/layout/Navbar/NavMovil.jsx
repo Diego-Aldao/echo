@@ -82,16 +82,16 @@ const NavMovil = ({ navegacion }) => {
           </span>
           <Dropdown toggle={toggle}>
             <ItemDropdown>
-              <Link to={"/proyecto"}>proyecto 1</Link>
+              <Link to={"/proyecto"}>muebles de lujo</Link>
             </ItemDropdown>
             <ItemDropdown>
-              <Link to={"/proyecto"}>proyecto 2</Link>
+              <Link to={"/proyecto"}>casa moderna</Link>
             </ItemDropdown>
             <ItemDropdown>
-              <Link to={"/proyecto"}>proyecto 3</Link>
+              <Link to={"/proyecto"}>exterior renovado</Link>
             </ItemDropdown>
             <ItemDropdown>
-              <Link to={"/proyecto"}>proyecto 4</Link>
+              <Link to={"/proyectos"}>ver todos</Link>
             </ItemDropdown>
           </Dropdown>
         </li>
