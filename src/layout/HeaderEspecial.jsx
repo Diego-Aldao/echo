@@ -7,7 +7,7 @@ const Header = styled.header`
   color: white;
   padding: 80px 15px 0px;
   text-align: center;
-  min-height: 560px;
+  min-height: 530px;
   display: flex;
   justify-content: center;
   align-items: center;
