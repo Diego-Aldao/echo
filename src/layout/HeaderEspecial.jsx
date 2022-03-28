@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import imgBg from "../assets/images/header-especial.webp";
 
 const Header = styled.header`
   width: 100%;
@@ -11,6 +12,7 @@ const Header = styled.header`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background: url(${imgBg});
   h2 {
     font-size: 28px;
     letter-spacing: 2px;
@@ -30,7 +32,6 @@ const Header = styled.header`
     }
   }
   @media (min-width: 1200px) {
-    min-height: 630px;
     h2,
     p {
       max-width: 825px;
