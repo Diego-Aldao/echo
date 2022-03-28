@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import imgPrueba from "../../../assets/images/Header/img-header-01.webp";
 import Autor from "./Autor";
+import { RiLayoutGridFill } from "react-icons/ri";
 
 const Wrapper = styled.section`
   width: 100%;
@@ -107,6 +108,31 @@ const Tags = styled.div`
   }
 `;
 
+const Paginacion = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  span {
+    width: 100%;
+    padding: 20px;
+    border-right: 1px solid #333;
+    border-left: 1px solid #333;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+  span:not(:first-child):not(:last-child) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 60px;
+  }
+  span:last-child {
+    text-align: right;
+  }
+`;
+
 const Info = () => {
   return (
     <Wrapper>
@@ -182,8 +208,15 @@ const Info = () => {
           <Tags>
             <span>diseño</span>,<span>arquitectura</span>,<span>interior</span>
           </Tags>
-          <Autor />
         </Contenido>
+        <Autor />
+        <Paginacion>
+          <span>post anterior</span>
+          <span>
+            <RiLayoutGridFill />
+          </span>
+          <span>post siguiente</span>
+        </Paginacion>
       </Contenedor>
     </Wrapper>
   );

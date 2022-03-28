@@ -3,7 +3,7 @@ import styled from "styled-components";
 import imgAutor from "../../../assets/images/Equipo/equipo-01.webp";
 import { FaFacebookF, FaTwitter, FaBehance } from "react-icons/fa";
 
-const Contenido = styled.div`
+const Datos = styled.div`
   margin-top: 30px;
   padding: 30px 15px;
   text-align: center;
@@ -16,6 +16,8 @@ const Contenido = styled.div`
   h6 {
     text-transform: capitalize;
     margin-bottom: 10px;
+    font-size: 16px;
+    font-family: var(--fuente-poppins);
   }
   p {
     margin: 0px;
@@ -33,7 +35,7 @@ const Redes = styled.div`
 
 const Autor = () => {
   return (
-    <Contenido>
+    <Datos>
       <img src={imgAutor} alt="" />
       <h6> jorden griffith</h6>
       <p>
@@ -45,7 +47,7 @@ const Autor = () => {
         <FaTwitter />
         <FaBehance />
       </Redes>
-    </Contenido>
+    </Datos>
   );
 };
 
