@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import imgPrueba from "../../../assets/images/Header/img-header-01.webp";
+import Autor from "./Autor";
 
 const Wrapper = styled.section`
   width: 100%;
@@ -181,6 +182,7 @@ const Info = () => {
           <Tags>
             <span>diseño</span>,<span>arquitectura</span>,<span>interior</span>
           </Tags>
+          <Autor />
         </Contenido>
       </Contenedor>
     </Wrapper>
