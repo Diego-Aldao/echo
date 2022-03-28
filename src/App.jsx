@@ -12,6 +12,7 @@ const PaginaProyectos = lazy(() =>
   import("./paginas/Portfolio/Proyectos/ProyectosPage")
 );
 import Loader from "./components/Loader";
+import DetalleBlog from "./paginas/Blog/DetalleBlog/DetalleBlog";
 
 const App = () => {
   const [mostrarNav, setMostrarNav] = useState(false);
@@ -82,6 +83,21 @@ const App = () => {
             element={
               <Suspense fallback={<Loader />}>
                 <PaginaBlog />
+              </Suspense>
+            }
+          />
+        </Route>
+        <Route
+          path="/detalle-blog"
+          element={
+            <Layout mostrarNav={mostrarNav} setMostrarNav={setMostrarNav} />
+          }
+        >
+          <Route
+            index
+            element={
+              <Suspense fallback={<Loader />}>
+                <DetalleBlog />
               </Suspense>
             }
           />
