@@ -8,6 +8,9 @@ const PaginaAbout = lazy(() => import("./paginas/About/AboutPage"));
 const PaginaPortfolio = lazy(() => import("./paginas/Portfolio/PortfolioPage"));
 const PaginaBlog = lazy(() => import("./paginas/Blog/BlogPage"));
 const PaginaContacto = lazy(() => import("./paginas/Contacto/ContactoPage"));
+const PaginaProyectos = lazy(() =>
+  import("./paginas/Portfolio/Proyectos/ProyectosPage")
+);
 import Loader from "./components/Loader";
 
 const App = () => {
@@ -49,6 +52,21 @@ const App = () => {
             element={
               <Suspense fallback={<Loader />}>
                 <PaginaPortfolio />
+              </Suspense>
+            }
+          />
+        </Route>
+        <Route
+          path="/proyectos"
+          element={
+            <Layout mostrarNav={mostrarNav} setMostrarNav={setMostrarNav} />
+          }
+        >
+          <Route
+            index
+            element={
+              <Suspense fallback={<Loader />}>
+                <PaginaProyectos />
               </Suspense>
             }
           />
