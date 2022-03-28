@@ -1,7 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import imagenPrueba from "../../../assets/images/PaginasSec/Proyecto/img-proyecto-01.webp";
-import imagenPrueba2 from "../../../assets/images/Trabajos/trabajo-grande-03.webp";
+import imagenCuatro from "../../../assets/images/PaginasSec/Proyecto/img-proyecto-01.webp";
+import imagenCinco from "../../../assets/images/PaginasSec/Proyecto/img-proyecto-02.webp";
+import imagenSeis from "../../../assets/images/PaginasSec/Proyecto/img-proyecto-03.webp";
+import imagenUno from "../../../assets/images/Trabajos/trabajo-grande-03.webp";
+import imagenDos from "../../../assets/images/Trabajos/trabajo-grande-02.webp";
+import imagenTres from "../../../assets/images/Trabajos/trabajo-grande-01.webp";
 import ImagenTrabajos from "../../../components/Trabajos/ImagenTrabajos";
 
 const Wrapper = styled.section`
@@ -57,12 +61,26 @@ const Media = () => {
           <span>otro</span>
         </Filtro>
         <Contenido>
-          <ImagenTrabajos img={imagenPrueba} />
-          <ImagenTrabajos img={imagenPrueba2} column={"2 / 3"} row={" 1 / 3"} />
-          <ImagenTrabajos img={imagenPrueba} />
-          <ImagenTrabajos img={imagenPrueba2} row={" 2 / 4"} />
-          <ImagenTrabajos img={imagenPrueba} column={"2 / 3"} />
-          <ImagenTrabajos img={imagenPrueba2} column={"3 / 4"} row={"2 / 4"} />
+          <ImagenTrabajos img={imagenCuatro} link={"/proyecto"} />
+          <ImagenTrabajos
+            img={imagenUno}
+            column={"2 / 3"}
+            row={" 1 / 3"}
+            link={"/proyecto"}
+          />
+          <ImagenTrabajos img={imagenCinco} link={"/proyecto"} />
+          <ImagenTrabajos img={imagenDos} row={" 2 / 4"} link={"/proyecto"} />
+          <ImagenTrabajos
+            img={imagenSeis}
+            column={"2 / 3"}
+            link={"/proyecto"}
+          />
+          <ImagenTrabajos
+            img={imagenTres}
+            column={"3 / 4"}
+            row={"2 / 4"}
+            link={"/proyecto"}
+          />
         </Contenido>
       </Contenedor>
     </Wrapper>
