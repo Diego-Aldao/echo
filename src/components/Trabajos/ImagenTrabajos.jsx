@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import LazyLoad from "react-lazyload";
+import { Link } from "react-router-dom";
 
 const Contenedor = styled.div`
   width: 100%;
@@ -18,7 +19,7 @@ const Contenedor = styled.div`
   }
 `;
 
-const Info = styled.a`
+const Info = styled(Link)`
   position: absolute;
   top: 0px;
   left: 0px;
@@ -62,7 +63,7 @@ const ImagenTrabajos = ({ img, column, row }) => {
       <LazyLoad height={"100%"} offset={200}>
         <img src={img} />
       </LazyLoad>
-      <Info href="#">
+      <Info to={"/proyecto"}>
         <Tags>
           <span>arquitectura</span>
           <span>moderno</span>
