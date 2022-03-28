@@ -41,7 +41,7 @@ const Contenido = styled.div`
   grid-template-rows: repeat(6, auto);
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: repeat(3, auto);
     column-gap: 25px;
   }
 `;
