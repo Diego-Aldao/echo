@@ -20,6 +20,25 @@ const Header = styled.header`
   p {
     max-width: 510px;
   }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 40px;
+    }
+    h2,
+    p {
+      max-width: 690px;
+    }
+  }
+  @media (min-width: 1200px) {
+    min-height: 630px;
+    h2,
+    p {
+      max-width: 825px;
+    }
+  }
+  @media (min-width: 1800px) {
+    min-height: 1000px;
+  }
 `;
 
 const HeaderEspecial = () => {
