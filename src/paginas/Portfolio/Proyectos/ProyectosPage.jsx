@@ -1,7 +1,12 @@
 import React from "react";
+import HeaderEspecial from "../../../layout/HeaderEspecial";
 
 const ProyectosPage = () => {
-  return <></>;
+  return (
+    <>
+      <HeaderEspecial />
+    </>
+  );
 };
 
 export default ProyectosPage;
