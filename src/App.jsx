@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import Layout from "./layout/Layout";
 import Inicio from "./layout/Inicio";
 import ScrollTop from "./components/ScrollTop";
@@ -14,17 +14,17 @@ const App = () => {
   const [mostrarNav, setMostrarNav] = useState(false);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollTop />
       <Routes>
         <Route
-          path={import.meta.env.BASE_URL + "/"}
+          path="/"
           element={
             <Inicio mostrarNav={mostrarNav} setMostrarNav={setMostrarNav} />
           }
         ></Route>
         <Route
-          path={import.meta.env.BASE_URL + "/about"}
+          path="/about"
           element={
             <Layout mostrarNav={mostrarNav} setMostrarNav={setMostrarNav} />
           }
@@ -39,7 +39,7 @@ const App = () => {
           />
         </Route>
         <Route
-          path={import.meta.env.BASE_URL + "/proyecto"}
+          path="/proyecto"
           element={
             <Layout mostrarNav={mostrarNav} setMostrarNav={setMostrarNav} />
           }
@@ -54,7 +54,7 @@ const App = () => {
           />
         </Route>
         <Route
-          path={import.meta.env.BASE_URL + "/blog"}
+          path="/blog"
           element={
             <Layout mostrarNav={mostrarNav} setMostrarNav={setMostrarNav} />
           }
@@ -69,7 +69,7 @@ const App = () => {
           />
         </Route>
         <Route
-          path={import.meta.env.BASE_URL + "/contacto"}
+          path="/contacto"
           element={
             <Layout mostrarNav={mostrarNav} setMostrarNav={setMostrarNav} />
           }
@@ -84,7 +84,7 @@ const App = () => {
           />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
