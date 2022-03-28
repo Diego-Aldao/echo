@@ -15,16 +15,10 @@ const Contenedor = styled.div`
   max-width: 540px;
   margin: 0 auto;
   @media (min-width: 768px) {
-    max-width: 720px;
+    max-width: 100%;
   }
-  @media (min-width: 992px) {
-    max-width: 960px;
-  }
-  @media (min-width: 1200px) {
-    max-width: 1140px;
-  }
-  @media (min-width: 1400px) {
-    max-width: 1340px;
+  @media (min-width: 1240px) {
+    padding: 0px 30px;
   }
 `;
 
@@ -45,6 +39,11 @@ const Contenido = styled.div`
   grid-template-columns: 1fr;
   row-gap: 25px;
   grid-template-rows: repeat(6, auto);
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    column-gap: 25px;
+  }
 `;
 
 const Media = () => {
@@ -59,11 +58,11 @@ const Media = () => {
         </Filtro>
         <Contenido>
           <ImagenTrabajos img={imagenPrueba} />
-          <ImagenTrabajos img={imagenPrueba2} />
+          <ImagenTrabajos img={imagenPrueba2} column={"2 / 3"} row={" 1 / 3"} />
           <ImagenTrabajos img={imagenPrueba} />
-          <ImagenTrabajos img={imagenPrueba2} />
-          <ImagenTrabajos img={imagenPrueba} />
-          <ImagenTrabajos img={imagenPrueba2} />
+          <ImagenTrabajos img={imagenPrueba2} row={" 2 / 4"} />
+          <ImagenTrabajos img={imagenPrueba} column={"2 / 3"} />
+          <ImagenTrabajos img={imagenPrueba2} column={"3 / 4"} row={"2 / 4"} />
         </Contenido>
       </Contenedor>
     </Wrapper>
