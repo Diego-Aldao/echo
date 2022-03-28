@@ -61,26 +61,12 @@ const Media = () => {
           <span>otro</span>
         </Filtro>
         <Contenido>
-          <ImagenTrabajos img={imagenCuatro} link={"/proyecto"} />
-          <ImagenTrabajos
-            img={imagenUno}
-            column={"2 / 3"}
-            row={" 1 / 3"}
-            link={"/proyecto"}
-          />
-          <ImagenTrabajos img={imagenCinco} link={"/proyecto"} />
-          <ImagenTrabajos img={imagenDos} row={" 2 / 4"} link={"/proyecto"} />
-          <ImagenTrabajos
-            img={imagenSeis}
-            column={"2 / 3"}
-            link={"/proyecto"}
-          />
-          <ImagenTrabajos
-            img={imagenTres}
-            column={"3 / 4"}
-            row={"2 / 4"}
-            link={"/proyecto"}
-          />
+          <ImagenTrabajos img={imagenCuatro} />
+          <ImagenTrabajos img={imagenUno} column={"2 / 3"} row={" 1 / 3"} />
+          <ImagenTrabajos img={imagenCinco} />
+          <ImagenTrabajos img={imagenDos} row={" 2 / 4"} />
+          <ImagenTrabajos img={imagenSeis} column={"2 / 3"} />
+          <ImagenTrabajos img={imagenTres} column={"3 / 4"} row={"2 / 4"} />
         </Contenido>
       </Contenedor>
     </Wrapper>
