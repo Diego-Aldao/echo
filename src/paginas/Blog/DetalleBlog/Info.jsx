@@ -18,14 +18,13 @@ const Contenedor = styled.div`
     max-width: 720px;
   }
   @media (min-width: 992px) {
-    max-width: 960px;
-    display: flex;
+    max-width: 880px;
   }
   @media (min-width: 1200px) {
-    max-width: 1140px;
+    max-width: 1045px;
   }
   @media (min-width: 1400px) {
-    max-width: 1340px;
+    max-width: 1140px;
   }
 `;
 
@@ -48,13 +47,23 @@ const Titulo = styled.div`
       font-family: var(--fuente-poppins);
     }
   }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 40px;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+`;
+const ImgPrincipal = styled.img`
+  height: 600px;
+  width: 100%;
+  object-fit: cover;
 `;
 const Contenido = styled.div`
-  img {
-    height: 600px;
-    width: 100%;
-    object-fit: cover;
-  }
+  max-width: 705px;
+  margin: 0px auto;
   h5,
   h6 {
     font-family: var(--fuente-poppins);
@@ -72,10 +81,17 @@ const Contenido = styled.div`
   li {
     font-family: var(--fuente-poppins);
     margin: 10px 0px;
+    line-height: 1.5;
     span {
       margin-right: 15px;
       font-size: 13px;
     }
+  }
+  @media (min-width: 1200px) {
+    max-width: 840px;
+  }
+  @media (min-width: 1400px) {
+    max-width: 960px;
   }
 `;
 const Quote = styled.div`
@@ -89,17 +105,40 @@ const Quote = styled.div`
   }
 `;
 const MiniImagenes = styled.div`
+  width: 100%;
   img {
     height: 50vw;
     min-height: 170px;
     margin-bottom: 10px;
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    img {
+      width: 330px;
+      height: 195px;
+    }
+  }
+  @media (min-width: 1200px) {
+    img {
+      width: 405px;
+      height: 238px;
+    }
+  }
+  @media (min-width: 1400px) {
+    img {
+      width: 445px;
+      height: 268px;
+    }
   }
 `;
 
 const Tags = styled.div`
-  padding: 0px 15px;
+  padding: 10px 15px 0px;
   margin: 30px 0px;
-  text-align: center;
+  text-align: right;
+  border-top: 1px solid #333;
   span {
     font-size: 12px;
     font-family: var(--fuente-poppins);
@@ -138,14 +177,14 @@ const Info = () => {
     <Wrapper>
       <Contenedor>
         <Titulo>
-          <h2>construye un hermoso blog con facilidad</h2>
+          <h2>construye un blog con facilidad</h2>
           <p>
             <span>alex smith</span> /<span> august 6, 2022</span>/
             <span>web design</span>
           </p>
         </Titulo>
+        <ImgPrincipal src={imgPrueba} />
         <Contenido>
-          <img src={imgPrueba} />
           <h5>
             Never ever think of giving up. Winners never quit and quitters never
             win. Take all negative words out of your mental dictionary and focus
@@ -171,19 +210,21 @@ const Info = () => {
           </p>
           <ul>
             <li>
-              <span>01</span>Lorem ipsum dolor sit.
+              <span>01</span>Integer in volutpat libero.
             </li>
             <li>
-              <span>02</span>Lorem ipsum dolor sit.
+              <span>02</span>Vivamus maximus ultricies pulvinar.
             </li>
             <li>
-              <span>03</span>Lorem ipsum dolor sit.
+              <span>03</span>priorities that will pop up in any particular
+              month.
             </li>
             <li>
-              <span>04</span>Lorem ipsum dolor sit.
+              <span>04</span>We all intend to plan ahead.
             </li>
             <li>
-              <span>05</span>Lorem ipsum dolor sit.
+              <span>05</span>The main component of a healthy env for self
+              esteem.
             </li>
           </ul>
           <Quote>

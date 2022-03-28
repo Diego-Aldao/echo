@@ -4,15 +4,36 @@ import imgAutor from "../../../assets/images/Equipo/equipo-01.webp";
 import { FaFacebookF, FaTwitter, FaBehance } from "react-icons/fa";
 
 const Datos = styled.div`
-  margin-top: 30px;
+  margin: 30px auto 0px;
   padding: 30px 15px;
   text-align: center;
-  img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    margin-bottom: 20px;
+  max-width: 705px;
+  @media (min-width: 480px) {
+    padding: 0px 40px;
+    display: flex;
+    align-items: center;
   }
+  @media (min-width: 1200px) {
+    max-width: 840px;
+  }
+  @media (min-width: 1400px) {
+    max-width: 960px;
+  }
+`;
+
+const ImagenAutor = styled.img`
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  @media (min-width: 480px) {
+    width: 140px;
+    height: 140px;
+  }
+`;
+
+const Info = styled.div`
+  text-align: left;
   h6 {
     text-transform: capitalize;
     margin-bottom: 10px;
@@ -22,6 +43,10 @@ const Datos = styled.div`
   p {
     margin: 0px;
   }
+  @media (min-width: 480px) {
+    padding-left: 40px;
+    width: calc(100% - 140px);
+  }
 `;
 const Redes = styled.div`
   display: flex;
@@ -29,24 +54,29 @@ const Redes = styled.div`
   align-items: center;
   margin-top: 15px;
   svg {
-    margin: 10px 20px;
+    margin: 10px 10px;
+  }
+  @media (min-width: 480px) {
+    justify-content: flex-start;
   }
 `;
 
 const Autor = () => {
   return (
     <Datos>
-      <img src={imgAutor} alt="" />
-      <h6> jorden griffith</h6>
-      <p>
-        the main component of a healthy environment for self esteem is that it
-        needs be nurturing. The main compont of a healthy environment.
-      </p>
-      <Redes>
-        <FaFacebookF />
-        <FaTwitter />
-        <FaBehance />
-      </Redes>
+      <ImagenAutor src={imgAutor} />
+      <Info>
+        <h6> jorden griffith</h6>
+        <p>
+          the main component of a healthy environment for self esteem is that it
+          needs be nurturing. The main compont of a healthy environment.
+        </p>
+        <Redes>
+          <FaFacebookF />
+          <FaTwitter />
+          <FaBehance />
+        </Redes>
+      </Info>
     </Datos>
   );
 };
