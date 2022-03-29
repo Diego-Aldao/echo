@@ -1,5 +1,8 @@
+import { Formik, Form } from "formik";
 import React from "react";
 import styled from "styled-components";
+import Input from "./Input";
+import * as Yup from "yup";
 
 const Contenido = styled.div`
   padding: 40px 0px;
@@ -9,31 +12,6 @@ const Contenido = styled.div`
   }
 `;
 
-const Form = styled.form`
-  input,
-  textarea {
-    background: black;
-    border: 0px;
-    border-bottom: 1px solid var(--color-principal);
-    width: 100%;
-    padding: 20px 5px;
-    color: white;
-    font-family: var(--fuente-poppins);
-    margin-bottom: 20px;
-  }
-  input::placeholder,
-  textarea::placeholder {
-    color: var(--color-parrafos);
-    text-transform: capitalize;
-    font-family: var(--fuente-jost);
-  }
-  input:focus,
-  textarea:focus {
-    outline: 2px;
-    outline-color: var(--color-principal);
-    outline-style: solid;
-  }
-`;
 const Boton = styled.button`
   font-size: 16px;
   font-weight: 500;
@@ -46,31 +24,40 @@ const Boton = styled.button`
 `;
 
 const Formulario = () => {
+  const validacion = Yup.object().shape({
+    nombre: Yup.string()
+      .min(3, "El nombre es muy corto")
+      .max(20, "El nombre es muy largo")
+      .required("El nombre es obligatorio"),
+    email: Yup.string()
+      .email("Email no válido")
+      .required("El email es obligatorio"),
+    notas: "",
+  });
   return (
     <Contenido>
-      <Form>
-        <input
-          name="nombre"
-          type="text"
-          id="form-name"
-          placeholder="nombre"
-        ></input>
-        <input
-          name="email"
-          type="email"
-          id="form-email"
-          placeholder="email"
-        ></input>
-        <textarea
-          name="mensaje"
-          id="form-mensaje"
-          placeholder="mensaje"
-          rows={7}
-        ></textarea>
-        <Boton type="submit">
-          <span>enviar mensaje</span>
-        </Boton>
-      </Form>
+      <Formik
+        initialValues={{
+          nombre: "",
+          email: "",
+          mensaje: "",
+        }}
+        validationSchema={validacion}
+      >
+        {({ errors, touched }) => (
+          <Form>
+            <Input type="text" name="nombre" placeholder="nombre" />
+            <Input type="email" name="email" placeholder="email" />
+            <Input
+              as="textarea"
+              rows="8"
+              name="mensaje"
+              placeholder="mensaje"
+            />
+            <Boton type="submit">enviar</Boton>
+          </Form>
+        )}
+      </Formik>
     </Contenido>
   );
 };
