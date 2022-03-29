@@ -3,8 +3,9 @@ import styled from "styled-components";
 import { GoLocation } from "react-icons/go";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsTelephone } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
-const Contenido = styled.div`
+const Contenido = styled(Link)`
   padding: 0px 25px;
   margin-bottom: 50px;
   @media (min-width: 768px) {
@@ -50,7 +51,7 @@ const Icono = styled.span`
 
 const Contacto = () => {
   return (
-    <Contenido>
+    <Contenido to="/contacto">
       <Titulo>contacto</Titulo>
       <Info>
         <li>

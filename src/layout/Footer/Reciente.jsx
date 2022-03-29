@@ -4,6 +4,7 @@ import imgFooterUno from "../../assets/images/Footer/img-footer-01.webp";
 import imgFooterDos from "../../assets/images/Footer/img-footer-02.webp";
 import { RiSendPlaneFill } from "react-icons/ri";
 import LazyLoad from "react-lazyload";
+import { Link } from "react-router-dom";
 
 const Contenido = styled.div`
   padding: 0px 25px;
@@ -98,32 +99,36 @@ const Reciente = () => {
     <Contenido>
       <Titulo>noticias recientes</Titulo>
       <Info>
-        <li>
-          <Icono>
-            <LazyLoad heigth={"100%"} offset={150}>
-              <img src={imgFooterUno} alt="" />
-            </LazyLoad>
-          </Icono>
-          <div>
-            <TextoInfo>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </TextoInfo>
-            <FechaInfo>14 feb 2020</FechaInfo>
-          </div>
-        </li>
-        <li>
-          <Icono>
-            <LazyLoad heigth={"100%"} offset={150}>
-              <img src={imgFooterDos} alt="" />
-            </LazyLoad>
-          </Icono>
-          <div>
-            <TextoInfo>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </TextoInfo>
-            <FechaInfo>14 feb 2020</FechaInfo>
-          </div>
-        </li>
+        <Link to="/detalle-blog">
+          <li>
+            <Icono>
+              <LazyLoad heigth={"100%"} offset={150}>
+                <img src={imgFooterUno} alt="" />
+              </LazyLoad>
+            </Icono>
+            <div>
+              <TextoInfo>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </TextoInfo>
+              <FechaInfo>14 feb 2020</FechaInfo>
+            </div>
+          </li>
+        </Link>
+        <Link to="/detalle-blog">
+          <li>
+            <Icono>
+              <LazyLoad heigth={"100%"} offset={150}>
+                <img src={imgFooterDos} alt="" />
+              </LazyLoad>
+            </Icono>
+            <div>
+              <TextoInfo>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </TextoInfo>
+              <FechaInfo>14 feb 2020</FechaInfo>
+            </div>
+          </li>
+        </Link>
       </Info>
       <Newsletter>
         <input
