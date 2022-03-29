@@ -52,9 +52,8 @@ const Formulario = () => {
         }}
         validationSchema={validacion}
         onSubmit={(values, { resetForm }) => {
-          console.log(values);
           resetForm();
-          navigate("/contacto");
+          navigate("/");
         }}
       >
         {({ errors, touched }) => (

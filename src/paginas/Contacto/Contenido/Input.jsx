@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Field } from "formik";
+import { Field, useField } from "formik";
 
 const Campo = styled(Field)`
   background: black;
@@ -23,16 +23,12 @@ const Campo = styled(Field)`
   }
 `;
 
-const Input = ({ type, name, placeholder, as, rows }) => {
+const Input = (props) => {
+  const [field] = useField(props);
+
   return (
     <>
-      <Campo
-        name={name}
-        type={type}
-        placeholder={placeholder}
-        as={as ? as : null}
-        rows={rows ? rows : null}
-      />
+      <Campo {...field} {...props} />
     </>
   );
 };
