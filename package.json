@@ -23,7 +23,8 @@
     "react-router-dom": "^6.2.2",
     "splitting": "^1.0.6",
     "styled-components": "^5.3.3",
-    "swiper": "^8.0.6"
+    "swiper": "^8.0.6",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",
