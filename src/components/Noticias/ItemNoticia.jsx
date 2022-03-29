@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import LazyLoad from "react-lazyload";
+import { Link } from "react-router-dom";
 
-const Item = styled.div`
+const Item = styled(Link)`
   padding: 50px 30px;
   margin-bottom: 50px;
   color: #fff;
@@ -66,7 +67,7 @@ const Titulo = styled.h6`
   }
 `;
 
-const Boton = styled.a`
+const Boton = styled.span`
   font-size: 12px;
   letter-spacing: 2px;
   background: none;
@@ -81,7 +82,7 @@ const Boton = styled.a`
 const ItemNoticia = ({ img, bgOpacity }) => {
   return (
     <LazyLoad heigth={"100%"} offset={150}>
-      <Item bgOpacity={bgOpacity} img={img}>
+      <Item bgOpacity={bgOpacity} img={img} to="/blog">
         <Info>
           <Fecha>agosto 06</Fecha>
           <Tags>
