@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Circle } from "rc-progress";
 import { IoIosArrowUp } from "react-icons/io";
 
-const Caja = styled.div`
+const Caja = styled.a`
   width: 50px;
   height: 50px;
   position: fixed;
@@ -29,12 +29,14 @@ const Flecha = styled(IoIosArrowUp)`
 const BotonScroll = () => {
   const handleClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    console.log("si");
   };
 
   const [scrollTop, setScrollTop] = useState(0);
 
   useEffect(() => {
+    /*Effect para calcular la posicion actual de la pagina y pasarsela
+    a react-progress como porcentaje*/
+
     const porcentajeScroll = () => {
       let posicion = document.documentElement.scrollTop;
       let calcHeight =
@@ -50,6 +52,8 @@ const BotonScroll = () => {
   return (
     <Caja scrollTop={scrollTop} onClick={handleClick}>
       <Flecha />
+
+      {/*barra de progreso de react-progress */}
       <Circle
         percent={scrollTop}
         strokeWidth="7"
