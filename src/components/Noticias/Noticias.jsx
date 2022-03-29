@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import ItemNoticia from "./ItemNoticia";
 import imgNoticiasUno from "../../assets/images/Noticias/noticias-01.webp";
@@ -47,15 +47,14 @@ const Contenido = styled.div`
 `;
 
 const Noticias = () => {
-  const [bgOpacity, setBgOpacity] = useState("#000000b0");
   return (
     <Wrapper>
       <Contenedor>
         <Titulo>noticias</Titulo>
         <Contenido>
-          <ItemNoticia bgOpacity={bgOpacity} img={imgNoticiasUno} />
+          <ItemNoticia opacity={"#000000b0"} img={imgNoticiasUno} />
           <ItemNoticia img={imgNoticiasDos} />
-          <ItemNoticia bgOpacity={bgOpacity} img={imgNoticiasTres} />
+          <ItemNoticia opacity={"#000000b0"} img={imgNoticiasTres} />
         </Contenido>
       </Contenedor>
     </Wrapper>

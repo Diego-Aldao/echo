@@ -22,7 +22,7 @@ const Item = styled(Link)`
     left: 0px;
     width: 100%;
     height: 100%;
-    background: ${(props) => (props.bgOpacity ? props.bgOpacity : "#00000028")};
+    background: ${(props) => (props.opacity ? props.opacity : "#00000028")};
     transition: all 0.3s ease-in-out;
   }
   &:hover {
@@ -79,10 +79,10 @@ const Boton = styled.span`
   line-height: 1.4;
 `;
 
-const ItemNoticia = ({ img, bgOpacity }) => {
+const ItemNoticia = ({ img, opacity }) => {
   return (
     <LazyLoad heigth={"100%"} offset={150}>
-      <Item bgOpacity={bgOpacity} img={img} to="/blog">
+      <Item opacity={opacity} img={img} to="/blog">
         <Info>
           <Fecha>agosto 06</Fecha>
           <Tags>
