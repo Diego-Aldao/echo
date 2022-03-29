@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import imgProyecto01 from "../../assets/images/PaginasSec/Proyecto/img-proyecto-01.webp";
 import imgProyecto02 from "../../assets/images/PaginasSec/Proyecto/img-proyecto-02.webp";
@@ -25,17 +26,21 @@ const Contenido = styled.div`
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 15px;
+    grid-template-rows: repeat(5, auto);
   }
   @media (min-width: 992px) {
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
   }
   @media (min-width: 1200px) {
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
   }
 `;
-const Imagen = styled.img`
+
+const ContenedorImg = styled(Link)`
   width: 100%;
-  object-fit: cover;
+  height: 100%;
   max-height: auto;
   @media (min-width: 768px) {
     min-height: 335px;
@@ -43,40 +48,59 @@ const Imagen = styled.img`
   }
   @media (min-width: 992px) {
     max-height: 500px;
-    grid-column: ${(props) => (props.columnLg ? props.columnLg : "")};
+    grid-column: ${(props) => (props.columnlg ? props.columnlg : "")};
   }
   @media (min-width: 1200px) {
     max-height: 600px;
-    grid-column: ${(props) => (props.columnXl ? props.columnXl : "")};
+    grid-column: ${(props) => (props.columnxl ? props.columnxl : "")};
   }
+`;
+const Imagen = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 
 const Media = () => {
   return (
     <Wrapper>
       <Contenido>
-        <Imagen
-          src={imgProyecto01}
+        <ContenedorImg
+          to="/proyectos"
           column={"1 / 3"}
-          columnLg={"1 / 2"}
-          columnXl={"1 / 5"}
-        />
-        <Imagen src={imgProyecto02} />
-        <Imagen src={imgProyecto03} />
-        <Imagen
-          src={imgProyecto04}
+          columnlg={"1 / 2"}
+          columnxl={"1 / 5"}
+        >
+          <Imagen src={imgProyecto01} />
+        </ContenedorImg>
+        <ContenedorImg to="/proyectos">
+          <Imagen src={imgProyecto02} />
+        </ContenedorImg>
+        <ContenedorImg to="/proyectos">
+          <Imagen src={imgProyecto03} />
+        </ContenedorImg>
+        <ContenedorImg
+          to="/proyectos"
           column={"1 / 3"}
-          columnLg={"1 / 4"}
-          columnXl={"3 / 4"}
-        />
-        <Imagen
-          src={imgProyecto05}
+          columnlg={"1 / 4"}
+          columnxl={"3 / 4"}
+        >
+          <Imagen src={imgProyecto04} />
+        </ContenedorImg>
+        <ContenedorImg
+          to="/proyectos"
           column={"1 / 3"}
-          columnLg={"1 / 2"}
-          columnXl={"4 / 5"}
-        />
-        <Imagen src={imgProyecto06} columnXl={"1 / 3"} />
-        <Imagen src={imgProyecto07} columnXl={"3 / 5"} />
+          columnlg={"1 / 2"}
+          columnxl={"4 / 5"}
+        >
+          <Imagen src={imgProyecto05} />
+        </ContenedorImg>
+        <ContenedorImg to="/proyectos" columnxl={"1 / 3"}>
+          <Imagen src={imgProyecto06} />
+        </ContenedorImg>
+        <ContenedorImg to="/proyectos" columnxl={"3 / 5"}>
+          <Imagen src={imgProyecto07} />
+        </ContenedorImg>
       </Contenido>
       <Siguiente />
     </Wrapper>
