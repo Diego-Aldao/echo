@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { ErrorMessage, Field } from "formik";
+import { Field } from "formik";
 
 const Campo = styled(Field)`
   background: black;
@@ -10,7 +10,7 @@ const Campo = styled(Field)`
   padding: 20px 5px;
   color: white;
   font-family: var(--fuente-poppins);
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   &::placeholder {
     color: var(--color-parrafos);
     text-transform: capitalize;
