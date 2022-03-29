@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Contenido = styled.div`
   width: 100%;
@@ -62,7 +63,7 @@ const TituloCaja = styled.h2`
     font-size: 40px;
   }
 `;
-const BotonCaja = styled.a`
+const BotonCaja = styled(Link)`
   padding: 10px 15px;
   display: block;
   width: 100px;
@@ -88,7 +89,7 @@ const ContenidoAbout = () => {
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
           accusantium doloremque laudantium, totam rem aperiam
         </p>
-        <BotonCaja>ver mas</BotonCaja>
+        <BotonCaja to="/about">ver mas</BotonCaja>
       </CajaAbout>
     </Contenido>
   );
