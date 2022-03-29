@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "custom-cursor-react": "^1.0.5",
+    "formik": "^2.2.9",
     "leaflet": "^1.7.1",
     "normalize.css": "^8.0.1",
     "rc-progress": "^3.2.4",
