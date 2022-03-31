@@ -90,7 +90,7 @@ const LinkNav = styled.li`
   font-weight: 500;
   letter-spacing: 1px;
   position: relative;
-  span {
+  a {
     cursor: pointer;
   }
 `;
@@ -113,9 +113,7 @@ const Navbar = ({ mostrarNav }) => {
         </Hamburguesa>
         <LinksNav>
           <LinkNav>
-            <span>
-              <Link to="/">inicio</Link>
-            </span>
+            <Link to="/">inicio</Link>
           </LinkNav>
           <LinkNav>
             <Link to="/about">About</Link>
@@ -127,9 +125,7 @@ const Navbar = ({ mostrarNav }) => {
             <Dropdown modal={modal} />
           </LinkNav>
           <LinkNav>
-            <span>
-              <Link to={"/blog"}>blog</Link>
-            </span>
+            <Link to={"/blog"}>blog</Link>
           </LinkNav>
           <LinkNav>
             <Link to={"/contacto"}>contacto</Link>

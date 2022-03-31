@@ -29,7 +29,7 @@ const Titulo = styled.h5`
 const Info = styled.ul`
   margin-bottom: 40px;
   padding: 0px;
-  li {
+  a {
     display: flex;
     margin-bottom: 25px;
   }
@@ -99,8 +99,8 @@ const Reciente = () => {
     <Contenido>
       <Titulo>noticias recientes</Titulo>
       <Info>
-        <Link to="/detalle-blog">
-          <li>
+        <li>
+          <Link to="/detalle-blog">
             <Icono>
               <LazyLoad heigth={"100%"} offset={150}>
                 <img src={imgFooterUno} alt="imagen blog" />
@@ -112,10 +112,10 @@ const Reciente = () => {
               </TextoInfo>
               <FechaInfo>14 feb 2020</FechaInfo>
             </div>
-          </li>
-        </Link>
-        <Link to="/detalle-blog">
-          <li>
+          </Link>
+        </li>
+        <li>
+          <Link to="/detalle-blog">
             <Icono>
               <LazyLoad heigth={"100%"} offset={150}>
                 <img src={imgFooterDos} alt="imagen blog" />
@@ -127,8 +127,8 @@ const Reciente = () => {
               </TextoInfo>
               <FechaInfo>14 feb 2020</FechaInfo>
             </div>
-          </li>
-        </Link>
+          </Link>
+        </li>
       </Info>
       <Newsletter>
         <input
