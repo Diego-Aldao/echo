@@ -71,13 +71,13 @@ const Media = () => {
           columnlg={"1 / 2"}
           columnxl={"1 / 5"}
         >
-          <Imagen src={imgProyecto01} />
+          <Imagen src={imgProyecto01} alt="imagen proyecto" />
         </ContenedorImg>
         <ContenedorImg to="/proyectos">
-          <Imagen src={imgProyecto02} />
+          <Imagen src={imgProyecto02} alt="imagen proyecto" />
         </ContenedorImg>
         <ContenedorImg to="/proyectos">
-          <Imagen src={imgProyecto03} />
+          <Imagen src={imgProyecto03} alt="imagen proyecto" />
         </ContenedorImg>
         <ContenedorImg
           to="/proyectos"
@@ -85,7 +85,7 @@ const Media = () => {
           columnlg={"1 / 4"}
           columnxl={"3 / 4"}
         >
-          <Imagen src={imgProyecto04} />
+          <Imagen src={imgProyecto04} alt="imagen proyecto" />
         </ContenedorImg>
         <ContenedorImg
           to="/proyectos"
@@ -93,13 +93,13 @@ const Media = () => {
           columnlg={"1 / 2"}
           columnxl={"4 / 5"}
         >
-          <Imagen src={imgProyecto05} />
+          <Imagen src={imgProyecto05} alt="imagen proyecto" />
         </ContenedorImg>
         <ContenedorImg to="/proyectos" columnxl={"1 / 3"}>
-          <Imagen src={imgProyecto06} />
+          <Imagen src={imgProyecto06} alt="imagen proyecto" />
         </ContenedorImg>
         <ContenedorImg to="/proyectos" columnxl={"3 / 5"}>
-          <Imagen src={imgProyecto07} />
+          <Imagen src={imgProyecto07} alt="imagen proyecto" />
         </ContenedorImg>
       </Contenido>
       <Siguiente />

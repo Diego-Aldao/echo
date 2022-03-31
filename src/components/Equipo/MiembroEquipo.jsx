@@ -115,7 +115,7 @@ const MiembroEquipo = ({ imgEquipo }) => {
         <SubEquipo>client manager</SubEquipo>
       </InfoEquipo>
       <LazyLoad height={"auto"} offset={150}>
-        <ImagenEquipo src={imgEquipo} />
+        <ImagenEquipo src={imgEquipo} alt="imagen miembro equipo" />
       </LazyLoad>
     </ItemEquipo>
   );

@@ -184,7 +184,7 @@ const Info = () => {
             <span>diseño</span>
           </p>
         </Titulo>
-        <ImgPrincipal src={imgPrueba} />
+        <ImgPrincipal src={imgPrueba} alt="img-blog" />
         <Contenido>
           <h5>
             Nunca jamás pienses en rendirte. Los ganadores nunca se dan por
@@ -240,8 +240,8 @@ const Info = () => {
             </p>
           </Quote>
           <MiniImagenes>
-            <img src={imgPrueba} alt="" />
-            <img src={imgPrueba} alt="" />
+            <img src={imgPrueba} alt="imagen blog" />
+            <img src={imgPrueba} alt="imagen blog" />
           </MiniImagenes>
           <p>
             We all intend to plan ahead, but too often let the day-to-day

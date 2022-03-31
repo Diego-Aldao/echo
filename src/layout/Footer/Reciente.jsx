@@ -103,7 +103,7 @@ const Reciente = () => {
           <li>
             <Icono>
               <LazyLoad heigth={"100%"} offset={150}>
-                <img src={imgFooterUno} alt="" />
+                <img src={imgFooterUno} alt="imagen blog" />
               </LazyLoad>
             </Icono>
             <div>
@@ -118,7 +118,7 @@ const Reciente = () => {
           <li>
             <Icono>
               <LazyLoad heigth={"100%"} offset={150}>
-                <img src={imgFooterDos} alt="" />
+                <img src={imgFooterDos} alt="imagen blog" />
               </LazyLoad>
             </Icono>
             <div>

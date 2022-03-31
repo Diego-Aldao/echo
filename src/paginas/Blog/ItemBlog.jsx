@@ -112,7 +112,7 @@ const ItemBlog = ({ img }) => {
   return (
     <Contenedor>
       <LazyLoad heigth={"100%"} offset={150}>
-        <Imagen src={img} />
+        <Imagen src={img} alt="imagen diseño blog" />
       </LazyLoad>
       <Contenido>
         <Fecha>

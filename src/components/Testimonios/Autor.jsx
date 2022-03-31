@@ -80,7 +80,7 @@ const Autor = ({ imgTestimonio, nombre, cargo }) => {
       <Info>
         <ImgAutor>
           <LazyLoad heigth={"100%"} offset={150}>
-            <img src={imgTestimonio} alt="" />
+            <img src={imgTestimonio} alt="imagen autor" />
           </LazyLoad>
         </ImgAutor>
         <NombreAutor>

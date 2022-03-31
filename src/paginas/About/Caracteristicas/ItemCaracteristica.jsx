@@ -70,7 +70,7 @@ const ItemCaracteristica = () => {
   return (
     <Item>
       <Info>
-        <Icono src={IconoCasa} />
+        <Icono src={IconoCasa} alt="icono caracteristica" />
         <Caracteristica>3d modeling</Caracteristica>
         <Texto>
           lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, earum!

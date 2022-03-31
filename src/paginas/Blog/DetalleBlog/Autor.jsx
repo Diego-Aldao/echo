@@ -65,7 +65,7 @@ const Redes = styled.div`
 const Autor = () => {
   return (
     <Datos>
-      <ImagenAutor src={imgAutor} />
+      <ImagenAutor src={imgAutor} alt="imagen autor" />
       <Info>
         <h6>jorden griffith</h6>
         <p>

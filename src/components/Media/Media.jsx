@@ -112,7 +112,7 @@ const Media = () => {
   return (
     <Wrapper>
       <LazyLoad height={"100%"} offset={150}>
-        <ImagenBg src={Background} />
+        <ImagenBg src={Background} alt="imagen background" />
       </LazyLoad>
       <Contenedor>
         {miVideo && <MediaModal miVideo={miVideo} setMiVideo={setMiVideo} />}

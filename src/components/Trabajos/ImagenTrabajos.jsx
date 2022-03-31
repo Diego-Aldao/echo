@@ -61,7 +61,7 @@ const ImagenTrabajos = ({ img, column, row }) => {
   return (
     <Contenedor column={column} row={row}>
       <LazyLoad height={"100%"} offset={200}>
-        <img src={img} />
+        <img src={img} alt="imagen trabajo experior" />
       </LazyLoad>
       <Info to={"/proyecto"}>
         <Tags>

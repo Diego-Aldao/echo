@@ -64,7 +64,7 @@ const MediaAbout = () => {
   return (
     <Media>
       <LazyLoad height={"100%"} offset={150}>
-        <MediaImg src={imgAbout}></MediaImg>
+        <MediaImg src={imgAbout} alt="imagen diseño interior" />
       </LazyLoad>
       <MediaContenido>
         <ItemMediaContenido>
