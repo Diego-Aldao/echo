@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import LazyLoad from "react-lazyload";
+import { Link } from "react-router-dom";
 
 const Contenedor = styled.div`
   width: 100%;
@@ -130,7 +131,9 @@ const ItemBlog = ({ img }) => {
               Lorem ipsum dolor sit ameteses eres adipisicing elit. Maiores
               recusandae vel alias dolore eaque illo voluptatem deleniti,
             </p>
-            <span>leer mas</span>
+            <span>
+              <Link to={"/detalle-blog"}>leer mas</Link>
+            </span>
           </Info>
         </Descripcion>
       </Contenido>

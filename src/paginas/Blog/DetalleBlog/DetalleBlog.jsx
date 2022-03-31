@@ -5,7 +5,11 @@ import Info from "./Info";
 const DetalleBlog = () => {
   return (
     <>
-      <HeaderSecundario nombre={"posteo blog"} link={"posteo blog"} />
+      <HeaderSecundario
+        nombre={"posteo blog"}
+        link={"posteo blog"}
+        link2={"blog"}
+      />
       <Info />
     </>
   );
