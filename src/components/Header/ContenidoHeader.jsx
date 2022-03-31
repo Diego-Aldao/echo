@@ -3,6 +3,7 @@ import styled from "styled-components";
 import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
 import Splitting from "splitting";
+import { Link } from "react-router-dom";
 
 const HeaderContenido = styled.div`
   width: 100%;
@@ -70,7 +71,7 @@ const Info = styled.p`
   transition: all 0.4s;
   transition-delay: 0.8s;
 `;
-const Botton = styled.a`
+const Botton = styled(Link)`
   position: relative;
   width: 170px;
   height: 50px;
@@ -145,7 +146,9 @@ const ContenidoHeader = ({ refObs, inView, miniTexto, titulo }) => {
         El diseño correcto y las ideas correctas importan mucho en el diseño de
         interiores. <br /> Un estilo que marca tendencia.
       </Info>
-      <Botton style={stylesObserverInfoBtn}>Descrubir trabajo</Botton>
+      <Botton style={stylesObserverInfoBtn} to="/proyectos">
+        Descrubir trabajo
+      </Botton>
     </HeaderContenido>
   );
 };
