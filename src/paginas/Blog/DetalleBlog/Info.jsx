@@ -139,7 +139,7 @@ const Tags = styled.div`
   margin: 30px 0px;
   text-align: right;
   border-top: 1px solid #333;
-  span {
+  a {
     font-size: 12px;
     font-family: var(--fuente-poppins);
     margin: 8px;
@@ -152,7 +152,7 @@ const Paginacion = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 80px;
-  span {
+  a {
     width: 100%;
     padding: 20px;
     border-right: 1px solid #333;
@@ -160,14 +160,15 @@ const Paginacion = styled.div`
     text-transform: uppercase;
     font-size: 13px;
     letter-spacing: 1px;
+    font-family: var(--fuente-poppins);
   }
-  span:not(:first-child):not(:last-child) {
+  a:not(:first-child):not(:last-child) {
     display: flex;
     align-items: center;
     justify-content: center;
     max-width: 60px;
   }
-  span:last-child {
+  a:last-child {
     text-align: right;
   }
 `;
@@ -177,19 +178,20 @@ const Info = () => {
     <Wrapper>
       <Contenedor>
         <Titulo>
-          <h2>construye un blog con facilidad</h2>
+          <h2>construye un simple blog con facilidad</h2>
           <p>
-            <span>alex smith</span> /<span> august 6, 2022</span>/
-            <span>web design</span>
+            <span>juan bautista</span> /<span> 06 febrero, 2022</span>/
+            <span>diseño</span>
           </p>
         </Titulo>
         <ImgPrincipal src={imgPrueba} />
         <Contenido>
           <h5>
-            Never ever think of giving up. Winners never quit and quitters never
-            win. Take all negative words out of your mental dictionary and focus
-            on the solutions with utmost conviction and patience. The battle is
-            never lost until you've abandon your vision.
+            Nunca jamás pienses en rendirte. Los ganadores nunca se dan por
+            vencidos y los que se dan por vencidos nunca ganan. Saca todas las
+            palabras negativas de tu diccionario mental y concéntrate en las
+            soluciones con la máxima convicción y paciencia. La batalla nunca se
+            pierde hasta que abandonas tu visión.
           </h5>
           <p>
             the main component of a healthy environment for self esteem is that
@@ -200,13 +202,14 @@ const Info = () => {
             for self esteem The main compont be nurturing It should provide
             unconditional
           </p>
-          <h6>- We all intend to plan ahead</h6>
+          <h6>- Todos tenemos la intención de planificar el futuro</h6>
           <p>
-            We all intend to plan ahead, but too often let the day-to-day
-            minutia get in the way of making a calendar for the year. Sure, you
-            can't know every detail to anticipate. Heck, you can't know half the
-            priorities that will pop up in any particular month. But you can
-            plan for big picture seasonality, busy-times, and events.
+            Todos tenemos la intención de planificar con anticipación, pero con
+            demasiada frecuencia dejamos que las minucias del día a día se
+            interpongan en el camino de hacer una planifiación. Claro, no se
+            puede saber cada detalle para anticipar. No puedes saber la mitad de
+            las prioridades que aparecerán en un mes en particular, pero puedes
+            planificar el panorama general, los tiempos difíciles y los eventos.
           </p>
           <ul>
             <li>
@@ -229,10 +232,11 @@ const Info = () => {
           </ul>
           <Quote>
             <p>
-              Never ever think of giving up. Winners never quit and quitters
-              never win. Take all negative words out of your mental dictionary
-              and focus on the solutions with utmost conviction and patience.
-              The battle is never lost until you've abandon your vision.
+              Nunca jamás pienses en rendirte. Los ganadores nunca se rinden y
+              los que se rinden nunca ganan. Saca todas las palabras negativas
+              de tu diccionario mental y concéntrate en las soluciones con la
+              mayor convicción y paciencia. La batalla nunca se pierde hasta que
+              abandonas tu visión.
             </p>
           </Quote>
           <MiniImagenes>
@@ -247,16 +251,17 @@ const Info = () => {
             plan for big picture seasonality, busy-times, and events.
           </p>
           <Tags>
-            <span>diseño</span>,<span>arquitectura</span>,<span>interior</span>
+            <a href="#">diseño</a>,<a href="#">arquitectura</a>,
+            <a href="#">interior</a>
           </Tags>
         </Contenido>
         <Autor />
         <Paginacion>
-          <span>post anterior</span>
-          <span>
+          <a href="#">post anterior</a>
+          <a href="#">
             <RiLayoutGridFill />
-          </span>
-          <span>post siguiente</span>
+          </a>
+          <a href="#">post siguiente</a>
         </Paginacion>
       </Contenedor>
     </Wrapper>

@@ -42,6 +42,7 @@ const Info = styled.div`
   }
   p {
     margin: 0px;
+    text-transform: capitalize;
   }
   @media (min-width: 480px) {
     padding-left: 40px;
@@ -66,15 +67,22 @@ const Autor = () => {
     <Datos>
       <ImagenAutor src={imgAutor} />
       <Info>
-        <h6> jorden griffith</h6>
+        <h6>jorden griffith</h6>
         <p>
-          the main component of a healthy environment for self esteem is that it
-          needs be nurturing. The main compont of a healthy environment.
+          el componente principal de un entorno saludable para la autoestima es
+          que necesita ser nutritivo. El componente principal de un ambiente
+          saludable.
         </p>
         <Redes>
-          <FaFacebookF />
-          <FaTwitter />
-          <FaBehance />
+          <a href="#">
+            <FaFacebookF />
+          </a>
+          <a href="#">
+            <FaTwitter />
+          </a>
+          <a href="#">
+            <FaBehance />
+          </a>
         </Redes>
       </Info>
     </Datos>

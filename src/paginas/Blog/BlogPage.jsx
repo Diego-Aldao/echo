@@ -5,7 +5,7 @@ import ContenidoBlog from "./ContenidoBlog";
 const BlogPage = () => {
   return (
     <>
-      <HeaderSecundario nombre={"utlimos blogs"} link={"blog"} />
+      <HeaderSecundario nombre={"útlimos blogs"} link={"blog"} />
       <ContenidoBlog />
     </>
   );

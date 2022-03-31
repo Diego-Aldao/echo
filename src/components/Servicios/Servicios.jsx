@@ -54,7 +54,7 @@ const Servicios = () => {
         <ContenidoServicios>
           <ItemServicios
             imgIcono={iconoSketch}
-            titulo={"diseño & planificacion"}
+            titulo={"diseño & planificación"}
           />
           <ItemServicios imgIcono={iconoFurniture} titulo={"muebles & deco"} />
           <ItemServicios imgIcono={iconoHome} titulo={"diseño exterior"} />

@@ -4,6 +4,7 @@ import { GrFacebookOption } from "react-icons/gr";
 import { GrTwitter } from "react-icons/gr";
 import { GrInstagram } from "react-icons/gr";
 import { GrYoutube } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
 const Contenido = styled.div`
   padding: 0px;
@@ -14,7 +15,7 @@ const Contenido = styled.div`
   }
 `;
 
-const Logo = styled.span`
+const Logo = styled(Link)`
   color: white;
   text-transform: uppercase;
   margin: 0px;
@@ -27,7 +28,7 @@ const Redes = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: 30px 0px;
-  span {
+  a {
     width: 60px;
     height: 60px;
     line-height: 60px;
@@ -54,20 +55,20 @@ const Copy = styled.p`
 const Extra = () => {
   return (
     <Contenido>
-      <Logo>echo</Logo>
+      <Logo to="/">echo</Logo>
       <Redes>
-        <span>
+        <a href="#">
           <GrFacebookOption />
-        </span>
-        <span>
+        </a>
+        <a href="#">
           <GrTwitter />
-        </span>
-        <span>
+        </a>
+        <a href="#">
           <GrInstagram />
-        </span>
-        <span>
+        </a>
+        <a href="#">
           <GrYoutube />
-        </span>
+        </a>
       </Redes>
       <Copy>
         © 2022, template echo. construido por{" "}

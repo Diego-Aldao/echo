@@ -46,7 +46,8 @@ const HeaderEspecial = () => {
   return (
     <Header>
       <h2>
-        Architecture is a visual art, and the building speak for themeselves
+        La arquitectura es un arte visual, y las construcciones hablan por sí
+        mismas.
       </h2>
       <p>
         Architecture bibendum pharetra eleifend. Suspendisse vel volutpat purus,

@@ -6,7 +6,7 @@ import Datos from "./Datos/Datos";
 const ContactoPage = () => {
   return (
     <>
-      <HeaderSecundario nombre={"contactanos"} link={"contacto"} />
+      <HeaderSecundario nombre={"contáctanos"} link={"contacto"} />
       <Datos />
       <Contenido />
     </>

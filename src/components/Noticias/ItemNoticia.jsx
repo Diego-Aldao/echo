@@ -87,10 +87,10 @@ const ItemNoticia = ({ img, opacity }) => {
           <Fecha>agosto 06</Fecha>
           <Tags>
             <span>admin</span>
-            <span>WordPress</span>
+            <span>Diseño</span>
           </Tags>
           <Titulo>casas de doble rectángulo de contenedores viejos.</Titulo>
-          <Boton>leer mas</Boton>
+          <Boton>leer más</Boton>
         </Info>
       </Item>
     </LazyLoad>

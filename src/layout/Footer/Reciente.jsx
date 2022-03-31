@@ -82,7 +82,7 @@ const Newsletter = styled.div`
       color: #bdbdbd;
     }
   }
-  span {
+  a {
     width: 50px;
     height: 50px;
     display: flex;
@@ -137,9 +137,9 @@ const Reciente = () => {
           id="email"
           placeholder="ingresa tu email"
         />
-        <span>
+        <a href="#">
           <RiSendPlaneFill />
-        </span>
+        </a>
       </Newsletter>
     </Contenido>
   );

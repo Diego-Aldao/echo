@@ -121,7 +121,7 @@ const ItemBlog = ({ img }) => {
         </Fecha>
         <Descripcion>
           <Tags>
-            <a href="">clasico</a>
+            <a href="">clásico</a>
             <a href="">interior</a>
             <a href="">diseño</a>
           </Tags>
@@ -132,7 +132,7 @@ const ItemBlog = ({ img }) => {
               recusandae vel alias dolore eaque illo voluptatem deleniti,
             </p>
             <span>
-              <Link to={"/detalle-blog"}>leer mas</Link>
+              <Link to={"/detalle-blog"}>leer más</Link>
             </span>
           </Info>
         </Descripcion>

@@ -77,7 +77,7 @@ const Intro = () => {
     <Wrapper>
       <Contenedor>
         <Info>
-          <Titulo>introduccion</Titulo>
+          <Titulo>introducción</Titulo>
           <Texto>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis
             omnis magni consectetur veniam ullam sint ab placeat exercitationem
@@ -95,7 +95,7 @@ const Intro = () => {
             <p>6 agosto 2022</p>
           </Dato>
           <Dato>
-            <h6>categorias</h6>
+            <h6>categorías</h6>
             <p>diseño interior, muebles</p>
           </Dato>
           <Dato>

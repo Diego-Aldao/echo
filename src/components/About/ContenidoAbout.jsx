@@ -89,7 +89,7 @@ const ContenidoAbout = () => {
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
           accusantium doloremque laudantium, totam rem aperiam
         </p>
-        <BotonCaja to="/about">ver mas</BotonCaja>
+        <BotonCaja to="/about">ver más</BotonCaja>
       </CajaAbout>
     </Contenido>
   );

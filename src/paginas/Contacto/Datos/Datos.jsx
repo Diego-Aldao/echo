@@ -34,9 +34,24 @@ const Datos = () => {
   return (
     <Wrapper>
       <Contenedor>
-        <ItemDatos titulo={"telefono"} icono={<MdOutlineSmartphone />} />
-        <ItemDatos titulo={"email"} icono={<FaRegEnvelopeOpen />} />
-        <ItemDatos titulo={"direccion"} icono={<ImMap2 />} />
+        <ItemDatos
+          titulo="teléfono"
+          icono={<MdOutlineSmartphone />}
+          dato1="+7 (111) 1234 56789"
+          dato2="+1 (000) 9876 54321"
+        />
+        <ItemDatos
+          titulo="email"
+          icono={<FaRegEnvelopeOpen />}
+          dato1="contacto@echo.com"
+          dato2="usuario@echo.com"
+        />
+        <ItemDatos
+          titulo="dirección"
+          icono={<ImMap2 />}
+          dato1="Primitivo de la reta 1007"
+          dato2="Maipú, Mendoza"
+        />
       </Contenedor>
     </Wrapper>
   );

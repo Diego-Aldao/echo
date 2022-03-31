@@ -25,14 +25,14 @@ const Info = styled.p`
   font-size: 13px;
 `;
 
-const ItemDatos = ({ icono, titulo }) => {
+const ItemDatos = ({ icono, titulo, dato1, dato2 }) => {
   return (
     <Contenido>
       <Icono>{icono}</Icono>
       <Descripcion>
         <Titulo>{titulo}</Titulo>
-        <Info>Lorem ipsum dolor sit amet.</Info>
-        <Info>Lorem ipsum dolor sit amet.</Info>
+        <Info>{dato1}</Info>
+        <Info>{dato2}</Info>
       </Descripcion>
     </Contenido>
   );
