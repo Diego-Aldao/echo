@@ -116,7 +116,7 @@ const Media = () => {
       </LazyLoad>
       <Contenedor>
         {miVideo && <MediaModal miVideo={miVideo} setMiVideo={setMiVideo} />}
-        <BtnPlay onClick={handleClick} miVideo={miVideo}>
+        <BtnPlay onClick={handleClick} miVideo={miVideo} aria-label="play">
           <IconoPlay />
         </BtnPlay>
         <CajaClientes>

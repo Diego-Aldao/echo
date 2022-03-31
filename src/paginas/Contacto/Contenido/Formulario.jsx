@@ -73,7 +73,9 @@ const Formulario = () => {
               placeholder="mensaje"
             ></Input>
 
-            <Boton type="submit">enviar</Boton>
+            <Boton type="submit" aria-label="enviar">
+              enviar
+            </Boton>
           </Form>
         )}
       </Formik>
