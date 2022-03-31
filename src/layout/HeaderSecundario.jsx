@@ -75,7 +75,7 @@ const Current = styled.span`
   color: var(--color-principal);
 `;
 
-const HeaderSecundario = ({ nombre, link }) => {
+const HeaderSecundario = ({ nombre, link, link2 }) => {
   return (
     <Contenedor>
       <Descripcion>
@@ -85,8 +85,16 @@ const HeaderSecundario = ({ nombre, link }) => {
             <Link to={"/"}>inicio</Link>
           </span>
           <Barra>/</Barra>
+          {link2 && (
+            <>
+              <span>
+                <Link to={`/${link2}`}>{link2}</Link>
+              </span>
+              <Barra>/</Barra>
+            </>
+          )}
           <Current>
-            <Link to={"/about"}>{link}</Link>
+            <Link to={`/${link}`}>{link}</Link>
           </Current>
         </Path>
       </Descripcion>
