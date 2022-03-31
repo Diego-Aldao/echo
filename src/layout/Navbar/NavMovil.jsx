@@ -61,17 +61,17 @@ const ItemDropdown = styled.span`
   }
 `;
 
-const NavMovil = ({ navegacion }) => {
+const NavMovil = ({ navegacion, setNavegacion }) => {
   const [toggle, setToggle] = useState(false);
   return (
     <Contenedor navegacion={navegacion}>
       <ul>
-        <li>
+        <li onClick={() => setNavegacion(!navegacion)}>
           <span>
             <Link to={"/"}>inicio</Link>
           </span>
         </li>
-        <li>
+        <li onClick={() => setNavegacion(!navegacion)}>
           <span>
             <Link to={"/about"}>about</Link>
           </span>
@@ -81,26 +81,26 @@ const NavMovil = ({ navegacion }) => {
             proyecto <RiArrowDownSFill />
           </span>
           <Dropdown toggle={toggle}>
-            <ItemDropdown>
+            <ItemDropdown onClick={() => setNavegacion(!navegacion)}>
               <Link to={"/proyecto"}>muebles de lujo</Link>
             </ItemDropdown>
-            <ItemDropdown>
+            <ItemDropdown onClick={() => setNavegacion(!navegacion)}>
               <Link to={"/proyecto"}>casa moderna</Link>
             </ItemDropdown>
-            <ItemDropdown>
+            <ItemDropdown onClick={() => setNavegacion(!navegacion)}>
               <Link to={"/proyecto"}>exterior renovado</Link>
             </ItemDropdown>
-            <ItemDropdown>
+            <ItemDropdown onClick={() => setNavegacion(!navegacion)}>
               <Link to={"/proyectos"}>ver todos</Link>
             </ItemDropdown>
           </Dropdown>
         </li>
-        <li>
+        <li onClick={() => setNavegacion(!navegacion)}>
           <span>
             <Link to={"/blog"}>blog</Link>
           </span>
         </li>
-        <li>
+        <li onClick={() => setNavegacion(!navegacion)}>
           <span>
             <Link to={"/contacto"}>contacto</Link>
           </span>
