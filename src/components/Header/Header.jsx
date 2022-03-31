@@ -72,9 +72,15 @@ const Header = ({ setMostrarNav }) => {
           delay: 1000,
           disableOnInteraction: false,
         }}
+        allowTouchMove={false}
         navigation={true}
         modules={[Parallax, Pagination, Navigation]}
         className="mySwiper"
+        breakpoints={{
+          992: {
+            allowTouchMove: true,
+          },
+        }}
       >
         <SwiperSlide style={sliderStyles}>
           <HeaderImg data-swiper-parallax="75%" img={imgHeader1}></HeaderImg>
