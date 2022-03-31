@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import iconoSketch from "../../assets/images/Iconos/sketch.png";
-import iconoFurniture from "../../assets/images/Iconos/furniture.png";
-import iconoHome from "../../assets/images/Iconos/home.png";
+import iconoSketch from "../../assets/images/Iconos/sketch.webp";
+import iconoFurniture from "../../assets/images/Iconos/mueble.webp";
+import iconoHome from "../../assets/images/Iconos/casa.webp";
 import ItemServicios from "./ItemServicios";
 
 const Wrapper = styled.section`

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import IconoCasa from "../../../assets/images/Iconos/home.png";
+import IconoCasa from "../../../assets/images/Iconos/sketch.webp";
 
 const Item = styled.div`
   padding: 60px 40px;

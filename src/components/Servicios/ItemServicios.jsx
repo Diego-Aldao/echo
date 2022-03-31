@@ -23,7 +23,7 @@ const TituloItem = styled.h6`
 const ItemServicios = ({ imgIcono, titulo }) => {
   return (
     <Contenedor>
-      <Icono src={imgIcono} />
+      <Icono src={imgIcono} alt="icono servicio" />
       <TituloItem>{titulo}</TituloItem>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio
