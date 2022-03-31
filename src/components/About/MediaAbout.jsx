@@ -43,8 +43,6 @@ const ItemMediaContenido = styled.div`
     font-family: var(--fuente-jost);
     font-size: 18px;
     color: var(--color-principal);
-    line-height: 1.4;
-    font-weight: 500;
   }
   h6 {
     font-size: 15px;

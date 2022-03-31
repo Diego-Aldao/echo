@@ -18,7 +18,7 @@ const Contenido = styled.div`
   }
 `;
 
-const Titulo = styled.h5`
+const Titulo = styled.h6`
   margin: 0px 0px 30px;
   font-size: 18px;
   text-transform: capitalize;

@@ -25,7 +25,7 @@ const HeaderContenido = styled.div`
     max-width: 1340px;
   }
 `;
-const MiniTexto = styled.h5`
+const MiniTexto = styled.h6`
   position: relative;
   font-size: 20px;
   padding: 0px;
