@@ -76,7 +76,6 @@ const Botton = styled(Link)`
   width: 170px;
   height: 50px;
   background: var(--color-principal);
-  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,6 +87,7 @@ const Botton = styled(Link)`
   cursor: pointer;
   &:hover {
     background: none;
+    color: #fff;
   }
   &:after {
     content: "";
@@ -147,7 +147,7 @@ const ContenidoHeader = ({ refObs, inView, miniTexto, titulo }) => {
         interiores. <br /> Un estilo que marca tendencia.
       </Info>
       <Botton style={stylesObserverInfoBtn} to="/proyectos">
-        Descrubir trabajo
+        Descubrir trabajo
       </Botton>
     </HeaderContenido>
   );
