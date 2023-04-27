@@ -1,4 +1,4 @@
-# Echo
+# Echo ![logo](public/logo.png)
 
 Echo es un sitio para una empresa de diseño de interiores. Contiene distintas caracteristicas como un blog, formulario de contacto, portfolio de trabajos, etc.
 
