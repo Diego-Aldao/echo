@@ -9,24 +9,11 @@ import Testimonios from "../components/Testimonios/Testimonios";
 import Noticias from "../components/Noticias/Noticias";
 import Footer from "./Footer/Footer";
 import BotonScroll from "../components/BotonScroll";
-import CustomCursor from "custom-cursor-react";
-import "custom-cursor-react/dist/index.css";
 import Navbar from "./Navbar/Navbar";
 
 const Inicio = ({ mostrarNav, setMostrarNav }) => {
   return (
     <>
-      <CustomCursor
-        targets={["a, button, .dropdown"]}
-        dimensions={30}
-        fill={"#c5a47e"}
-        smoothness={{
-          movement: 0.5,
-          scale: 1,
-          opacity: 0.9,
-        }}
-        targetOpacity={0.5}
-      />
       <Navbar mostrarNav={mostrarNav} />
       <Header mostrarNav={mostrarNav} setMostrarNav={setMostrarNav} />
       <About />
