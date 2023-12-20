@@ -71,10 +71,7 @@ const Extra = () => {
         </a>
       </Redes>
       <Copy>
-        © 2022, template echo. construido por{" "}
-        <a href="https://github.com/Diego-Aldao" target="_blank">
-          diego
-        </a>
+        © 2022, template echo.
       </Copy>
     </Contenido>
   );
